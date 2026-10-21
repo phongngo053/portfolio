@@ -35,6 +35,7 @@ makes no `fetch()` calls, so there is no CORS problem.
 ├── css/
 │   └── main.css        # design tokens + all components, in one file
 ├── js/
+│   ├── i18n.js         # lightweight EN/VN runtime + localized dictionaries
 │   └── main.js         # nav drawer, scroll spy, reveal, filters, mailto form
 └── assets/
     ├── avatar.png
@@ -44,6 +45,15 @@ makes no `fetch()` calls, so there is no CORS problem.
 
 The CSS is organised in eight commented sections: tokens, reset & base, typography,
 layout primitives, components, page sections, utilities, responsive.
+
+## Internationalisation (i18n)
+
+The site includes built-in support for both **English (default)** and **Vietnamese (VN)**:
+- Single-page architecture using `data-i18n`, `data-i18n-html`, `data-i18n-attr`, and `data-i18n-content` attributes.
+- Complete copy stored in `js/i18n.js` with instant client-side switching.
+- Language selection is persisted in `localStorage` (`phong-lang`).
+- Inline pre-paint script prevents flash of untranslated content (FOUC).
+- Both desktop nav and mobile drawer include a pill-style EN/VN toggle switch.
 
 ## Design system
 

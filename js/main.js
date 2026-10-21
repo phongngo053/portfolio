@@ -6,6 +6,12 @@
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* Translated strings come from js/i18n.js; fall back to the key if it
+     failed to load. */
+  function t(key, vars) {
+    return window.I18N && window.I18N.t ? window.I18N.t(key, vars) : key;
+  }
+
   /* ---------------------------------------------------------------- Nav --- */
   var nav = document.querySelector(".nav");
   var toggle = document.querySelector(".nav-toggle");
@@ -138,15 +144,18 @@
       if (!name || !email || !message) {
         var note = form.querySelector(".form-note");
         if (note) {
-          note.textContent = "Please fill in your name, email and message.";
+          note.textContent = t("form.error");
           note.style.color = "var(--system--orange-300)";
         }
         return;
       }
 
-      var subject = "Portfolio enquiry from " + name;
-      var body =
-        "Hi Phong,\n\n" + message + "\n\n— " + name + "\n" + email;
+      var subject = t("form.subject", { name: name });
+      var body = t("form.body", {
+        message: message,
+        name: name,
+        email: email
+      });
       var href =
         "mailto:ngoti.phong.dev@gmail.com" +
         "?subject=" + encodeURIComponent(subject) +
@@ -156,7 +165,7 @@
 
       var note = form.querySelector(".form-note");
       if (note) {
-        note.textContent = "Opening your mail app…";
+        note.textContent = t("form.success");
         note.style.color = "var(--system--green-300)";
       }
     });
@@ -170,7 +179,7 @@
       var value = button.dataset.copy;
       var done = function () {
         var original = button.textContent;
-        button.textContent = "Copied!";
+        button.textContent = t("form.copied");
         setTimeout(function () {
           button.textContent = original;
         }, 1800);

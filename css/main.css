@@ -582,6 +582,47 @@ textarea.input {
   color: var(--neutral--300);
 }
 
+/* Language switch ---------------------------------------------------------- */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--neutral--600);
+  border-radius: 999px;
+  background: var(--neutral--700);
+}
+
+.lang-option {
+  border: 0;
+  border-radius: 999px;
+  padding: 5px 14px;
+  background: transparent;
+  color: var(--neutral--400);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.lang-option:hover {
+  color: var(--neutral--100);
+}
+
+.lang-option.is-active {
+  background: var(--accent--primary-1);
+  color: var(--neutral--100);
+}
+
+/* The mobile copy of the switch only exists inside the nav drawer. */
+.nav-lang { display: none; }
+
+/* Never flash the wrong language while the saved locale is being applied. */
+html[data-lang-pending] body { visibility: hidden; }
+
 /* Avatar ------------------------------------------------------------------- */
 .avatar-circle {
   border-radius: 50%;
@@ -1441,6 +1482,9 @@ textarea.input {
   .nav-links.is-open { transform: translateY(0); visibility: visible; }
   .nav-links a { display: block; padding: 18px 0; border-bottom: 1px solid rgba(195, 202, 213, 0.08); }
   .nav-actions .btn { display: none; }
+  .nav-actions .lang-switch-desktop { display: none; }
+  .nav-lang { display: flex; padding: 18px 0; }
+  .nav-links.is-open .nav-lang { border-bottom: 1px solid rgba(195, 202, 213, 0.08); }
 }
 
 @media (max-width: 767px) {

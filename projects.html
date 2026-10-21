@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects — Ngô Tiến Phong</title>
-  <meta name="description" content="Every project I've shipped: browser extensions, backend services, microservices, media tooling and full-stack apps.">
+  <title data-i18n="meta.projects.title">Projects — Ngô Tiến Phong</title>
+  <meta name="description" data-i18n-content="meta.projects.description" content="Every project I've shipped: backend services, microservices, delivery apps and full-stack apps.">
   <meta name="author" content="Ngô Tiến Phong">
   <meta name="theme-color" content="#1b1f24">
 
@@ -13,13 +13,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/main.css">
+
+  <!-- Pick the saved locale before the first paint so the page never flashes the wrong language. -->
+  <script>
+    (function () {
+      var lang = "en";
+      try { lang = localStorage.getItem("phong-lang") || "en"; } catch (e) {}
+      if (lang !== "en" && lang !== "vi") lang = "en";
+      document.documentElement.setAttribute("lang", lang);
+      if (lang !== "en") {
+        document.documentElement.setAttribute("data-lang-pending", lang);
+        setTimeout(function () {
+          document.documentElement.removeAttribute("data-lang-pending");
+        }, 2000);
+      }
+    })();
+  </script>
+
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
 
   <!-- ============================== NAV ============================== -->
   <header class="nav">
     <div class="container nav-inner">
-      <a class="nav-logo" href="index.html" aria-label="Ngô Tiến Phong — home">
+      <a class="nav-logo" href="index.html" aria-label="Ngô Tiến Phong — home" data-i18n-attr="aria-label:nav.home">
         <span class="logo-mark" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
             <path d="M25 21 L13 32 L25 43"/>
@@ -31,17 +50,27 @@
 
       <nav aria-label="Primary">
         <ul class="nav-links" id="nav-links">
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#stack">Stack</a></li>
-          <li><a href="projects.html" class="is-active">Projects</a></li>
-          <li><a href="index.html#experience">Experience</a></li>
-          <li><a href="about.html">About page</a></li>
+          <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+          <li><a href="index.html#stack" data-i18n="nav.stack">Stack</a></li>
+          <li><a href="projects.html" class="is-active" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="index.html#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="about.html" data-i18n="nav.aboutPage">About page</a></li>
+          <li class="nav-lang">
+            <div class="lang-switch" role="group" aria-label="Switch language" data-i18n-attr="aria-label:nav.langSwitch">
+              <button class="lang-option is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
+              <button class="lang-option" type="button" data-lang="vi" aria-pressed="false">VN</button>
+            </div>
+          </li>
         </ul>
       </nav>
 
       <div class="nav-actions">
-        <a class="btn btn-primary btn-small" href="about.html#contact">Let's talk</a>
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <div class="lang-switch lang-switch-desktop" role="group" aria-label="Switch language" data-i18n-attr="aria-label:nav.langSwitch">
+          <button class="lang-option is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-option" type="button" data-lang="vi" aria-pressed="false">VN</button>
+        </div>
+        <a class="btn btn-primary btn-small" href="about.html#contact" data-i18n="nav.talk">Let's talk</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation" data-i18n-attr="aria-label:nav.toggle">
           <span></span>
         </button>
       </div>
@@ -54,9 +83,9 @@
     <section class="page-hero">
       <div class="container">
         <div class="heading-top-line large" aria-hidden="true"></div>
-        <h1 class="display-2">Every project, one place.</h1>
-        <p>
-          A dozen repositories, each one started because I needed the thing to exist. Most of them run
+        <h1 class="display-2" data-i18n="projectsPage.heading">Every project, one place.</h1>
+        <p data-i18n="projectsPage.intro">
+          Eight repositories, each one started because I needed the thing to exist. Most of them run
           locally, none of them phone home, and all of them are open for you to read.
         </p>
       </div>
@@ -65,75 +94,15 @@
     <!-- ============================== PROJECT GRID ============================== -->
     <section class="section" style="padding-top:40px">
       <div class="container">
-        <div class="filter-row reveal" role="group" aria-label="Filter projects by language">
-          <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <div class="filter-row reveal" role="group" aria-label="Filter projects by language" data-i18n-attr="aria-label:projectsPage.filterLabel">
+          <button class="chip is-active" type="button" data-filter="all" aria-pressed="true" data-i18n="projectsPage.filterAll">All</button>
           <button class="chip" type="button" data-filter="javascript" aria-pressed="false">JavaScript</button>
           <button class="chip" type="button" data-filter="typescript" aria-pressed="false">TypeScript</button>
-          <button class="chip" type="button" data-filter="python" aria-pressed="false">Python</button>
           <button class="chip" type="button" data-filter="csharp" aria-pressed="false">C# / .NET</button>
-          <button class="chip" type="button" data-filter="html" aria-pressed="false">HTML</button>
           <button class="chip" type="button" data-filter="css" aria-pressed="false">CSS</button>
         </div>
 
         <div class="projects-grid">
-
-          <article class="card card-project reveal" data-tags="javascript,html">
-            <div class="card-project-visual">
-              <img src="assets/projects/quiz-lens.svg" width="84" height="84" alt="">
-            </div>
-            <div class="card-project-body">
-              <div class="card-project-tags">
-                <span class="badge badge-primary small">JavaScript</span>
-                <span class="badge badge-primary small">MV3</span>
-              </div>
-              <h3 class="card-project-title">Quiz Lens</h3>
-              <p class="body-default">
-                A browser extension that reads the quiz questions and answers already on your screen and
-                renders them as a clean comparison table, with optional AI hints. Four detection
-                strategies, Shadow DOM and iframe traversal, and an inline mode that sits next to each
-                question. Runs entirely locally — no backend, no telemetry.
-              </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/quiz-lens" target="_blank" rel="noopener">View on GitHub</a>
-            </div>
-          </article>
-
-          <article class="card card-project reveal" data-tags="python">
-            <div class="card-project-visual">
-              <img src="assets/projects/yt-sub-viet.svg" width="84" height="84" alt="">
-            </div>
-            <div class="card-project-body">
-              <div class="card-project-tags">
-                <span class="badge badge-primary small">Python</span>
-                <span class="badge badge-primary small">Gradio</span>
-              </div>
-              <h3 class="card-project-title">YT Sub Viet</h3>
-              <p class="body-default">
-                A YouTube web player with real-time Vietnamese subtitles: live translation, vision-based
-                speaker detection and Vietnamese text-to-speech. The API key stays on your own machine,
-                entered in the settings panel.
-              </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/yt-sub-viet" target="_blank" rel="noopener">View on GitHub</a>
-            </div>
-          </article>
-
-          <article class="card card-project reveal" data-tags="html">
-            <div class="card-project-visual">
-              <img src="assets/projects/dev-kit.svg" width="84" height="84" alt="">
-            </div>
-            <div class="card-project-body">
-              <div class="card-project-tags">
-                <span class="badge badge-primary small">HTML</span>
-                <span class="badge badge-primary small">7-Zip</span>
-              </div>
-              <h3 class="card-project-title">DEV_KIT</h3>
-              <p class="body-default">
-                A portable development environment in the spirit of Git for Windows: a self-extracting
-                archive that unpacks anywhere and runs straight from the drive, leaving no permanent
-                system entries and needing no admin rights.
-              </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/DEV_KIT" target="_blank" rel="noopener">View on GitHub</a>
-            </div>
-          </article>
 
           <article class="card card-project reveal" data-tags="typescript">
             <div class="card-project-visual">
@@ -146,12 +115,12 @@
                 <span class="badge badge-primary small">MySQL</span>
               </div>
               <h3 class="card-project-title">Food Ordering</h3>
-              <p class="body-default">
+              <p class="body-default" data-i18n="projectsPage.foodOrdering">
                 A full food-ordering platform with user, shop and delivery roles. JWT authentication,
                 dish and order management, order tracking, ratings and reviews, plus push notifications
                 for customers, shops and drivers.
               </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-nestjs" target="_blank" rel="noopener">View on GitHub</a>
+              <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-nestjs" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
             </div>
           </article>
 
@@ -165,12 +134,12 @@
                 <span class="badge badge-primary small">Microservices</span>
               </div>
               <h3 class="card-project-title">Food Ordering — Microservices</h3>
-              <p class="body-default">
+              <p class="body-default" data-i18n="projectsPage.foodOrderingMicro">
                 The same domain rebuilt as independent services: authentication, product, category,
                 ordering, settings and notification, each deployable on its own and talking over
                 documented contracts.
               </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-micro" target="_blank" rel="noopener">View on GitHub</a>
+              <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-micro" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
             </div>
           </article>
 
@@ -185,11 +154,11 @@
                 <span class="badge badge-primary small">Firebase</span>
               </div>
               <h3 class="card-project-title">Food Ordering — Web</h3>
-              <p class="body-default">
+              <p class="body-default" data-i18n="projectsPage.foodOrderingWeb">
                 The front end for the food-ordering demo: a React + Vite app on top of Firebase for
                 auth and data, covering browsing, cart and checkout.
               </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-react" target="_blank" rel="noopener">View on GitHub</a>
+              <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-react" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
             </div>
           </article>
 
@@ -203,11 +172,11 @@
                 <span class="badge badge-primary small">Node.js</span>
               </div>
               <h3 class="card-project-title">Phong Delivery — Front end</h3>
-              <p class="body-default">
+              <p class="body-default" data-i18n="projectsPage.deliveryFe">
                 The customer-facing side of my graduation project: a React + Vite app for placing
                 orders, following a driver's progress and keeping delivery history.
               </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/phong-delivery-FE" target="_blank" rel="noopener">View on GitHub</a>
+              <a class="link-underline small" href="https://github.com/phongngo053/phong-delivery-FE" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
             </div>
           </article>
 
@@ -221,11 +190,11 @@
                 <span class="badge badge-primary small">REST API</span>
               </div>
               <h3 class="card-project-title">Phong Delivery — Back end</h3>
-              <p class="body-default">
+              <p class="body-default" data-i18n="projectsPage.deliveryBe">
                 The service behind it: users, orders, addresses and assignments, exposed as a REST API
                 for the delivery app and the admin screens.
               </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/phong-delivery-BE" target="_blank" rel="noopener">View on GitHub</a>
+              <a class="link-underline small" href="https://github.com/phongngo053/phong-delivery-BE" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
             </div>
           </article>
 
@@ -240,11 +209,11 @@
                 <span class="badge badge-primary small">Angular</span>
               </div>
               <h3 class="card-project-title">Dating App</h3>
-              <p class="body-default">
+              <p class="body-default" data-i18n="projectsPage.datingApp">
                 A dating application built as a .NET back end with an Angular front end — profiles,
                 matching and messaging end to end.
               </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/DatingApp" target="_blank" rel="noopener">View on GitHub</a>
+              <a class="link-underline small" href="https://github.com/phongngo053/DatingApp" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
             </div>
           </article>
 
@@ -258,11 +227,11 @@
                 <span class="badge badge-primary small">Swagger</span>
               </div>
               <h3 class="card-project-title">Nest Learn</h3>
-              <p class="body-default">
+              <p class="body-default" data-i18n="projectsPage.nestLearn">
                 A playground for learning NestJS properly — one module at a time, with auto-generated
                 Swagger / OpenAPI documentation for every endpoint.
               </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/nest-learn" target="_blank" rel="noopener">View on GitHub</a>
+              <a class="link-underline small" href="https://github.com/phongngo053/nest-learn" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
             </div>
           </article>
 
@@ -276,18 +245,18 @@
                 <span class="badge badge-primary small">Web UI</span>
               </div>
               <h3 class="card-project-title">Dating Count</h3>
-              <p class="body-default">
+              <p class="body-default" data-i18n="projectsPage.datingCount">
                 A vibe-coded web UI experiment — a small, opinionated interface for counting days and
                 dates, built mostly out of CSS.
               </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/dating-count" target="_blank" rel="noopener">View on GitHub</a>
+              <a class="link-underline small" href="https://github.com/phongngo053/dating-count" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
             </div>
           </article>
 
         </div>
 
         <p class="body-small text-neutral-500 mt-64 reveal">
-          More small experiments and forks live on
+          <span data-i18n="projectsPage.more">More small experiments and forks live on</span>
           <a class="link-underline small" href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener">github.com/phongngo053</a>.
         </p>
       </div>
@@ -298,14 +267,14 @@
       <div class="container">
         <div class="cta reveal">
           <div class="heading-top-line large" style="margin-left:auto;margin-right:auto" aria-hidden="true"></div>
-          <h2 class="display-3">Like what you see?</h2>
-          <p class="body-large">
+          <h2 class="display-3" data-i18n="projectsPage.ctaHeading">Like what you see?</h2>
+          <p class="body-large" data-i18n="projectsPage.ctaBody">
             Most of these started as something I needed on a Tuesday night. If you have a problem that
             deserves the same treatment, I'd love to hear about it.
           </p>
           <div class="buttons-row">
-            <a class="btn btn-primary" href="about.html#contact">Get in touch</a>
-            <a class="btn btn-secondary" href="https://github.com/phongngo053" target="_blank" rel="noopener">See my GitHub</a>
+            <a class="btn btn-primary" href="about.html#contact" data-i18n="hero.getInTouch">Get in touch</a>
+            <a class="btn btn-secondary" href="https://github.com/phongngo053" target="_blank" rel="noopener" data-i18n="cta.github">See my GitHub</a>
           </div>
         </div>
       </div>
@@ -327,7 +296,7 @@
             </span>
             <span>Ngô Tiến Phong</span>
           </a>
-          <p class="body-small text-neutral-500 mt-24" style="max-width:340px">
+          <p class="body-small text-neutral-500 mt-24" style="max-width:340px" data-i18n="footer.tagline">
             Backend Developer &amp; Software Engineer. I build APIs, services and small tools that
             make other people's work a little easier.
           </p>
@@ -353,33 +322,32 @@
         </div>
 
         <div>
-          <h4 class="h5">Navigate</h4>
+          <h4 class="h5" data-i18n="footer.navigate">Navigate</h4>
           <ul>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#stack">Stack</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="index.html#experience">Experience</a></li>
-            <li><a href="about.html">Contact</a></li>
+            <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+            <li><a href="index.html#stack" data-i18n="nav.stack">Stack</a></li>
+            <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="index.html#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="about.html" data-i18n="footer.contact">Contact</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="h5">Contact</h4>
+          <h4 class="h5" data-i18n="footer.contact">Contact</h4>
           <ul>
             <li><a href="mailto:ngoti.phong.dev@gmail.com">ngoti.phong.dev@gmail.com</a></li>
             <li><a href="https://github.com/phongngo053" target="_blank" rel="noopener">github.com/phongngo053</a></li>
-            <li><a href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener">All repositories</a></li>
+            <li><a href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener" data-i18n="footer.allRepos">All repositories</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Ngô Tiến Phong. Built from scratch, no frameworks.</span>
-        <span>Design system inspired by Developer X (BRIX Templates) — original code &amp; content.</span>
+        <span>© <span data-year>2026</span> Ngô Tiến Phong. <span data-i18n="footer.built">Built from scratch, no frameworks.</span></span>
+        <span data-i18n="footer.design">Design system inspired by Developer X (BRIX Templates) — original code &amp; content.</span>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>

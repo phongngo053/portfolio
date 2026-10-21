@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About &amp; Contact — Ngô Tiến Phong</title>
-  <meta name="description" content="Who I am, how I work, and how to reach me — Ngô Tiến Phong, Backend Developer & Software Engineer at FPT Software.">
+  <title data-i18n="meta.about.title">About &amp; Contact — Ngô Tiến Phong</title>
+  <meta name="description" data-i18n-content="meta.about.description" content="Who I am, how I work, and how to reach me — Ngô Tiến Phong, Backend Developer & Software Engineer at FPT Software.">
   <meta name="author" content="Ngô Tiến Phong">
   <meta name="theme-color" content="#1b1f24">
 
@@ -13,13 +13,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/main.css">
+
+  <!-- Pick the saved locale before the first paint so the page never flashes the wrong language. -->
+  <script>
+    (function () {
+      var lang = "en";
+      try { lang = localStorage.getItem("phong-lang") || "en"; } catch (e) {}
+      if (lang !== "en" && lang !== "vi") lang = "en";
+      document.documentElement.setAttribute("lang", lang);
+      if (lang !== "en") {
+        document.documentElement.setAttribute("data-lang-pending", lang);
+        setTimeout(function () {
+          document.documentElement.removeAttribute("data-lang-pending");
+        }, 2000);
+      }
+    })();
+  </script>
+
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
 
   <!-- ============================== NAV ============================== -->
   <header class="nav">
     <div class="container nav-inner">
-      <a class="nav-logo" href="index.html" aria-label="Ngô Tiến Phong — home">
+      <a class="nav-logo" href="index.html" aria-label="Ngô Tiến Phong — home" data-i18n-attr="aria-label:nav.home">
         <span class="logo-mark" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
             <path d="M25 21 L13 32 L25 43"/>
@@ -31,17 +50,27 @@
 
       <nav aria-label="Primary">
         <ul class="nav-links" id="nav-links">
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#stack">Stack</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="index.html#experience">Experience</a></li>
-          <li><a href="about.html" class="is-active">About page</a></li>
+          <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+          <li><a href="index.html#stack" data-i18n="nav.stack">Stack</a></li>
+          <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="index.html#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="about.html" class="is-active" data-i18n="nav.aboutPage">About page</a></li>
+          <li class="nav-lang">
+            <div class="lang-switch" role="group" aria-label="Switch language" data-i18n-attr="aria-label:nav.langSwitch">
+              <button class="lang-option is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
+              <button class="lang-option" type="button" data-lang="vi" aria-pressed="false">VN</button>
+            </div>
+          </li>
         </ul>
       </nav>
 
       <div class="nav-actions">
-        <a class="btn btn-primary btn-small" href="#contact">Let's talk</a>
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+        <div class="lang-switch lang-switch-desktop" role="group" aria-label="Switch language" data-i18n-attr="aria-label:nav.langSwitch">
+          <button class="lang-option is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button class="lang-option" type="button" data-lang="vi" aria-pressed="false">VN</button>
+        </div>
+        <a class="btn btn-primary btn-small" href="#contact" data-i18n="nav.talk">Let's talk</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation" data-i18n-attr="aria-label:nav.toggle">
           <span></span>
         </button>
       </div>
@@ -54,8 +83,8 @@
     <section class="page-hero">
       <div class="container">
         <div class="heading-top-line large" aria-hidden="true"></div>
-        <h1 class="display-2">A backend engineer who ships the whole thing.</h1>
-        <p>
+        <h1 class="display-2" data-i18n="aboutPage.heading">A backend engineer who ships the whole thing.</h1>
+        <p data-i18n="aboutPage.intro">
           I write the services, the APIs and the plumbing — and usually the interface in front of them
           too, because shipping something end to end teaches you more than shipping half of it.
         </p>
@@ -73,34 +102,33 @@
             </div>
             <div class="about-media-caption">
               <span class="h5">Ngô Tiến Phong</span>
-              <span class="body-small text-neutral-500">Backend Developer · FPT Software</span>
+              <span class="body-small text-neutral-500" data-i18n="aboutPage.caption">Backend Developer · FPT Software</span>
             </div>
           </div>
 
           <div class="about-body reveal">
             <div class="heading-top-line" aria-hidden="true"></div>
-            <h2 class="h1">The short version</h2>
+            <h2 class="h1" data-i18n="aboutPage.shortVersion">The short version</h2>
 
-            <p class="body-large">
+            <p class="body-large" data-i18n="aboutPage.p1">
               I'm a Backend Developer and Software Engineer at FPT Software, currently working with
               Java. My day-to-day stack is Node.js with NestJS, Express, TypeScript and JavaScript —
               the part of the stack where the data, the contracts and the failure modes live.
             </p>
 
-            <p class="body-large">
+            <p class="body-large" data-i18n="aboutPage.p2">
               I grew up in Hue and graduated from Hue University of Science. Outside of work I read
               novels, mostly at night, which is the same part of the brain I use to design an API.
             </p>
 
-            <p class="body-large">
-              The projects on this site are mine, not coursework I was handed. A browser extension
-              that reads quizzes off the screen, a subtitle tool that translates YouTube in real time,
-              a food-ordering platform rebuilt twice — once as a monolith, once as microservices.
-              Most of them started because I needed the thing, and I decided building it was faster
-              than searching for it.
+            <p class="body-large" data-i18n="aboutPage.p3">
+              The projects on this site are mine, not coursework I was handed. A food-ordering
+              platform rebuilt twice — once as a monolith, once as microservices — and a delivery app
+              split into a React front end and a Node.js back end. Most of them started because I
+              needed the thing, and I decided building it was faster than searching for it.
             </p>
 
-            <p class="body-large">
+            <p class="body-large" data-i18n="aboutPage.p4">
               I like clean boundaries, boring technology and small diffs. I don't like clever code
               that needs a paragraph to explain. Everything on this site is plain HTML, CSS and
               JavaScript — no framework, no build step, nothing between you and the browser.
@@ -117,18 +145,18 @@
         <div class="section-head reveal">
           <div>
             <div class="heading-top-line" aria-hidden="true"></div>
-            <h2 class="h1">Where I've been</h2>
+            <h2 class="h1" data-i18n="exp.heading">Where I've been</h2>
           </div>
-          <p class="body-large">
+          <p class="body-large" data-i18n="aboutPage.timelineIntro">
             Labels rather than dates — a short timeline is honest; an invented one isn't.
           </p>
         </div>
 
         <div class="timeline reveal">
           <div class="timeline-item">
-            <span class="period">Current</span>
-            <h3 class="h3">Software Engineer — FPT Software</h3>
-            <p class="body-default">
+            <span class="period" data-i18n="exp.period.current">Current</span>
+            <h3 class="h3" data-i18n="aboutPage.t1">Software Engineer — FPT Software</h3>
+            <p class="body-default" data-i18n="aboutPage.t1desc">
               Building and maintaining backend services for enterprise clients. Java and the
               Node.js / NestJS ecosystem, with an emphasis on reliability, clear APIs and code that
               the next person can pick up without a briefing.
@@ -136,19 +164,19 @@
           </div>
 
           <div class="timeline-item">
-            <span class="period">Ongoing</span>
-            <h3 class="h3">Independent builder</h3>
-            <p class="body-default">
-              Designing and shipping my own tools — browser extensions, media utilities and full-stack
+            <span class="period" data-i18n="exp.period.ongoing">Ongoing</span>
+            <h3 class="h3" data-i18n="aboutPage.t2">Independent builder</h3>
+            <p class="body-default" data-i18n="aboutPage.t2desc">
+              Designing and shipping my own tools — backend services, delivery apps and full-stack
               demos — mostly at night, mostly for problems I personally had. Every one of them is open
               source and readable.
             </p>
           </div>
 
           <div class="timeline-item">
-            <span class="period">Alumni</span>
-            <h3 class="h3">Hue University of Science</h3>
-            <p class="body-default">
+            <span class="period" data-i18n="exp.period.alumni">Alumni</span>
+            <h3 class="h3" data-i18n="aboutPage.t3">Hue University of Science</h3>
+            <p class="body-default" data-i18n="aboutPage.t3desc">
               Graduated with a focus on software engineering. The graduation project — a delivery
               platform split into a React front end and a Node.js back end — became the first real
               version of Phong Delivery.
@@ -164,33 +192,33 @@
         <div class="section-head reveal">
           <div>
             <div class="heading-top-line" aria-hidden="true"></div>
-            <h2 class="h1">How I work</h2>
+            <h2 class="h1" data-i18n="aboutPage.howHeading">How I work</h2>
           </div>
-          <p class="body-large">
+          <p class="body-large" data-i18n="aboutPage.howIntro">
             Three habits that survived every project so far.
           </p>
         </div>
 
         <div class="cards-grid">
           <div class="card card-feature reveal">
-            <h3 class="h3">Start with the contract</h3>
-            <p class="body-default">
+            <h3 class="h3" data-i18n="aboutPage.card1">Start with the contract</h3>
+            <p class="body-default" data-i18n="aboutPage.card1desc">
               Before writing a service I decide what it exposes and what it refuses to expose. An API
               that says no early is cheaper than a data model that has to be migrated later.
             </p>
           </div>
 
           <div class="card card-feature reveal">
-            <h3 class="h3">Make it runnable</h3>
-            <p class="body-default">
+            <h3 class="h3" data-i18n="aboutPage.card2">Make it runnable</h3>
+            <p class="body-default" data-i18n="aboutPage.card2desc">
               Every project of mine clones and starts. A local setup that takes one command beats a
               perfect README that assumes a machine I no longer own.
             </p>
           </div>
 
           <div class="card card-feature reveal">
-            <h3 class="h3">Leave it readable</h3>
-            <p class="body-default">
+            <h3 class="h3" data-i18n="aboutPage.card3">Leave it readable</h3>
+            <p class="body-default" data-i18n="aboutPage.card3desc">
               Naming, small functions, no clever abstractions. I optimise for the next reader — often
               me, six months later, wondering what I was thinking.
             </p>
@@ -205,9 +233,9 @@
         <div class="section-head reveal">
           <div>
             <div class="heading-top-line" aria-hidden="true"></div>
-            <h2 class="h1">Get in touch</h2>
+            <h2 class="h1" data-i18n="aboutPage.contactHeading">Get in touch</h2>
           </div>
-          <p class="body-large">
+          <p class="body-large" data-i18n="aboutPage.contactIntro">
             Have something that needs building, or just want to compare notes on a stack? My inbox
             is open.
           </p>
@@ -224,7 +252,7 @@
                 </svg>
               </span>
               <span>
-                <span class="label">Email</span>
+                <span class="label" data-i18n="contact.email">Email</span>
                 <span class="value">ngoti.phong.dev@gmail.com</span>
               </span>
             </a>
@@ -236,7 +264,7 @@
                 </svg>
               </span>
               <span>
-                <span class="label">GitHub</span>
+                <span class="label" data-i18n="contact.github">GitHub</span>
                 <span class="value">@phongngo053</span>
               </span>
             </a>
@@ -249,7 +277,7 @@
                 </svg>
               </span>
               <span>
-                <span class="label">Based in</span>
+                <span class="label" data-i18n="contact.basedIn">Based in</span>
                 <span class="value">Hue, Vietnam · GMT+7</span>
               </span>
             </div>
@@ -263,18 +291,18 @@
                 </svg>
               </span>
               <span>
-                <span class="label">Currently into</span>
+                <span class="label" data-i18n="contact.into">Currently into</span>
                 <span class="value">Java, NestJS &amp; novels</span>
               </span>
             </div>
           </div>
 
           <form class="contact-form reveal" id="contact-form" novalidate>
-            <input class="input" type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
-            <input class="input" type="email" id="email" name="email" placeholder="Your email" autocomplete="email" required>
-            <textarea class="input" id="message" name="message" rows="5" placeholder="What are you building?" required></textarea>
-            <button class="btn btn-primary" type="submit">Send message</button>
-            <p class="form-note">
+            <input class="input" type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required" data-i18n-attr="placeholder:form.name">
+            <input class="input" type="email" id="email" name="email" placeholder="Your email" autocomplete="email" required" data-i18n-attr="placeholder:form.email">
+            <textarea class="input" id="message" name="message" rows="5" placeholder="What are you building?" required data-i18n-attr="placeholder:form.message"></textarea>
+            <button class="btn btn-primary" type="submit" data-i18n="form.submit">Send message</button>
+            <p class="form-note" data-i18n="form.note">
               This form opens your mail app with the message pre-filled — nothing is sent to a server
               and nothing is stored.
             </p>
@@ -300,7 +328,7 @@
             </span>
             <span>Ngô Tiến Phong</span>
           </a>
-          <p class="body-small text-neutral-500 mt-24" style="max-width:340px">
+          <p class="body-small text-neutral-500 mt-24" style="max-width:340px" data-i18n="footer.tagline">
             Backend Developer &amp; Software Engineer. I build APIs, services and small tools that
             make other people's work a little easier.
           </p>
@@ -326,33 +354,32 @@
         </div>
 
         <div>
-          <h4 class="h5">Navigate</h4>
+          <h4 class="h5" data-i18n="footer.navigate">Navigate</h4>
           <ul>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#stack">Stack</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="index.html#experience">Experience</a></li>
-            <li><a href="about.html">Contact</a></li>
+            <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+            <li><a href="index.html#stack" data-i18n="nav.stack">Stack</a></li>
+            <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
+            <li><a href="index.html#experience" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="about.html" data-i18n="footer.contact">Contact</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="h5">Contact</h4>
+          <h4 class="h5" data-i18n="footer.contact">Contact</h4>
           <ul>
             <li><a href="mailto:ngoti.phong.dev@gmail.com">ngoti.phong.dev@gmail.com</a></li>
             <li><a href="https://github.com/phongngo053" target="_blank" rel="noopener">github.com/phongngo053</a></li>
-            <li><a href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener">All repositories</a></li>
+            <li><a href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener" data-i18n="footer.allRepos">All repositories</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Ngô Tiến Phong. Built from scratch, no frameworks.</span>
-        <span>Design system inspired by Developer X (BRIX Templates) — original code &amp; content.</span>
+        <span>© <span data-year>2026</span> Ngô Tiến Phong. <span data-i18n="footer.built">Built from scratch, no frameworks.</span></span>
+        <span data-i18n="footer.design">Design system inspired by Developer X (BRIX Templates) — original code &amp; content.</span>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>
