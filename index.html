@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="meta.home.title">Ngô Tiến Phong — Backend Developer &amp; Software Engineer</title>
-  <meta name="description" data-i18n-content="meta.home.description" content="Portfolio of Ngô Tiến Phong — Backend Developer and Software Engineer at FPT Software. Building APIs, services and tools with Node.js, NestJS, TypeScript and Java.">
+  <title data-i18n="meta.home.title">Ngô Tiến Phong — Fullstack Developer &amp; Self-Host Builder</title>
+  <meta name="description" data-i18n-content="meta.home.description" content="Portfolio của Ngô Tiến Phong — Fullstack Developer tại FPT Software. Xây sản phẩm web trọn gói (Next.js, React, Node.js, NestJS, Java), bot truyện AI và tự vận hành Ubuntu Home Server.">
   <meta name="author" content="Ngô Tiến Phong">
   <meta name="theme-color" content="#1b1f24">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" data-i18n-content="meta.home.ogTitle" content="Ngô Tiến Phong — Backend Developer">
-  <meta property="og:description" data-i18n-content="meta.home.ogDescription" content="Backend Developer &amp; Software Engineer. I design and ship APIs, services and tools people actually enjoy using.">
+  <meta property="og:title" data-i18n-content="meta.home.ogTitle" content="Ngô Tiến Phong — Fullstack Developer">
+  <meta property="og:description" data-i18n-content="meta.home.ogDescription" content="Fullstack Developer tự code, tự dựng Ubuntu Home Server và vận hành sản phẩm thật ra ngoài.">
   <meta property="og:image" content="assets/avatar.png">
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -22,11 +22,11 @@
   <!-- Pick the saved locale before the first paint so the page never flashes the wrong language. -->
   <script>
     (function () {
-      var lang = "en";
-      try { lang = localStorage.getItem("phong-lang") || "en"; } catch (e) {}
-      if (lang !== "en" && lang !== "vi") lang = "en";
+      var lang = "vi";
+      try { lang = localStorage.getItem("phong-lang") || "vi"; } catch (e) {}
+      if (lang !== "vi" && lang !== "en") lang = "vi";
       document.documentElement.setAttribute("lang", lang);
-      if (lang !== "en") {
+      if (lang !== "vi") {
         document.documentElement.setAttribute("data-lang-pending", lang);
         setTimeout(function () {
           document.documentElement.removeAttribute("data-lang-pending");
@@ -43,7 +43,7 @@
   <!-- ============================== NAV ============================== -->
   <header class="nav">
     <div class="container nav-inner">
-      <a class="nav-logo" href="index.html" aria-label="Ngô Tiến Phong — home" data-i18n-attr="aria-label:nav.home">
+      <a class="nav-logo" href="index.html" aria-label="Ngô Tiến Phong — trang chủ" data-i18n-attr="aria-label:nav.home">
         <span class="logo-mark" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
             <path d="M25 21 L13 32 L25 43"/>
@@ -55,27 +55,28 @@
 
       <nav aria-label="Primary">
         <ul class="nav-links" id="nav-links">
-          <li><a href="#about" data-i18n="nav.about">About</a></li>
-          <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
-          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
-          <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
-          <li><a href="about.html" data-i18n="nav.aboutPage">About page</a></li>
+          <li><a href="#about" data-i18n="nav.about">Giới thiệu</a></li>
+          <li><a href="#homelab" data-i18n="nav.homelab">Home Server</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Dự án</a></li>
+          <li><a href="#stack" data-i18n="nav.stack">Công nghệ</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Kinh nghiệm</a></li>
+          <li><a href="about.html" data-i18n="nav.aboutPage">Về mình</a></li>
           <li class="nav-lang">
-            <div class="lang-switch" role="group" aria-label="Switch language" data-i18n-attr="aria-label:nav.langSwitch">
-              <button class="lang-option is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
-              <button class="lang-option" type="button" data-lang="vi" aria-pressed="false">VN</button>
+            <div class="lang-switch" role="group" aria-label="Đổi ngôn ngữ" data-i18n-attr="aria-label:nav.langSwitch">
+              <button class="lang-option is-active" type="button" data-lang="vi" aria-pressed="true">VN</button>
+              <button class="lang-option" type="button" data-lang="en" aria-pressed="false">EN</button>
             </div>
           </li>
         </ul>
       </nav>
 
       <div class="nav-actions">
-        <div class="lang-switch lang-switch-desktop" role="group" aria-label="Switch language" data-i18n-attr="aria-label:nav.langSwitch">
-          <button class="lang-option is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
-          <button class="lang-option" type="button" data-lang="vi" aria-pressed="false">VN</button>
+        <div class="lang-switch lang-switch-desktop" role="group" aria-label="Đổi ngôn ngữ" data-i18n-attr="aria-label:nav.langSwitch">
+          <button class="lang-option is-active" type="button" data-lang="vi" aria-pressed="true">VN</button>
+          <button class="lang-option" type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
-        <a class="btn btn-primary btn-small" href="#contact" data-i18n="nav.talk">Let's talk</a>
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation" data-i18n-attr="aria-label:nav.toggle">
+        <a class="btn btn-primary btn-small" href="#contact" data-i18n="nav.talk">Liên hệ</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Mở hoặc đóng menu" data-i18n-attr="aria-label:nav.toggle">
           <span></span>
         </button>
       </div>
@@ -89,30 +90,30 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-copy">
-            <p class="hero-eyebrow"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.eyebrow">Open to new opportunities</span></p>
+            <p class="hero-eyebrow"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.eyebrow">Sẵn sàng hợp tác &amp; dự án mới</span></p>
 
             <h1 class="display-1" data-i18n-html="hero.title">
-              Backend developer building<br />
-              <span class="accent">fast, boringly reliable</span> services.
+              Fullstack developer tự code,<br />
+              <span class="accent">tự dựng server và chạy sản phẩm thật.</span>
             </h1>
 
             <p class="hero-lead" data-i18n-html="hero.lead">
-              I'm <strong class="bold">Ngô Tiến Phong</strong> — a Backend Developer and Software
-              Engineer at FPT Software. I design APIs, break monoliths into services, and build the
-              small tools that make a team's day a little less painful.
+              Mình là <strong class="bold">Ngô Tiến Phong</strong> — Fullstack Developer, hiện là
+              Software Engineer tại FPT Software. Mình làm trọn gói từ giao diện, backend, bot tự
+              động cho tới tự vận hành Ubuntu Home Server ở nhà để đưa các dự án chạy live ra ngoài.
             </p>
 
             <div class="buttons-row">
-              <a class="btn btn-primary" href="#projects" data-i18n="hero.viewWork">View my work</a>
-              <a class="btn btn-secondary" href="#contact" data-i18n="hero.getInTouch">Get in touch</a>
+              <a class="btn btn-primary" href="#projects" data-i18n="hero.viewWork">Xem dự án tiêu biểu</a>
+              <a class="btn btn-secondary" href="#contact" data-i18n="hero.getInTouch">Liên hệ với mình</a>
             </div>
 
             <div class="hero-badges">
-              <span class="badge badge-primary small">Node.js</span>
-              <span class="badge badge-primary small">NestJS</span>
               <span class="badge badge-primary small">TypeScript</span>
+              <span class="badge badge-primary small">Next.js / React</span>
+              <span class="badge badge-primary small">Node.js / NestJS</span>
               <span class="badge badge-primary small">Java</span>
-              <span class="badge badge-primary small">Python</span>
+              <span class="badge badge-primary small">Ubuntu Server</span>
             </div>
           </div>
 
@@ -120,12 +121,12 @@
             <div class="hero-visual-card">
               <img class="avatar-circle _04" src="assets/avatar.png" width="320" height="320" alt="Ngô Tiến Phong">
               <p class="hero-status"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.status">Software Engineer @ FPT Software</span></p>
-              <p class="body-small text-neutral-500" data-i18n="hero.basedIn">Based in Vietnam · Hue University of Science</p>
+              <p class="body-small text-neutral-500" data-i18n="hero.basedIn">Huế, Việt Nam · Tự vận hành Ubuntu Home Server</p>
             </div>
           </div>
         </div>
 
-        <a class="scroll-down" href="#about" aria-label="Scroll to about section" data-i18n-attr="aria-label:hero.scroll">↓</a>
+        <a class="scroll-down" href="#about" aria-label="Cuộn xuống phần giới thiệu" data-i18n-attr="aria-label:hero.scroll">↓</a>
       </div>
     </section>
 
@@ -136,108 +137,107 @@
           <div class="reveal">
             <div class="heading-top-line large" aria-hidden="true"></div>
             <h2 class="display-3" data-i18n="about.heading">
-              I build the invisible layer — the APIs, services and pipelines that keep a product moving.
+              Code chạy trên localhost mới chỉ là một nửa — phần thú vị nhất là đưa nó chạy ổn định ngoài đời thật.
             </h2>
           </div>
 
           <div class="about-copy reveal">
             <p class="body-large" data-i18n-html="about.p1">
-              I started out as a self-taught developer poking at the web, and turned it into a career
-              as a backend engineer. These days I work mostly in <strong class="bold">Java</strong> and
-              <strong class="bold">Node.js / NestJS</strong>, writing services that other people can
-              build on without fearing them.
+              Mình bắt đầu từ việc tự học làm web rồi đi theo con đường kỹ sư phần mềm. Công việc hằng
+              ngày xoay quanh <strong class="bold">Java</strong>, <strong class="bold">Node.js / NestJS</strong>,
+              <strong class="bold">TypeScript</strong> và <strong class="bold">React / Next.js</strong> —
+              nhưng thay vì chỉ dừng ở một lớp backend hay frontend, mình thích nắm trọn từ thiết kế
+              dữ liệu, API cho tới giao diện và khâu triển khai.
             </p>
             <p data-i18n="about.p2">
-              I like the unglamorous work: schema design, idempotent consumers, sensible error messages,
-              a deploy that doesn't wake anyone up. But I also like the side projects — a food-ordering
-              platform rebuilt twice, once as a monolith and once as microservices, and a delivery app
-              split into a React front end and a Node.js back end.
+              Ở nhà mình duy trì một chiếc Ubuntu Home Server để tự host các sản phẩm cá nhân: từ nền
+              tảng đọc truyện sungthe.online, dàn bot tự động crawl và dịch truyện bằng AI, cho tới
+              self-host trợ lý AI (OpenClaw) hỗ trợ công việc hằng ngày.
             </p>
             <p data-i18n="about.p3">
-              Away from the editor I read a lot of novels, and I write software for people who share that
-              habit.
+              Ngoài giờ code, mình mê đọc truyện chữ — và phần lớn những sản phẩm mình tự xây cũng xuất
+              phát từ chính thói quen đó.
             </p>
-            <a class="link-underline mt-32" href="about.html" data-i18n="about.more">More about me</a>
+            <a class="link-underline mt-32" href="about.html" data-i18n="about.more">Đọc thêm về mình</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================== STACK ============================== -->
-    <section class="section" id="stack">
+    <!-- ============================== HOME SERVER ============================== -->
+    <section class="section" id="homelab">
       <div class="container">
         <div class="section-head reveal">
           <div>
             <div class="heading-top-line" aria-hidden="true"></div>
-            <h2 class="display-4" data-i18n="stack.heading">The stack I reach for</h2>
+            <h2 class="display-4" data-i18n="homelab.heading">Tự vận hành trên Ubuntu Home Server</h2>
           </div>
-          <p class="body-default" data-i18n="stack.intro">
-            Tools change constantly. These are the ones I've shipped production code with — and the ones
-            I'd still pick tomorrow.
+          <p class="body-default" data-i18n="homelab.intro">
+            Thay vì để repo nằm yên trên GitHub, mình chạy hẳn một máy chủ Ubuntu tại nhà để tự deploy,
+            tự theo dõi và tự xử lý khi hệ thống có chuyện.
           </p>
         </div>
 
-        <div class="stack-grid">
-          <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#075fe4">TS</span>
-            <h3 class="h4">TypeScript</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.ts">Typed backends, shared contracts</p>
+        <div class="homelab-grid">
+          <article class="card card-homelab reveal">
+            <div class="homelab-head">
+              <span class="skill-mark" style="--mark:#d5691b" aria-hidden="true">UB</span>
+              <span class="status-pill"><span class="dot" aria-hidden="true"></span><span data-i18n="homelab.badgeLive">Chạy 24/7</span></span>
+            </div>
+            <h3 class="h3" data-i18n="homelab.c1Title">Hạ tầng Linux &amp; Reverse Proxy</h3>
+            <p class="body-default" data-i18n="homelab.c1Desc">
+              Quản trị trực tiếp Ubuntu Server tại nhà với Nginx reverse proxy (HTTPS/SSL), phân luồng
+              subdomain rõ ràng và quản lý tiến trình bằng PM2 / Docker để deploy gọn, dễ khởi động lại.
+            </p>
+            <div class="homelab-specs">
+              <span class="homelab-spec">Ubuntu Linux</span>
+              <span class="homelab-spec">Nginx + SSL</span>
+              <span class="homelab-spec">PM2 / Docker</span>
+            </div>
+          </article>
+
+          <article class="card card-homelab reveal">
+            <div class="homelab-head">
+              <span class="skill-mark" style="--mark:#05c168" aria-hidden="true">WEB</span>
+              <span class="status-pill"><span class="dot" aria-hidden="true"></span><span>sungthe.online</span></span>
+            </div>
+            <h3 class="h3" data-i18n="homelab.c2Title">Web Production (sungthe.online)</h3>
+            <p class="body-default" data-i18n="homelab.c2Desc">
+              Host trực tiếp web đọc truyện chữ Sủng Thê (Next.js + Express + SQLite) phục vụ người đọc
+              thật trên cả mobile lẫn desktop — tự chủ hoàn toàn dữ liệu và băng thông.
+            </p>
+            <div>
+              <a class="link-underline small" href="https://sungthe.online" target="_blank" rel="noopener" data-i18n="homelab.c2Link">Mở sungthe.online ↗</a>
+            </div>
+          </article>
+
+          <article class="card card-homelab reveal">
+            <div class="homelab-head">
+              <span class="skill-mark" style="--mark:#2e81ff" aria-hidden="true">AI</span>
+              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span data-i18n="homelab.badgeSelf">Self-hosted</span></span>
+            </div>
+            <h3 class="h3" data-i18n="homelab.c3Title">OpenClaw AI &amp; Bot chạy nền</h3>
+            <p class="body-default" data-i18n="homelab.c3Desc">
+              Self-host OpenClaw làm trợ lý AI riêng hỗ trợ công việc cá nhân (chạy nội bộ, không mở công
+              khai), song song với các worker tự động crawl và dịch truyện chạy theo lịch hằng ngày.
+            </p>
+            <div class="homelab-specs">
+              <span class="homelab-spec">OpenClaw</span>
+              <span class="homelab-spec">Playwright</span>
+              <span class="homelab-spec">Cron Workers</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="card homelab-banner reveal">
+          <div class="homelab-banner-copy">
+            <h3 class="h5" data-i18n="homelab.bannerTitle">Tại sao lại tự dựng server ở nhà?</h3>
+            <p class="body-small text-neutral-400" data-i18n="homelab.bannerDesc">
+              Tự chạm vào Linux, Nginx, SSL, log lỗi và tài nguyên thật giúp mình viết code cẩn thận hơn
+              nhiều — hiểu rõ chuyện gì xảy ra từ lúc bấm git push cho tới khi người dùng mở trình duyệt.
+            </p>
           </div>
-          <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#2e81ff">JS</span>
-            <h3 class="h4">JavaScript</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.js">Browser extensions, Node tooling</p>
-          </div>
-          <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#11845b">N</span>
-            <h3 class="h4">Node.js</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.node">Event-driven services &amp; CLIs</p>
-          </div>
-          <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#05c168">Ne</span>
-            <h3 class="h4">NestJS</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.nest">Modular, testable APIs</p>
-          </div>
-          <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#d5691b">Jv</span>
-            <h3 class="h4">Java</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.java">Enterprise services at FPT</p>
-          </div>
-          <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#075fe4">Py</span>
-            <h3 class="h4">Python</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.python">AI, media pipelines, automation</p>
-          </div>
-          <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#2e81ff">Re</span>
-            <h3 class="h4">React</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.react">Dashboards and app front ends</p>
-          </div>
-          <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#11845b">C#</span>
-            <h3 class="h4">.NET / C#</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.csharp">Desktop &amp; web applications</p>
-          </div>
-          <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#d5691b">Ng</span>
-            <h3 class="h4">Angular</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.angular">Structured enterprise front ends</p>
-          </div>
-          <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#075fe4">SQL</span>
-            <h3 class="h4">MySQL</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.mysql">Relational modelling &amp; queries</p>
-          </div>
-          <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#2e81ff">FB</span>
-            <h3 class="h4">Firebase</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.firebase">Auth &amp; realtime for demos</p>
-          </div>
-          <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#05c168">Ex</span>
-            <h3 class="h4">Browser Extensions</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.ext">Manifest V3, Shadow DOM, CDP</p>
-          </div>
+          <span class="badge badge-primary small" data-i18n="homelab.bannerBadge">Ubuntu · Nginx · PM2 · Docker</span>
         </div>
       </div>
     </section>
@@ -248,12 +248,63 @@
         <div class="section-head reveal">
           <div>
             <div class="heading-top-line" aria-hidden="true"></div>
-            <h2 class="display-4" data-i18n="projects.heading">Selected projects</h2>
+            <h2 class="display-4" data-i18n="projects.heading">Dự án tiêu biểu</h2>
           </div>
-          <a class="link-underline" href="projects.html" data-i18n="projects.viewAll">View all projects</a>
+          <a class="link-underline" href="projects.html" data-i18n="projects.viewAll">Xem tất cả dự án</a>
         </div>
 
         <div class="projects-grid">
+
+          <article class="card card-project card-project-featured reveal">
+            <div class="card-project-visual">
+              <span class="status-pill"><span class="dot" aria-hidden="true"></span><span data-i18n="projects.liveBadge">Live · sungthe.online</span></span>
+              <img src="assets/projects/sungthe.svg" width="112" height="112" alt="">
+            </div>
+            <div class="card-project-body">
+              <div class="card-project-tags">
+                <span class="badge badge-primary small">Next.js 16</span>
+                <span class="badge badge-primary small">React 19</span>
+                <span class="badge badge-primary small">Express</span>
+                <span class="badge badge-primary small">SQLite</span>
+                <span class="badge badge-primary small">Ubuntu / Nginx</span>
+              </div>
+              <h3 class="card-project-title">Sủng Thê (sungthe.online)</h3>
+              <p class="body-default" data-i18n="projects.sungtheDesc">
+                Nền tảng đọc truyện chữ hoàn chỉnh đang chạy production trên Ubuntu Home Server. Gồm giao
+                diện đọc tối ưu cho mobile có lưu tiến độ, Author Studio cho tác giả tự đăng truyện, và
+                Bookhub Admin tích hợp module crawl &amp; dịch AI — kèm hơn 860 bài test tự động (Vitest và node:test).
+              </p>
+              <div class="card-project-links">
+                <a class="link-underline small" href="https://sungthe.online" target="_blank" rel="noopener" data-i18n="projects.openSungthe">Mở sungthe.online ↗</a>
+                <span class="card-project-meta" data-i18n="projects.privateRepoNote">Self-hosted · Private repo</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card-project reveal">
+            <div class="card-project-visual">
+              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span data-i18n="projects.selfHostedBadge">Chạy trên Home Server</span></span>
+              <img src="assets/projects/novel-bots.svg" width="84" height="84" alt="">
+            </div>
+            <div class="card-project-body">
+              <div class="card-project-tags">
+                <span class="badge badge-primary small">Node.js</span>
+                <span class="badge badge-primary small">TypeScript</span>
+                <span class="badge badge-primary small">Playwright</span>
+                <span class="badge badge-primary small">OpenAI / DeepSeek</span>
+              </div>
+              <h3 class="card-project-title" data-i18n="projects.botsTitle">Hệ thống Bot &amp; Dịch Truyện AI</h3>
+              <p class="body-default" data-i18n="projects.botsDesc">
+                Bộ công cụ tự động hoá phục vụ hệ sinh thái đọc truyện: bot chạy theo lịch bằng Playwright,
+                Puppeteer &amp; Cheerio để thu thập dữ liệu, pipeline dịch tiểu thuyết Trung–Việt bằng LLM
+                giữ văn phong tự nhiên, cùng extension dịch truyện mã nguồn mở cho app VBook.
+              </p>
+              <div class="card-project-links">
+                <a class="link-underline small" href="https://github.com/phongngo053/vbook-ext" target="_blank" rel="noopener" data-i18n="projects.openVbook">GitHub: vbook-ext ↗</a>
+                <span class="card-project-meta" data-i18n="projects.botsNote">Automation bots · Private</span>
+              </div>
+            </div>
+          </article>
 
           <article class="card card-project reveal">
             <div class="card-project-visual">
@@ -262,52 +313,21 @@
             <div class="card-project-body">
               <div class="card-project-tags">
                 <span class="badge badge-primary small">NestJS</span>
-                <span class="badge badge-primary small">TypeScript</span>
+                <span class="badge badge-primary small">Microservices</span>
+                <span class="badge badge-primary small">React</span>
                 <span class="badge badge-primary small">MySQL</span>
               </div>
-              <h3 class="card-project-title">Food Ordering</h3>
-              <p class="body-default" data-i18n="projects.foodOrdering">
-                A full food-ordering platform with user, shop and delivery roles. JWT authentication,
-                dish and order management, order tracking, ratings, and push notifications for
-                customers, shops and drivers.
+              <h3 class="card-project-title" data-i18n="projects.foodTitle">Food Ordering Platform</h3>
+              <p class="body-default" data-i18n="projects.foodDesc">
+                Hệ thống đặt đồ ăn trọn vẹn với 3 vai trò khách hàng, cửa hàng và tài xế — được mình dựng
+                qua hai kiến trúc: một bản Monolith chặt chẽ (JWT, theo dõi đơn, đánh giá, push notification)
+                và một bản tách nhỏ thành 6 microservices độc lập, đi kèm giao diện web React + Vite.
               </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-nestjs" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
-            </div>
-          </article>
-
-          <article class="card card-project reveal">
-            <div class="card-project-visual">
-              <img src="assets/projects/phong-delivery.svg" width="84" height="84" alt="">
-            </div>
-            <div class="card-project-body">
-              <div class="card-project-tags">
-                <span class="badge badge-primary small">React</span>
-                <span class="badge badge-primary small">Node.js</span>
+              <div class="card-project-links">
+                <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-nestjs" target="_blank" rel="noopener" data-i18n="projects.linkMonolith">Monolith (NestJS) ↗</a>
+                <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-micro" target="_blank" rel="noopener" data-i18n="projects.linkMicro">Microservices ↗</a>
+                <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-react" target="_blank" rel="noopener" data-i18n="projects.linkWeb">Web (React) ↗</a>
               </div>
-              <h3 class="card-project-title">Phong Delivery</h3>
-              <p class="body-default" data-i18n="projects.phongDelivery">
-                My graduation project: a delivery application with a React front end and a Node.js
-                back end — order placement, driver assignment, live status and history.
-              </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/phong-delivery-FE" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
-            </div>
-          </article>
-
-          <article class="card card-project reveal">
-            <div class="card-project-visual">
-              <img src="assets/projects/nest-learn.svg" width="84" height="84" alt="">
-            </div>
-            <div class="card-project-body">
-              <div class="card-project-tags">
-                <span class="badge badge-primary small">NestJS</span>
-                <span class="badge badge-primary small">Swagger</span>
-              </div>
-              <h3 class="card-project-title">Nest Learn</h3>
-              <p class="body-default" data-i18n="projects.nestLearn">
-                A playground for learning NestJS properly — one module at a time, with auto-generated
-                Swagger / OpenAPI documentation for every endpoint.
-              </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/nest-learn" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
             </div>
           </article>
 
@@ -315,73 +335,152 @@
       </div>
     </section>
 
-    <!-- ============================== EXPERIENCE ============================== -->
-    <section class="section" id="experience">
+    <!-- ============================== STACK ============================== -->
+    <section class="section" id="stack">
       <div class="container">
         <div class="section-head reveal">
           <div>
             <div class="heading-top-line" aria-hidden="true"></div>
-            <h2 class="display-4" data-i18n="exp.heading">Where I've been</h2>
+            <h2 class="display-4" data-i18n="stack.heading">Bộ công nghệ mình dùng hằng ngày</h2>
+          </div>
+          <p class="body-default" data-i18n="stack.intro">
+            Công nghệ mới ra liên tục, nhưng đây là những thứ mình thực sự đã đưa lên production — từ giao
+            diện, API cho tới máy chủ Linux.
+          </p>
+        </div>
+
+        <div class="stack-grid">
+          <div class="card card-skills reveal">
+            <span class="skill-mark" style="--mark:#075fe4" aria-hidden="true">TS</span>
+            <h3 class="h4">TypeScript</h3>
+            <p class="body-small text-neutral-500" data-i18n="stack.ts">Fullstack chặt kiểu, dùng chung contract</p>
+          </div>
+          <div class="card card-skills reveal">
+            <span class="skill-mark" style="--mark:#2e81ff" aria-hidden="true">Nx</span>
+            <h3 class="h4">Next.js &amp; React</h3>
+            <p class="body-small text-neutral-500" data-i18n="stack.next">App Router, SSR &amp; giao diện ứng dụng</p>
+          </div>
+          <div class="card card-skills reveal">
+            <span class="skill-mark" style="--mark:#11845b" aria-hidden="true">Nd</span>
+            <h3 class="h4">Node.js</h3>
+            <p class="body-small text-neutral-500" data-i18n="stack.node">REST API, worker nền &amp; công cụ CLI</p>
+          </div>
+          <div class="card card-skills reveal">
+            <span class="skill-mark" style="--mark:#05c168" aria-hidden="true">Ne</span>
+            <h3 class="h4">NestJS</h3>
+            <p class="body-small text-neutral-500" data-i18n="stack.nest">Backend chia module, kiến trúc microservices</p>
+          </div>
+          <div class="card card-skills reveal">
+            <span class="skill-mark" style="--mark:#d5691b" aria-hidden="true">Jv</span>
+            <h3 class="h4">Java</h3>
+            <p class="body-small text-neutral-500" data-i18n="stack.java">Hệ thống doanh nghiệp tại FPT Software</p>
+          </div>
+          <div class="card card-skills reveal">
+            <span class="skill-mark" style="--mark:#075fe4" aria-hidden="true">Py</span>
+            <h3 class="h4">Python</h3>
+            <p class="body-small text-neutral-500" data-i18n="stack.python">Tự động hoá, xử lý dữ liệu &amp; AI</p>
+          </div>
+          <div class="card card-skills reveal">
+            <span class="skill-mark" style="--mark:#d5691b" aria-hidden="true">Ng</span>
+            <h3 class="h4">Angular</h3>
+            <p class="body-small text-neutral-500" data-i18n="stack.angular">Front end doanh nghiệp có cấu trúc rõ</p>
+          </div>
+          <div class="card card-skills reveal">
+            <span class="skill-mark" style="--mark:#2e81ff" aria-hidden="true">SQL</span>
+            <h3 class="h4">MySQL</h3>
+            <p class="body-small text-neutral-500" data-i18n="stack.mysql">Thiết kế lược đồ &amp; tối ưu truy vấn</p>
+          </div>
+          <div class="card card-skills reveal">
+            <span class="skill-mark" style="--mark:#05c168" aria-hidden="true">DB</span>
+            <h3 class="h4">SQLite</h3>
+            <p class="body-small text-neutral-500" data-i18n="stack.sqlite">Nhẹ, nhanh, chuẩn cho sản phẩm self-host</p>
+          </div>
+          <div class="card card-skills reveal">
+            <span class="skill-mark" style="--mark:#d5691b" aria-hidden="true">UB</span>
+            <h3 class="h4">Ubuntu &amp; Nginx</h3>
+            <p class="body-small text-neutral-500" data-i18n="stack.ubuntu">Quản trị Linux, reverse proxy &amp; SSL</p>
+          </div>
+          <div class="card card-skills reveal">
+            <span class="skill-mark" style="--mark:#075fe4" aria-hidden="true">Dk</span>
+            <h3 class="h4">Docker &amp; PM2</h3>
+            <p class="body-small text-neutral-500" data-i18n="stack.docker">Đóng gói dịch vụ &amp; giữ process chạy 24/7</p>
+          </div>
+          <div class="card card-skills reveal">
+            <span class="skill-mark" style="--mark:#11845b" aria-hidden="true">PW</span>
+            <h3 class="h4">Playwright / Bots</h3>
+            <p class="body-small text-neutral-500" data-i18n="stack.bots">Headless browser, crawler &amp; cron job</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== EXPERIENCE ============================== -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="heading-top-line" aria-hidden="true"></div>
+            <h2 class="display-4" data-i18n="exp.heading">Hành trình &amp; Kinh nghiệm</h2>
           </div>
           <p class="body-default" data-i18n="exp.intro">
-            A short track record of shipping software, learning in public and keeping the pipeline green.
+            Làm việc nghiêm túc trong môi trường doanh nghiệp, đồng thời liên tục tự build và vận hành
+            sản phẩm cá nhân.
           </p>
         </div>
 
         <div class="experience-list">
           <div class="card card-experience reveal">
             <div class="experience-role">
-              <span class="period" data-i18n="exp.period.current">Current</span>
+              <span class="period" data-i18n="exp.period.current">Hiện tại</span>
               <h3 class="h3" data-i18n="exp.role1">Software Engineer</h3>
               <p class="body-small text-neutral-500">FPT Software</p>
             </div>
             <div>
               <p data-i18n="exp.role1.desc">
-                Building and maintaining backend services for enterprise clients — mostly Java and
-                Node.js services behind REST APIs, with an eye on reliability, observability and the
-                on-call experience.
+                Phát triển và duy trì các dịch vụ backend cho khách hàng doanh nghiệp — chủ yếu xoay quanh
+                Java, Node.js và REST API, chú trọng độ ổn định, khả năng theo dõi log và vận hành an toàn.
               </p>
               <ul>
-                <li data-i18n="exp.role1.li1">Design and ship APIs and services used by downstream product teams.</li>
-                <li data-i18n="exp.role1.li2">Work across Java, Node.js / NestJS, TypeScript and SQL.</li>
-                <li data-i18n="exp.role1.li3">Keep deployments boring: repeatable, reversible, documented.</li>
+                <li data-i18n="exp.role1.li1">Thiết kế và triển khai API, service để các team sản phẩm phía trước tích hợp thuận tiện.</li>
+                <li data-i18n="exp.role1.li2">Làm việc thường xuyên với Java, Node.js / NestJS, TypeScript và SQL.</li>
+                <li data-i18n="exp.role1.li3">Ưu tiên quy trình deploy rõ ràng: dễ lặp lại, dễ rollback và có tài liệu đầy đủ.</li>
               </ul>
             </div>
           </div>
 
           <div class="card card-experience reveal">
             <div class="experience-role">
-              <span class="period" data-i18n="exp.period.alumni">Alumni</span>
-              <h3 class="h3" data-i18n="exp.role2">B.Sc. Information Technology</h3>
-              <p class="body-small text-neutral-500">Hue University of Science</p>
+              <span class="period" data-i18n="exp.period.ongoing">Duy trì 24/7</span>
+              <h3 class="h3" data-i18n="exp.role2">Fullstack &amp; Self-Host Builder</h3>
+              <p class="body-small text-neutral-500" data-i18n="exp.role2.tag">Dự án cá nhân &amp; Ubuntu Home Server</p>
             </div>
             <div>
               <p data-i18n="exp.role2.desc">
-                Where the fundamentals came from: data structures, databases, networks — and the habit
-                of reading documentation all the way to the bottom.
+                Tự xây dựng và vận hành trọn vẹn các sản phẩm phục vụ nhu cầu thật của bản thân — từ giao
+                diện web, backend, bot tự động cho tới hạ tầng máy chủ Linux đặt tại nhà.
               </p>
               <ul>
-                <li data-i18n="exp.role2.li1">Graduated with a focus on software engineering and information systems.</li>
-                <li data-i18n="exp.role2.li2">Started writing for the web, and never really stopped.</li>
+                <li data-i18n="exp.role2.li1">Vận hành sungthe.online (Next.js + Express + SQLite) với hơn 860 automated tests trên Ubuntu Server.</li>
+                <li data-i18n="exp.role2.li2">Phát triển dàn bot crawl, pipeline dịch truyện AI và extension mã nguồn mở vbook-ext.</li>
+                <li data-i18n="exp.role2.li3">Self-host OpenClaw làm trợ lý AI riêng và quản lý toàn bộ dịch vụ qua Nginx + PM2 / Docker.</li>
               </ul>
             </div>
           </div>
 
           <div class="card card-experience reveal">
             <div class="experience-role">
-              <span class="period" data-i18n="exp.period.ongoing">Ongoing</span>
-              <h3 class="h3" data-i18n="exp.role3">Independent builder</h3>
-              <p class="body-small text-neutral-500" data-i18n="exp.role3.tag">Open source &amp; side projects</p>
+              <span class="period" data-i18n="exp.period.alumni">Tốt nghiệp</span>
+              <h3 class="h3" data-i18n="exp.role3">Cử nhân Công nghệ Thông tin</h3>
+              <p class="body-small text-neutral-500">Hue University of Science</p>
             </div>
             <div>
               <p data-i18n="exp.role3.desc">
-                Personal projects shipped publicly — full-stack apps and backend services — mostly to
-                solve my own problems, then kept because other people found them useful too.
+                Nơi đặt nền móng về cấu trúc dữ liệu, cơ sở dữ liệu, mạng máy tính — và thói quen tự đọc
+                tài liệu gốc để giải quyết vấn đề tận gốc.
               </p>
               <ul>
-                <li data-i18n="exp.role3.li1">26 public repositories across JavaScript, TypeScript, Python, C#, HTML and CSS.</li>
-                <li data-i18n="exp.role3.li2">MIT-licensed where the project is worth reusing.</li>
-                <li data-i18n="exp.role3.li3">Everything local-first: no telemetry, no account required, no cloud bill.</li>
+                <li data-i18n="exp.role3.li1">Tốt nghiệp chuyên ngành Kỹ thuật phần mềm và Hệ thống thông tin tại ĐH Khoa học Huế.</li>
+                <li data-i18n="exp.role3.li2">Thực hiện đồ án tốt nghiệp Phong Delivery (React + Node.js) từ đầu đến cuối.</li>
               </ul>
             </div>
           </div>
@@ -390,42 +489,42 @@
     </section>
 
     <!-- ============================== STATS ============================== -->
-    <section class="section section-tight section-alt">
+    <section class="section section-tight">
       <div class="container">
         <div class="stats-grid">
           <div class="stat reveal">
-            <span class="stat-value">26</span>
-            <span class="stat-label" data-i18n="stats.repositories">Public repositories</span>
+            <span class="stat-value">24/7</span>
+            <span class="stat-label" data-i18n="stats.server">Ubuntu Home Server tự vận hành</span>
           </div>
           <div class="stat reveal">
-            <span class="stat-value">8</span>
-            <span class="stat-label" data-i18n="stats.projects">Projects shipped</span>
+            <span class="stat-value">860+</span>
+            <span class="stat-label" data-i18n="stats.tests">Automated tests cho Sủng Thê</span>
           </div>
           <div class="stat reveal">
-            <span class="stat-value">12</span>
-            <span class="stat-label" data-i18n="stats.technologies">Technologies in the stack</span>
+            <span class="stat-value">6</span>
+            <span class="stat-label" data-i18n="stats.projects">Dự án cốt lõi đang show</span>
           </div>
           <div class="stat reveal">
             <span class="stat-value">∞</span>
-            <span class="stat-label" data-i18n="stats.novels">Novels on the reading list</span>
+            <span class="stat-label" data-i18n="stats.novels">Truyện chữ trong danh sách đọc</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ============================== CTA ============================== -->
-    <section class="section" id="contact">
+    <section class="section section-alt" id="contact">
       <div class="container">
         <div class="cta reveal">
           <div class="heading-top-line large" style="margin-left:auto;margin-right:auto" aria-hidden="true"></div>
-          <h2 class="display-3" data-i18n="cta.heading">Interested in working together?</h2>
+          <h2 class="display-3" data-i18n="cta.heading">Có dự án hay muốn trao đổi kỹ thuật?</h2>
           <p class="body-large" data-i18n="cta.body">
-            I'm open to backend engineering roles and interesting collaborations — especially around
-            Node.js, NestJS and Java services. Tell me what you're building.
+            Mình luôn mở lòng với các cơ hội Fullstack Developer, hợp tác làm sản phẩm web, hoặc đơn giản
+            là trao đổi về kiến trúc backend, tự dựng server và làm bot.
           </p>
           <div class="buttons-row">
-            <a class="btn btn-primary" href="mailto:ngoti.phong.dev@gmail.com" data-i18n="cta.email">Send me an email</a>
-            <a class="btn btn-secondary" href="https://github.com/phongngo053" target="_blank" rel="noopener" data-i18n="cta.github">See my GitHub</a>
+            <a class="btn btn-primary" href="mailto:ngoti.phong.dev@gmail.com" data-i18n="cta.email">Gửi email cho mình</a>
+            <a class="btn btn-secondary" href="https://github.com/phongngo053" target="_blank" rel="noopener" data-i18n="cta.github">Xem GitHub của mình</a>
           </div>
         </div>
       </div>
@@ -448,8 +547,8 @@
             <span>Ngô Tiến Phong</span>
           </a>
           <p class="body-small text-neutral-500 mt-24" style="max-width:340px" data-i18n="footer.tagline">
-            Backend Developer &amp; Software Engineer. I build APIs, services and small tools that
-            make other people's work a little easier.
+            Fullstack Developer &amp; Self-Host Builder. Tự viết giao diện, API, bot tự động và vận hành
+            sản phẩm thật trên Ubuntu Home Server.
           </p>
           <div class="social-row mt-32">
             <a href="https://github.com/phongngo053" target="_blank" rel="noopener" aria-label="GitHub">
@@ -463,38 +562,41 @@
                 <path d="m3 7 9 6 9-6"/>
               </svg>
             </a>
-            <a href="projects.html" aria-label="Projects">
+            <a href="https://sungthe.online" target="_blank" rel="noopener" aria-label="Sủng Thê Online">
               <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 6.5h6l2 2.5h8v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/>
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M3.6 9h16.8M3.6 15h16.8"/>
+                <path d="M12 3a14.5 14.5 0 0 0 0 18 14.5 14.5 0 0 0 0-18Z"/>
               </svg>
             </a>
           </div>
         </div>
 
         <div>
-          <h4 class="h5" data-i18n="footer.navigate">Navigate</h4>
+          <h2 class="h5" data-i18n="footer.navigate">Điều hướng</h2>
           <ul>
-            <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
-            <li><a href="index.html#stack" data-i18n="nav.stack">Stack</a></li>
-            <li><a href="index.html#projects" data-i18n="nav.projects">Projects</a></li>
-            <li><a href="index.html#experience" data-i18n="nav.experience">Experience</a></li>
-            <li><a href="about.html" data-i18n="footer.contact">Contact</a></li>
+            <li><a href="index.html#about" data-i18n="nav.about">Giới thiệu</a></li>
+            <li><a href="index.html#homelab" data-i18n="nav.homelab">Home Server</a></li>
+            <li><a href="projects.html" data-i18n="nav.projects">Dự án</a></li>
+            <li><a href="index.html#stack" data-i18n="nav.stack">Công nghệ</a></li>
+            <li><a href="about.html" data-i18n="footer.contact">Liên hệ</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="h5" data-i18n="footer.contact">Contact</h4>
+          <h2 class="h5" data-i18n="footer.contact">Liên hệ</h2>
           <ul>
             <li><a href="mailto:ngoti.phong.dev@gmail.com">ngoti.phong.dev@gmail.com</a></li>
+            <li><a href="https://sungthe.online" target="_blank" rel="noopener">sungthe.online</a></li>
             <li><a href="https://github.com/phongngo053" target="_blank" rel="noopener">github.com/phongngo053</a></li>
-            <li><a href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener" data-i18n="footer.allRepos">All repositories</a></li>
+            <li><a href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener" data-i18n="footer.allRepos">Tất cả repository</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Ngô Tiến Phong. <span data-i18n="footer.built">Built from scratch, no frameworks.</span></span>
-        <span data-i18n="footer.design">Design system inspired by Developer X (BRIX Templates) — original code &amp; content.</span>
+        <span>© <span data-year>2026</span> Ngô Tiến Phong. <span data-i18n="footer.built">Viết thuần HTML, CSS, JS — không framework.</span></span>
+        <span data-i18n="footer.design">Thiết kế lấy cảm hứng từ Developer X (BRIX Templates) — mã nguồn và nội dung tự viết hoàn toàn.</span>
       </div>
     </div>
   </footer>

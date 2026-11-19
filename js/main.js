@@ -49,7 +49,7 @@
   }
 
   /* ------------------------------------------------------- Active link --- */
-  var sectionIds = ["home", "about", "stack", "projects", "experience", "contact"];
+  var sectionIds = ["home", "about", "homelab", "projects", "stack", "experience", "contact"];
   var navAnchors = Array.prototype.slice.call(
     document.querySelectorAll('.nav-links a[href^="#"]')
   );
@@ -186,7 +186,7 @@
       };
 
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(value).then(done).catch(function () {});
+        navigator.clipboard.writeText(value).then(done).catch(function () { });
       }
     });
   });

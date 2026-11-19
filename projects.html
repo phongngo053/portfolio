@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="meta.projects.title">Projects — Ngô Tiến Phong</title>
-  <meta name="description" data-i18n-content="meta.projects.description" content="Every project I've shipped: backend services, microservices, delivery apps and full-stack apps.">
+  <title data-i18n="meta.projects.title">Dự án — Ngô Tiến Phong</title>
+  <meta name="description" data-i18n-content="meta.projects.description" content="Các dự án đã triển khai: web đọc truyện live sungthe.online, dàn bot crawl &amp; dịch truyện AI, kiến trúc microservices và ứng dụng fullstack.">
   <meta name="author" content="Ngô Tiến Phong">
   <meta name="theme-color" content="#1b1f24">
 
@@ -17,11 +17,11 @@
   <!-- Pick the saved locale before the first paint so the page never flashes the wrong language. -->
   <script>
     (function () {
-      var lang = "en";
-      try { lang = localStorage.getItem("phong-lang") || "en"; } catch (e) {}
-      if (lang !== "en" && lang !== "vi") lang = "en";
+      var lang = "vi";
+      try { lang = localStorage.getItem("phong-lang") || "vi"; } catch (e) {}
+      if (lang !== "vi" && lang !== "en") lang = "vi";
       document.documentElement.setAttribute("lang", lang);
-      if (lang !== "en") {
+      if (lang !== "vi") {
         document.documentElement.setAttribute("data-lang-pending", lang);
         setTimeout(function () {
           document.documentElement.removeAttribute("data-lang-pending");
@@ -38,7 +38,7 @@
   <!-- ============================== NAV ============================== -->
   <header class="nav">
     <div class="container nav-inner">
-      <a class="nav-logo" href="index.html" aria-label="Ngô Tiến Phong — home" data-i18n-attr="aria-label:nav.home">
+      <a class="nav-logo" href="index.html" aria-label="Ngô Tiến Phong — trang chủ" data-i18n-attr="aria-label:nav.home">
         <span class="logo-mark" aria-hidden="true">
           <svg width="22" height="22" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
             <path d="M25 21 L13 32 L25 43"/>
@@ -50,27 +50,28 @@
 
       <nav aria-label="Primary">
         <ul class="nav-links" id="nav-links">
-          <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
-          <li><a href="index.html#stack" data-i18n="nav.stack">Stack</a></li>
-          <li><a href="projects.html" class="is-active" data-i18n="nav.projects">Projects</a></li>
-          <li><a href="index.html#experience" data-i18n="nav.experience">Experience</a></li>
-          <li><a href="about.html" data-i18n="nav.aboutPage">About page</a></li>
+          <li><a href="index.html#about" data-i18n="nav.about">Giới thiệu</a></li>
+          <li><a href="index.html#homelab" data-i18n="nav.homelab">Home Server</a></li>
+          <li><a href="projects.html" class="is-active" data-i18n="nav.projects">Dự án</a></li>
+          <li><a href="index.html#stack" data-i18n="nav.stack">Công nghệ</a></li>
+          <li><a href="index.html#experience" data-i18n="nav.experience">Kinh nghiệm</a></li>
+          <li><a href="about.html" data-i18n="nav.aboutPage">Về mình</a></li>
           <li class="nav-lang">
-            <div class="lang-switch" role="group" aria-label="Switch language" data-i18n-attr="aria-label:nav.langSwitch">
-              <button class="lang-option is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
-              <button class="lang-option" type="button" data-lang="vi" aria-pressed="false">VN</button>
+            <div class="lang-switch" role="group" aria-label="Đổi ngôn ngữ" data-i18n-attr="aria-label:nav.langSwitch">
+              <button class="lang-option is-active" type="button" data-lang="vi" aria-pressed="true">VN</button>
+              <button class="lang-option" type="button" data-lang="en" aria-pressed="false">EN</button>
             </div>
           </li>
         </ul>
       </nav>
 
       <div class="nav-actions">
-        <div class="lang-switch lang-switch-desktop" role="group" aria-label="Switch language" data-i18n-attr="aria-label:nav.langSwitch">
-          <button class="lang-option is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
-          <button class="lang-option" type="button" data-lang="vi" aria-pressed="false">VN</button>
+        <div class="lang-switch lang-switch-desktop" role="group" aria-label="Đổi ngôn ngữ" data-i18n-attr="aria-label:nav.langSwitch">
+          <button class="lang-option is-active" type="button" data-lang="vi" aria-pressed="true">VN</button>
+          <button class="lang-option" type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
-        <a class="btn btn-primary btn-small" href="about.html#contact" data-i18n="nav.talk">Let's talk</a>
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation" data-i18n-attr="aria-label:nav.toggle">
+        <a class="btn btn-primary btn-small" href="about.html#contact" data-i18n="nav.talk">Liên hệ</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Mở hoặc đóng menu" data-i18n-attr="aria-label:nav.toggle">
           <span></span>
         </button>
       </div>
@@ -83,10 +84,10 @@
     <section class="page-hero">
       <div class="container">
         <div class="heading-top-line large" aria-hidden="true"></div>
-        <h1 class="display-2" data-i18n="projectsPage.heading">Every project, one place.</h1>
+        <h1 class="display-2" data-i18n="projectsPage.heading">Các dự án tiêu biểu.</h1>
         <p data-i18n="projectsPage.intro">
-          Eight repositories, each one started because I needed the thing to exist. Most of them run
-          locally, none of them phone home, and all of them are open for you to read.
+          Chỉ giữ lại những dự án có chiều sâu và thực sự chạy được — từ web production trên Home Server,
+          dàn bot truyện AI cho tới các hệ thống fullstack và microservices.
         </p>
       </div>
     </section>
@@ -94,37 +95,88 @@
     <!-- ============================== PROJECT GRID ============================== -->
     <section class="section" style="padding-top:40px">
       <div class="container">
-        <div class="filter-row reveal" role="group" aria-label="Filter projects by language" data-i18n-attr="aria-label:projectsPage.filterLabel">
-          <button class="chip is-active" type="button" data-filter="all" aria-pressed="true" data-i18n="projectsPage.filterAll">All</button>
-          <button class="chip" type="button" data-filter="javascript" aria-pressed="false">JavaScript</button>
-          <button class="chip" type="button" data-filter="typescript" aria-pressed="false">TypeScript</button>
-          <button class="chip" type="button" data-filter="csharp" aria-pressed="false">C# / .NET</button>
-          <button class="chip" type="button" data-filter="css" aria-pressed="false">CSS</button>
+        <div class="filter-row reveal" role="group" aria-label="Lọc dự án theo nhóm" data-i18n-attr="aria-label:projectsPage.filterLabel">
+          <button class="chip is-active" type="button" data-filter="all" aria-pressed="true" data-i18n="projectsPage.filterAll">Tất cả</button>
+          <button class="chip" type="button" data-filter="live" aria-pressed="false" data-i18n="projectsPage.filterLive">Đang chạy (Live)</button>
+          <button class="chip" type="button" data-filter="bot" aria-pressed="false" data-i18n="projectsPage.filterBot">Bot &amp; AI</button>
+          <button class="chip" type="button" data-filter="fullstack" aria-pressed="false" data-i18n="projectsPage.filterFullstack">Fullstack</button>
+          <button class="chip" type="button" data-filter="backend" aria-pressed="false" data-i18n="projectsPage.filterBackend">Backend / Microservices</button>
         </div>
 
         <div class="projects-grid">
 
-          <article class="card card-project reveal" data-tags="typescript">
+          <article class="card card-project reveal" data-tags="live,fullstack">
             <div class="card-project-visual">
-              <img src="assets/projects/food-ordering-nestjs.svg" width="84" height="84" alt="">
+              <span class="status-pill"><span class="dot" aria-hidden="true"></span><span data-i18n="projects.liveBadge">Live · sungthe.online</span></span>
+              <img src="assets/projects/sungthe.svg" width="84" height="84" alt="">
             </div>
             <div class="card-project-body">
               <div class="card-project-tags">
-                <span class="badge badge-primary small">NestJS</span>
-                <span class="badge badge-primary small">TypeScript</span>
-                <span class="badge badge-primary small">MySQL</span>
+                <span class="badge badge-primary small">Next.js 16</span>
+                <span class="badge badge-primary small">React 19</span>
+                <span class="badge badge-primary small">Express</span>
+                <span class="badge badge-primary small">SQLite</span>
               </div>
-              <h3 class="card-project-title">Food Ordering</h3>
-              <p class="body-default" data-i18n="projectsPage.foodOrdering">
-                A full food-ordering platform with user, shop and delivery roles. JWT authentication,
-                dish and order management, order tracking, ratings and reviews, plus push notifications
-                for customers, shops and drivers.
+              <h2 class="card-project-title">Sủng Thê (sungthe.online)</h2>
+              <p class="body-default" data-i18n="projectsPage.sungtheDesc">
+                Web đọc truyện chữ hoàn chỉnh đang chạy thật trên Ubuntu Home Server: Next.js 16 App
+                Router (React 19) + Express + SQLite. Có giao diện đọc lưu tiến độ cho mobile, Author
+                Studio cho tác giả tự đăng và Bookhub Admin tích hợp crawl &amp; dịch AI (835 Vitest + 28 backend tests).
               </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-nestjs" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
+              <div class="card-project-links">
+                <a class="link-underline small" href="https://sungthe.online" target="_blank" rel="noopener" data-i18n="projects.openSungthe">Mở sungthe.online ↗</a>
+                <span class="card-project-meta" data-i18n="projects.privateRepoNote">Self-hosted · Private repo</span>
+              </div>
             </div>
           </article>
 
-          <article class="card card-project reveal" data-tags="typescript">
+          <article class="card card-project reveal" data-tags="live,bot">
+            <div class="card-project-visual">
+              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span data-i18n="projects.selfHostedBadge">Chạy trên Home Server</span></span>
+              <img src="assets/projects/novel-bots.svg" width="84" height="84" alt="">
+            </div>
+            <div class="card-project-body">
+              <div class="card-project-tags">
+                <span class="badge badge-primary small">Node.js</span>
+                <span class="badge badge-primary small">TypeScript</span>
+                <span class="badge badge-primary small">Playwright</span>
+                <span class="badge badge-primary small">OpenAI / DeepSeek</span>
+              </div>
+              <h2 class="card-project-title" data-i18n="projectsPage.botsTitle">Bot Crawl &amp; Pipeline Dịch Truyện AI</h2>
+              <p class="body-default" data-i18n="projectsPage.botsDesc">
+                Bộ worker tự động chạy nền trên Ubuntu Server: dùng Playwright, Puppeteer, Cheerio và
+                node-schedule để thu thập dữ liệu định kỳ, kết hợp pipeline TypeScript + OpenAI/DeepSeek
+                API để dịch tiểu thuyết Trung–Việt mượt và giữ đúng ngữ cảnh.
+              </p>
+              <div class="card-project-links">
+                <span class="card-project-meta" data-i18n="projects.botsNote">Automation bots · Private</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card-project reveal" data-tags="bot">
+            <div class="card-project-visual">
+              <img src="assets/projects/vbook-ext.svg" width="84" height="84" alt="">
+            </div>
+            <div class="card-project-body">
+              <div class="card-project-tags">
+                <span class="badge badge-primary small">JavaScript</span>
+                <span class="badge badge-primary small">VBook Plugin</span>
+                <span class="badge badge-primary small">DeepSeek / OpenAI</span>
+              </div>
+              <h2 class="card-project-title" data-i18n="projectsPage.vbookTitle">VBook Translate Extension</h2>
+              <p class="body-default" data-i18n="projectsPage.vbookDesc">
+                Extension mã nguồn mở (sungthe-translate) cho ứng dụng đọc truyện VBook trên Android và
+                iOS — hỗ trợ dịch truyện trực tiếp qua API tương thích OpenAI (mặc định DeepSeek), cho
+                phép đổi model và base URL linh hoạt.
+              </p>
+              <div class="card-project-links">
+                <a class="link-underline small" href="https://github.com/phongngo053/vbook-ext" target="_blank" rel="noopener" data-i18n="projects.openVbook">GitHub: vbook-ext ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card-project reveal" data-tags="fullstack,backend">
             <div class="card-project-visual">
               <img src="assets/projects/food-ordering-micro.svg" width="84" height="84" alt="">
             </div>
@@ -132,131 +184,72 @@
               <div class="card-project-tags">
                 <span class="badge badge-primary small">NestJS</span>
                 <span class="badge badge-primary small">Microservices</span>
+                <span class="badge badge-primary small">React</span>
+                <span class="badge badge-primary small">MySQL</span>
               </div>
-              <h3 class="card-project-title">Food Ordering — Microservices</h3>
-              <p class="body-default" data-i18n="projectsPage.foodOrderingMicro">
-                The same domain rebuilt as independent services: authentication, product, category,
-                ordering, settings and notification, each deployable on its own and talking over
-                documented contracts.
+              <h2 class="card-project-title" data-i18n="projectsPage.foodTitle">Food Ordering — Monolith &amp; Microservices</h2>
+              <p class="body-default" data-i18n="projectsPage.foodDesc">
+                Hệ thống đặt đồ ăn 3 vai trò (khách hàng, cửa hàng, tài xế) được xây dựng thành hai kiến
+                trúc song song để so sánh: bản Monolith NestJS + MySQL đầy đủ JWT, đơn hàng, đánh giá,
+                thông báo đẩy; bản Microservices tách 6 service độc lập; kèm giao diện web React + Vite.
               </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-micro" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
+              <div class="card-project-links">
+                <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-nestjs" target="_blank" rel="noopener" data-i18n="projects.linkMonolith">Monolith (NestJS) ↗</a>
+                <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-micro" target="_blank" rel="noopener" data-i18n="projects.linkMicro">Microservices ↗</a>
+                <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-react" target="_blank" rel="noopener" data-i18n="projects.linkWeb">Web (React) ↗</a>
+              </div>
             </div>
           </article>
 
-          <article class="card card-project reveal" data-tags="javascript">
+          <article class="card card-project reveal" data-tags="fullstack,backend">
             <div class="card-project-visual">
-              <img src="assets/projects/food-ordering-react.svg" width="84" height="84" alt="">
+              <img src="assets/projects/phong-delivery.svg" width="84" height="84" alt="">
             </div>
             <div class="card-project-body">
               <div class="card-project-tags">
                 <span class="badge badge-primary small">React</span>
                 <span class="badge badge-primary small">Vite</span>
-                <span class="badge badge-primary small">Firebase</span>
-              </div>
-              <h3 class="card-project-title">Food Ordering — Web</h3>
-              <p class="body-default" data-i18n="projectsPage.foodOrderingWeb">
-                The front end for the food-ordering demo: a React + Vite app on top of Firebase for
-                auth and data, covering browsing, cart and checkout.
-              </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-react" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
-            </div>
-          </article>
-
-          <article class="card card-project reveal" data-tags="javascript">
-            <div class="card-project-visual">
-              <img src="assets/projects/phong-delivery.svg" width="84" height="84" alt="">
-            </div>
-            <div class="card-project-body">
-              <div class="card-project-tags">
-                <span class="badge badge-primary small">React</span>
-                <span class="badge badge-primary small">Node.js</span>
-              </div>
-              <h3 class="card-project-title">Phong Delivery — Front end</h3>
-              <p class="body-default" data-i18n="projectsPage.deliveryFe">
-                The customer-facing side of my graduation project: a React + Vite app for placing
-                orders, following a driver's progress and keeping delivery history.
-              </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/phong-delivery-FE" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
-            </div>
-          </article>
-
-          <article class="card card-project reveal" data-tags="javascript">
-            <div class="card-project-visual">
-              <img src="assets/projects/phong-delivery.svg" width="84" height="84" alt="">
-            </div>
-            <div class="card-project-body">
-              <div class="card-project-tags">
                 <span class="badge badge-primary small">Node.js</span>
                 <span class="badge badge-primary small">REST API</span>
               </div>
-              <h3 class="card-project-title">Phong Delivery — Back end</h3>
-              <p class="body-default" data-i18n="projectsPage.deliveryBe">
-                The service behind it: users, orders, addresses and assignments, exposed as a REST API
-                for the delivery app and the admin screens.
+              <h2 class="card-project-title" data-i18n="projectsPage.deliveryTitle">Phong Delivery (Đồ án tốt nghiệp)</h2>
+              <p class="body-default" data-i18n="projectsPage.deliveryDesc">
+                Ứng dụng giao hàng fullstack tách rõ Front-end React + Vite và Back-end Node.js REST API —
+                hỗ trợ đặt đơn, điều phối tài xế, theo dõi trạng thái trực tiếp, lịch sử giao hàng và màn
+                hình quản trị.
               </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/phong-delivery-BE" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
+              <div class="card-project-links">
+                <a class="link-underline small" href="https://github.com/phongngo053/phong-delivery-FE" target="_blank" rel="noopener" data-i18n="projectsPage.linkFe">Front-end (React) ↗</a>
+                <a class="link-underline small" href="https://github.com/phongngo053/phong-delivery-BE" target="_blank" rel="noopener" data-i18n="projectsPage.linkBe">Back-end (Node.js) ↗</a>
+              </div>
             </div>
           </article>
 
-          <article class="card card-project reveal" data-tags="csharp">
+          <article class="card card-project reveal" data-tags="fullstack">
             <div class="card-project-visual">
               <img src="assets/projects/dating-app.svg" width="84" height="84" alt="">
             </div>
             <div class="card-project-body">
               <div class="card-project-tags">
-                <span class="badge badge-primary small">C#</span>
-                <span class="badge badge-primary small">.NET</span>
+                <span class="badge badge-primary small">C# / .NET</span>
                 <span class="badge badge-primary small">Angular</span>
+                <span class="badge badge-primary small">TypeScript</span>
               </div>
-              <h3 class="card-project-title">Dating App</h3>
-              <p class="body-default" data-i18n="projectsPage.datingApp">
-                A dating application built as a .NET back end with an Angular front end — profiles,
-                matching and messaging end to end.
+              <h2 class="card-project-title" data-i18n="projectsPage.datingTitle">Dating App</h2>
+              <p class="body-default" data-i18n="projectsPage.datingDesc">
+                Ứng dụng hẹn hò fullstack kết hợp back-end .NET / C# và front-end Angular — hoàn chỉnh
+                luồng hồ sơ người dùng, ghép đôi và nhắn tin thời gian thực.
               </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/DatingApp" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
-            </div>
-          </article>
-
-          <article class="card card-project reveal" data-tags="typescript">
-            <div class="card-project-visual">
-              <img src="assets/projects/nest-learn.svg" width="84" height="84" alt="">
-            </div>
-            <div class="card-project-body">
-              <div class="card-project-tags">
-                <span class="badge badge-primary small">NestJS</span>
-                <span class="badge badge-primary small">Swagger</span>
+              <div class="card-project-links">
+                <a class="link-underline small" href="https://github.com/phongngo053/DatingApp" target="_blank" rel="noopener" data-i18n="projectsPage.openDating">GitHub: DatingApp ↗</a>
               </div>
-              <h3 class="card-project-title">Nest Learn</h3>
-              <p class="body-default" data-i18n="projectsPage.nestLearn">
-                A playground for learning NestJS properly — one module at a time, with auto-generated
-                Swagger / OpenAPI documentation for every endpoint.
-              </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/nest-learn" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
-            </div>
-          </article>
-
-          <article class="card card-project reveal" data-tags="css">
-            <div class="card-project-visual">
-              <img src="assets/projects/dating-count.svg" width="84" height="84" alt="">
-            </div>
-            <div class="card-project-body">
-              <div class="card-project-tags">
-                <span class="badge badge-primary small">CSS</span>
-                <span class="badge badge-primary small">Web UI</span>
-              </div>
-              <h3 class="card-project-title">Dating Count</h3>
-              <p class="body-default" data-i18n="projectsPage.datingCount">
-                A vibe-coded web UI experiment — a small, opinionated interface for counting days and
-                dates, built mostly out of CSS.
-              </p>
-              <a class="link-underline small" href="https://github.com/phongngo053/dating-count" target="_blank" rel="noopener" data-i18n="projects.viewGithub">View on GitHub</a>
             </div>
           </article>
 
         </div>
 
         <p class="body-small text-neutral-500 mt-64 reveal">
-          <span data-i18n="projectsPage.more">More small experiments and forks live on</span>
+          <span data-i18n="projectsPage.more">Các thử nghiệm khác được lưu trên</span>
           <a class="link-underline small" href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener">github.com/phongngo053</a>.
         </p>
       </div>
@@ -267,14 +260,14 @@
       <div class="container">
         <div class="cta reveal">
           <div class="heading-top-line large" style="margin-left:auto;margin-right:auto" aria-hidden="true"></div>
-          <h2 class="display-3" data-i18n="projectsPage.ctaHeading">Like what you see?</h2>
+          <h2 class="display-3" data-i18n="projectsPage.ctaHeading">Bạn có ý tưởng cần biến thành sản phẩm thật?</h2>
           <p class="body-large" data-i18n="projectsPage.ctaBody">
-            Most of these started as something I needed on a Tuesday night. If you have a problem that
-            deserves the same treatment, I'd love to hear about it.
+            Từ web fullstack, API backend cho tới bot tự động hay tự triển khai lên server riêng — cứ nhắn
+            mình cùng trao đổi nhé.
           </p>
           <div class="buttons-row">
-            <a class="btn btn-primary" href="about.html#contact" data-i18n="hero.getInTouch">Get in touch</a>
-            <a class="btn btn-secondary" href="https://github.com/phongngo053" target="_blank" rel="noopener" data-i18n="cta.github">See my GitHub</a>
+            <a class="btn btn-primary" href="about.html#contact" data-i18n="hero.getInTouch">Liên hệ với mình</a>
+            <a class="btn btn-secondary" href="https://github.com/phongngo053" target="_blank" rel="noopener" data-i18n="cta.github">Xem GitHub của mình</a>
           </div>
         </div>
       </div>
@@ -297,8 +290,8 @@
             <span>Ngô Tiến Phong</span>
           </a>
           <p class="body-small text-neutral-500 mt-24" style="max-width:340px" data-i18n="footer.tagline">
-            Backend Developer &amp; Software Engineer. I build APIs, services and small tools that
-            make other people's work a little easier.
+            Fullstack Developer &amp; Self-Host Builder. Tự viết giao diện, API, bot tự động và vận hành
+            sản phẩm thật trên Ubuntu Home Server.
           </p>
           <div class="social-row mt-32">
             <a href="https://github.com/phongngo053" target="_blank" rel="noopener" aria-label="GitHub">
@@ -312,39 +305,41 @@
                 <path d="m3 7 9 6 9-6"/>
               </svg>
             </a>
-            <a href="index.html" aria-label="Home">
+            <a href="https://sungthe.online" target="_blank" rel="noopener" aria-label="Sủng Thê Online">
               <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="m4 11 8-7 8 7"/>
-                <path d="M6.5 10v10h11V10"/>
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M3.6 9h16.8M3.6 15h16.8"/>
+                <path d="M12 3a14.5 14.5 0 0 0 0 18 14.5 14.5 0 0 0 0-18Z"/>
               </svg>
             </a>
           </div>
         </div>
 
         <div>
-          <h4 class="h5" data-i18n="footer.navigate">Navigate</h4>
+          <h2 class="h5" data-i18n="footer.navigate">Điều hướng</h2>
           <ul>
-            <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
-            <li><a href="index.html#stack" data-i18n="nav.stack">Stack</a></li>
-            <li><a href="projects.html" data-i18n="nav.projects">Projects</a></li>
-            <li><a href="index.html#experience" data-i18n="nav.experience">Experience</a></li>
-            <li><a href="about.html" data-i18n="footer.contact">Contact</a></li>
+            <li><a href="index.html#about" data-i18n="nav.about">Giới thiệu</a></li>
+            <li><a href="index.html#homelab" data-i18n="nav.homelab">Home Server</a></li>
+            <li><a href="projects.html" data-i18n="nav.projects">Dự án</a></li>
+            <li><a href="index.html#stack" data-i18n="nav.stack">Công nghệ</a></li>
+            <li><a href="about.html" data-i18n="footer.contact">Liên hệ</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="h5" data-i18n="footer.contact">Contact</h4>
+          <h2 class="h5" data-i18n="footer.contact">Liên hệ</h2>
           <ul>
             <li><a href="mailto:ngoti.phong.dev@gmail.com">ngoti.phong.dev@gmail.com</a></li>
+            <li><a href="https://sungthe.online" target="_blank" rel="noopener">sungthe.online</a></li>
             <li><a href="https://github.com/phongngo053" target="_blank" rel="noopener">github.com/phongngo053</a></li>
-            <li><a href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener" data-i18n="footer.allRepos">All repositories</a></li>
+            <li><a href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener" data-i18n="footer.allRepos">Tất cả repository</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Ngô Tiến Phong. <span data-i18n="footer.built">Built from scratch, no frameworks.</span></span>
-        <span data-i18n="footer.design">Design system inspired by Developer X (BRIX Templates) — original code &amp; content.</span>
+        <span>© <span data-year>2026</span> Ngô Tiến Phong. <span data-i18n="footer.built">Viết thuần HTML, CSS, JS — không framework.</span></span>
+        <span data-i18n="footer.design">Thiết kế lấy cảm hứng từ Developer X (BRIX Templates) — mã nguồn và nội dung tự viết hoàn toàn.</span>
       </div>
     </div>
   </footer>

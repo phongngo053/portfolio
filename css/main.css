@@ -539,6 +539,168 @@ blockquote {
   flex: 1;
 }
 
+.card-project-featured {
+  grid-column: 1 / -1;
+  container-type: inline-size;
+}
+
+.card-project-featured:hover {
+  transform: translateY(-6px);
+}
+
+@container (min-width: 720px) {
+  .card-project-featured:has(> .card-project-visual) {
+    display: grid;
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    align-items: stretch;
+  }
+
+  .card-project-featured > .card-project-visual {
+    height: auto;
+    min-height: 300px;
+  }
+
+  .card-project-featured > .card-project-visual img {
+    width: 112px;
+    height: 112px;
+  }
+
+  .card-project-featured > .card-project-body {
+    padding: 48px 44px;
+  }
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  background: rgba(27, 31, 36, 0.78);
+  color: var(--neutral--100);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.status-pill .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--system--green-300);
+  box-shadow: 0 0 0 4px rgba(5, 193, 104, 0.18);
+  flex: none;
+}
+
+.status-pill.is-subtle .dot {
+  background: var(--accent--primary-2);
+  box-shadow: 0 0 0 4px rgba(46, 129, 255, 0.18);
+}
+
+.card-project-visual .status-pill {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 2;
+}
+
+.card-project-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 24px;
+  margin-top: 4px;
+}
+
+.card-project-links .link-underline {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.card-project-meta {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--neutral--500);
+}
+
+/* Home Server / Self-Hosted ------------------------------------------------ */
+.homelab-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.card-homelab {
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.card-homelab:hover {
+  background-color: var(--neutral--600);
+  transform: translateY(-6px);
+}
+
+.homelab-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.card-homelab h3 {
+  color: var(--neutral--100);
+}
+
+.card-homelab p {
+  flex: 1;
+}
+
+.homelab-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(195, 202, 213, 0.14);
+}
+
+.homelab-spec {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--neutral--300);
+  background: rgba(27, 31, 36, 0.55);
+  border: 1px solid rgba(195, 202, 213, 0.14);
+  border-radius: 8px;
+  padding: 5px 11px;
+}
+
+.homelab-banner {
+  margin-top: 28px;
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.homelab-banner-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 760px;
+}
+
+.homelab-banner-copy .h5 {
+  color: var(--neutral--100);
+}
+
 /* Inputs ------------------------------------------------------------------- */
 .input {
   width: 100%;
@@ -1407,6 +1569,18 @@ html[data-lang-pending] body { visibility: hidden; }
 .relative { position: relative; }
 .overflow-hidden { overflow: hidden; }
 
+.visually-hidden:where(:not(:focus-within, :active)) {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
 /* Scroll reveal ------------------------------------------------------------- */
 .reveal {
   opacity: 0;
@@ -1422,7 +1596,11 @@ html[data-lang-pending] body { visibility: hidden; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .card-project:hover { transform: none; }
+  .card-project:hover,
+  .card-project-featured:hover,
+  .card-homelab:hover,
+  .card-skills:hover,
+  .card-feature:hover { transform: none; }
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 
@@ -1455,7 +1633,8 @@ html[data-lang-pending] body { visibility: hidden; }
   .about-layout,
   .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 48px; }
   .about-media { position: static; max-width: 320px; }
-  .cards-grid { grid-template-columns: minmax(0, 1fr); }
+  .cards-grid,
+  .homelab-grid { grid-template-columns: minmax(0, 1fr); }
   .card-experience { grid-template-columns: minmax(0, 1fr); }
   .projects-grid { grid-template-columns: minmax(0, 1fr); }
   .stack-grid,
@@ -1519,7 +1698,9 @@ html[data-lang-pending] body { visibility: hidden; }
   .footer-grid { grid-template-columns: minmax(0, 1fr); }
   .card-skills { padding: 40px 24px; }
   .card-pad,
-  .card-experience { padding: 32px 24px; }
+  .card-experience,
+  .card-homelab,
+  .homelab-banner { padding: 32px 24px; }
   .card-project-body { padding: 30px 24px 36px; }
   .cta { padding: 56px 24px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
