@@ -1,0 +1,77 @@
+% Ngo Tien Phong - CV (one page, ATS-friendly). Compile: pdflatex cv.tex  (or upload to overleaf.com)
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5,T1]{fontenc}
+\usepackage[a4paper,margin=1.6cm,top=1.3cm,bottom=1.2cm]{geometry}
+\usepackage[scaled=0.96]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem,titlesec,xcolor}
+
+\definecolor{accent}{HTML}{1F4E9E}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{\MakeUppercase}[\vspace{-6pt}\rule{\linewidth}{0.6pt}]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+\setlist[itemize]{leftmargin=1.1em,itemsep=1.5pt,topsep=2pt,parsep=0pt}
+
+\newcommand{\entry}[4]{\textbf{#1}\hfill\textbf{#2}\\ \textit{#3}\hfill\textit{#4}\par\vspace{1pt}}
+
+\begin{document}
+
+\begin{center}
+  {\Huge\bfseries Ngô Tiến Phong}\\[3pt]
+  {\large\color{accent} Fullstack Software Engineer \,|\, Java · Node.js/NestJS · React/Next.js · LLM Integration}\\[4pt]
+  Huế, Việt Nam \;·\; \href{mailto:ngotienphong053@gmail.com}{ngotienphong053@gmail.com} \;·\;
+  \href{https://github.com/phongngo053}{github.com/phongngo053} \;·\;
+  \href{https://phongngo053.github.io/portfolio/}{phongngo053.github.io/portfolio}
+\end{center}
+
+\section{Summary}
+Software Engineer with $\sim$2 years of experience building and maintaining enterprise backend systems (Java, Node.js/NestJS) and shipping end-to-end products (React/Next.js, REST APIs, databases, deployment). Experienced in integrating LLM APIs into production pipelines and self-hosting services on Ubuntu (Nginx, SSL, PM2, Docker). Prefers clear architecture, stable technology and maintainable code.
+
+\section{Experience}
+\entry{Software Engineer}{11/2024 -- Present}{FPT Software}{Việt Nam}
+\begin{itemize}
+  \item Develop and maintain backend systems for enterprise clients using Java and the Node.js/NestJS ecosystem.
+  \item Focus on system stability, clear API specifications and maintainable, well-structured code.
+  \item Work across the stack: data modeling, API design, and integration with user interfaces.
+\end{itemize}
+
+\vspace{4pt}
+\entry{Fullstack \& AI Automation Builder (Personal Projects)}{2024 -- Present}{Self-employed}{Running 24/7}
+\begin{itemize}
+  \item Designed and operate \textbf{sungthe.online}, a production web-novel platform (Next.js 16, React 19, Express, SQLite) with an admin tool, author studio and mobile-first reader; covered by 860+ automated tests (Vitest, node:test).
+  \item Built an automated crawler and LLM translation pipeline (Playwright, Puppeteer, Cheerio, OpenAI/DeepSeek) with context-preserving prompts, glossary consistency, async batching, retries and output normalization.
+  \item Administer an Ubuntu home server: Nginx reverse proxy with HTTPS, subdomain routing, PM2/Docker process management, monitoring and incident handling.
+  \item Self-host an internal AI agent (OpenClaw) to automate daily engineering workflows.
+\end{itemize}
+
+\section{Projects}
+\textbf{sungthe.online} --- Web-novel \& AI translation platform \hfill \textit{Next.js, React, Express, SQLite, LLM}\\
+Live production service on a self-managed server; automated ingestion and translation of content at scale.\par\vspace{3pt}
+\textbf{VBook AI Translate Extension} (open source) \hfill \textit{JavaScript, OpenAI-compatible API}\\
+AI translation plugin for the VBook reader app (Android/iOS) supporting DeepSeek, OpenAI and custom endpoints with configurable system prompt, model and base URL.\par\vspace{3pt}
+\textbf{Food Ordering --- Monolith \& Microservices} \hfill \textit{NestJS, MySQL, React, Vite}\\
+Three-role ordering system (customer, store, driver) built twice to compare architectures: a JWT-secured NestJS monolith and a 6-service microservices version.\par\vspace{3pt}
+\textbf{GoShip Delivery} --- Graduation project \hfill \textit{React, Vite, Node.js REST API}\\
+Fullstack dispatch platform: shipment creation, driver assignment, real-time status tracking, history reconciliation and admin dashboard.
+
+\section{Technical Skills}
+\begin{tabular}{@{}p{3.1cm}p{13.2cm}@{}}
+\textbf{Languages} & Java, TypeScript, JavaScript, SQL\\
+\textbf{Backend} & NestJS, Node.js, Express, REST API, JWT, Microservices\\
+\textbf{Frontend} & React, Next.js, Vite, HTML/CSS\\
+\textbf{Databases} & MySQL, SQLite\\
+\textbf{AI / Automation} & LLM APIs (OpenAI, DeepSeek), prompt engineering, AI agents, Playwright, Puppeteer\\
+\textbf{DevOps} & Linux (Ubuntu), Nginx, SSL/TLS, Docker, PM2, Git\\
+\textbf{Testing} & Vitest, node:test\\
+\end{tabular}
+
+\section{Education}
+\entry{Bachelor of Information Technology (Software Engineering)}{08/2020 -- 06/2024}{University of Sciences, Hue University}{Huế, Việt Nam}
+
+\section{Languages}
+Vietnamese (native) \;·\; English (add your level, e.g. IELTS / TOEIC)
+
+\end{document}

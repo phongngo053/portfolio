@@ -94,25 +94,27 @@
 
             <h1 class="display-1" data-i18n-html="hero.title">
               Fullstack Developer,<br />
-              <span class="accent">từ phát triển phần mềm đến vận hành thực tế.</span>
+              <span class="accent">tích hợp AI &amp; vận hành hệ thống thực tế.</span>
             </h1>
 
             <p class="hero-lead" data-i18n-html="hero.lead">
               Tôi là <strong class="bold">Ngô Tiến Phong</strong>, Fullstack Developer với
               <strong class="bold">~2 năm kinh nghiệm</strong>, hiện đang là Software Engineer tại FPT
-              Software (11/2024 – nay). Tôi phụ trách từ giao diện, backend, công cụ tự động hóa cho đến
-              triển khai và vận hành trực tiếp các dự án thực tế trên Ubuntu Home Server.
+              Software (11/2024 – nay). Tôi phát triển ứng dụng web fullstack, xây dựng các pipeline tự động
+              hóa tích hợp LLM / AI Agent và trực tiếp triển khai, vận hành hệ thống trên Ubuntu Home Server.
             </p>
 
             <div class="buttons-row">
               <a class="btn btn-primary" href="#projects" data-i18n="hero.viewWork">Xem dự án tiêu biểu</a>
               <a class="btn btn-secondary" href="#contact" data-i18n="hero.getInTouch">Liên hệ với tôi</a>
+        <a class="btn btn-secondary" href="assets/Ngo-Tien-Phong-CV-VI.pdf" download data-i18n="cv.download" data-i18n-attr="href:cv.file">Tải CV (PDF) ↓</a>
             </div>
 
             <div class="hero-badges">
               <span class="badge badge-primary small">TypeScript</span>
               <span class="badge badge-primary small">Next.js / React</span>
               <span class="badge badge-primary small">Node.js / NestJS</span>
+              <span class="badge badge-primary small">LLM / AI Agents</span>
               <span class="badge badge-primary small">Java</span>
               <span class="badge badge-primary small">Ubuntu Server</span>
             </div>
@@ -154,9 +156,9 @@
               kế dữ liệu, xây dựng API đến giao diện người dùng và khâu triển khai.
             </p>
             <p data-i18n="about.p2">
-              Bên cạnh công việc chính, tôi tự duy trì một máy chủ Ubuntu Home Server để vận hành các dự
-              án cá nhân, bao gồm nền tảng đọc truyện sungthe.online, hệ thống thu thập dữ liệu và dịch
-              truyện bằng AI, cùng trợ lý AI nội bộ (OpenClaw) phục vụ công việc hằng ngày.
+              Bên cạnh phát triển web, tôi tập trung mạnh vào việc ứng dụng AI vào sản phẩm thực tế: tích hợp
+              LLM API (OpenAI, DeepSeek), thiết kế prompt giữ ngữ cảnh cho pipeline dịch thuật tự động, triển
+              khai AI Agent nội bộ (OpenClaw) và tự vận hành toàn bộ trên Ubuntu Home Server.
             </p>
             <p data-i18n="about.p3">
               Ngoài thời gian làm việc, tôi có thói quen đọc tiểu thuyết trực tuyến. Phần lớn các sản phẩm
@@ -206,10 +208,11 @@
               <span class="skill-mark" style="--mark:#05c168" aria-hidden="true">WEB</span>
               <span class="status-pill"><span class="dot" aria-hidden="true"></span><span>sungthe.online</span></span>
             </div>
-            <h3 class="h3" data-i18n="homelab.c2Title">Web Production (sungthe.online)</h3>
+            <h3 class="h3" data-i18n="homelab.c2Title">Web Truyện Production (sungthe.online)</h3>
             <p class="body-default" data-i18n="homelab.c2Desc">
-              Triển khai trực tiếp nền tảng đọc truyện Sủng Thê (Next.js + Express + SQLite) phục vụ người
-              dùng trên cả thiết bị di động và máy tính, chủ động hoàn toàn về dữ liệu và băng thông.
+              Triển khai trực tiếp nền tảng đọc truyện trực tuyến (Next.js + Express + SQLite) tích hợp luồng
+              dịch thuật AI, phục vụ người dùng trên cả thiết bị di động và máy tính, chủ động hoàn toàn về
+              dữ liệu và băng thông.
             </p>
             <div>
               <a class="link-underline small" href="https://sungthe.online" target="_blank" rel="noopener" data-i18n="homelab.c2Link">Mở sungthe.online ↗</a>
@@ -219,17 +222,17 @@
           <article class="card card-homelab reveal">
             <div class="homelab-head">
               <span class="skill-mark" style="--mark:#2e81ff" aria-hidden="true">AI</span>
-              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span data-i18n="homelab.badgeSelf">Self-hosted</span></span>
+              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span data-i18n="homelab.badgeSelf">Self-hosted AI</span></span>
             </div>
-            <h3 class="h3" data-i18n="homelab.c3Title">OpenClaw AI &amp; Tác vụ chạy nền</h3>
+            <h3 class="h3" data-i18n="homelab.c3Title">OpenClaw AI Agent &amp; LLM Pipelines</h3>
             <p class="body-default" data-i18n="homelab.c3Desc">
-              Triển khai nội bộ OpenClaw làm trợ lý AI hỗ trợ công việc cá nhân (chỉ truy cập nội bộ), chạy
-              song song với các worker tự động thu thập dữ liệu và dịch truyện theo lịch hằng ngày.
+              Self-host trợ lý AI Agent (OpenClaw) hỗ trợ tự động hóa quy trình kỹ thuật hằng ngày, vận hành
+              song song với các worker thu thập dữ liệu và dịch thuật hàng loạt qua OpenAI / DeepSeek API.
             </p>
             <div class="homelab-specs">
-              <span class="homelab-spec">OpenClaw</span>
-              <span class="homelab-spec">Playwright</span>
-              <span class="homelab-spec">Cron Workers</span>
+              <span class="homelab-spec">OpenClaw Agent</span>
+              <span class="homelab-spec">OpenAI / DeepSeek</span>
+              <span class="homelab-spec">Playwright Workers</span>
             </div>
           </article>
         </div>
@@ -267,7 +270,7 @@
               <a class="card-project-preview-link" href="https://sungthe.online" target="_blank" rel="noopener" aria-label="Mở trang web sungthe.online trong tab mới" data-i18n-attr="aria-label:projects.sungthePreviewLabel">
                 <picture>
                   <source srcset="assets/projects/sungthe.webp" type="image/webp">
-                  <img src="assets/projects/sungthe.jpg" width="1280" height="850" loading="lazy" decoding="async" alt="Ảnh chụp màn hình trang chủ nền tảng đọc truyện Sủng Thê (sungthe.online)" data-i18n-attr="alt:projects.sungtheAlt">
+                  <img src="assets/projects/sungthe.jpg" width="1280" height="850" loading="lazy" decoding="async" alt="Ảnh chụp màn hình trang chủ nền tảng đọc truyện trực tuyến (sungthe.online)" data-i18n-attr="alt:projects.sungtheAlt">
                 </picture>
               </a>
             </div>
@@ -276,15 +279,15 @@
                 <span class="badge badge-primary small">Next.js 16</span>
                 <span class="badge badge-primary small">React 19</span>
                 <span class="badge badge-primary small">Express</span>
+                <span class="badge badge-primary small">AI / LLM Pipeline</span>
                 <span class="badge badge-primary small">SQLite</span>
-                <span class="badge badge-primary small">Ubuntu / Nginx</span>
               </div>
-              <h3 class="card-project-title">Sủng Thê (sungthe.online)</h3>
+              <h3 class="card-project-title" data-i18n="projects.sungtheTitle">Nền tảng Web Truyện &amp; Dịch thuật AI (sungthe.online)</h3>
               <p class="body-default" data-i18n="projects.sungtheDesc">
-                Nền tảng đọc truyện trực tuyến đang vận hành thực tế trên Ubuntu Home Server. Hệ thống gồm
-                giao diện đọc tối ưu cho di động có lưu tiến độ, Author Studio hỗ trợ tác giả tự đăng truyện
-                và Bookhub Admin tích hợp module thu thập, dịch thuật bằng AI, đi kèm hơn 860 bài kiểm thử
-                tự động (Vitest và node:test).
+                Nền tảng đọc truyện trực tuyến vận hành thực tế trên Ubuntu Home Server. Tích hợp Bookhub
+                Admin tự động hóa luồng thu thập dữ liệu và dịch thuật hàng loạt bằng LLM (OpenAI / DeepSeek),
+                Author Studio cho tác giả và giao diện đọc tối ưu di động, đi kèm hơn 860 bài kiểm thử tự động
+                (Vitest và node:test).
               </p>
               <div class="card-project-links">
                 <a class="link-underline small" href="https://sungthe.online" target="_blank" rel="noopener" data-i18n="projects.openSungthe">Mở sungthe.online ↗</a>
@@ -295,25 +298,25 @@
 
           <article class="card card-project reveal">
             <div class="card-project-visual">
-              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span data-i18n="projects.selfHostedBadge">Vận hành trên Home Server</span></span>
+              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span data-i18n="projects.selfHostedBadge">AI Pipeline · Home Server</span></span>
               <img src="assets/projects/novel-bots.svg" width="84" height="84" alt="">
             </div>
             <div class="card-project-body">
               <div class="card-project-tags">
-                <span class="badge badge-primary small">Node.js</span>
+                <span class="badge badge-primary small">OpenAI / DeepSeek</span>
+                <span class="badge badge-primary small">Prompt Engineering</span>
                 <span class="badge badge-primary small">TypeScript</span>
                 <span class="badge badge-primary small">Playwright</span>
-                <span class="badge badge-primary small">OpenAI / DeepSeek</span>
               </div>
-              <h3 class="card-project-title" data-i18n="projects.botsTitle">Hệ thống Crawler &amp; Dịch Truyện AI</h3>
+              <h3 class="card-project-title" data-i18n="projects.botsTitle">Hệ thống Crawler &amp; Pipeline Dịch thuật LLM</h3>
               <p class="body-default" data-i18n="projects.botsDesc">
-                Bộ công cụ tự động hóa phục vụ hệ sinh thái đọc truyện, gồm các worker chạy định kỳ bằng
-                Playwright, Puppeteer và Cheerio để thu thập dữ liệu, pipeline dịch tiểu thuyết Trung–Việt
-                bằng LLM giữ ngữ cảnh tự nhiên, cùng tiện ích dịch mã nguồn mở cho ứng dụng VBook.
+                Pipeline tự động hóa kết hợp Playwright, Puppeteer, Cheerio với LLM API (OpenAI / DeepSeek):
+                tự động thu thập chương mới theo lịch, thiết kế prompt giữ ngữ cảnh và nhất quán thuật ngữ
+                xuyên suốt bộ truyện, xử lý bất đồng bộ kèm retry/chuẩn hóa đầu ra và plugin dịch mở cho VBook.
               </p>
               <div class="card-project-links">
                 <a class="link-underline small" href="https://github.com/phongngo053/vbook-ext" target="_blank" rel="noopener" data-i18n="projects.openVbook">GitHub: vbook-ext ↗</a>
-                <span class="card-project-meta" data-i18n="projects.botsNote">Automation bots · Private</span>
+                <span class="card-project-meta" data-i18n="projects.botsNote">LLM Automation · Private</span>
               </div>
             </div>
           </article>
@@ -329,12 +332,12 @@
                 <span class="badge badge-primary small">React</span>
                 <span class="badge badge-primary small">MySQL</span>
               </div>
-              <h3 class="card-project-title" data-i18n="projects.foodTitle">Food Ordering Platform</h3>
+              <h3 class="card-project-title" data-i18n="projects.foodTitle">Food Ordering — Monolith &amp; Microservices</h3>
               <p class="body-default" data-i18n="projects.foodDesc">
-                Hệ thống đặt đồ ăn đầy đủ 3 vai trò (khách hàng, cửa hàng và tài xế), được tôi xây dựng
-                theo hai kiến trúc song song để đối chiếu: phiên bản Monolith (JWT, theo dõi đơn hàng, đánh
-                giá, thông báo đẩy) và phiên bản Microservices gồm 6 dịch vụ độc lập, kết hợp giao diện web
-                React + Vite.
+                Hệ thống đặt đồ ăn 3 vai trò (Khách hàng, Cửa hàng, Tài xế) được xây dựng song song trên hai
+                kiến trúc để đối chiếu thực tiễn: bản Monolith (NestJS + MySQL, JWT, theo dõi đơn, đánh giá,
+                thông báo đẩy) và bản Microservices tách thành 6 dịch vụ độc lập theo domain, kết hợp giao
+                diện React + Vite.
               </p>
               <div class="card-project-links">
                 <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-nestjs" target="_blank" rel="noopener" data-i18n="projects.linkMonolith">Monolith (NestJS) ↗</a>
@@ -364,6 +367,16 @@
 
         <div class="stack-grid">
           <div class="card card-skills reveal">
+            <span class="skill-mark" style="--mark:#d5691b" aria-hidden="true">AI</span>
+            <h3 class="h4">LLM &amp; AI APIs</h3>
+            <p class="body-small text-neutral-500" data-i18n="stack.llm">OpenAI, DeepSeek, Prompt Engineering &amp; AI Pipeline</p>
+          </div>
+          <div class="card card-skills reveal">
+            <span class="skill-mark" style="--mark:#11845b" aria-hidden="true">AG</span>
+            <h3 class="h4">AI Agents &amp; Bots</h3>
+            <p class="body-small text-neutral-500" data-i18n="stack.bots">OpenClaw Agent, Playwright &amp; tự động hóa</p>
+          </div>
+          <div class="card card-skills reveal">
             <span class="skill-mark" style="--mark:#075fe4" aria-hidden="true">TS</span>
             <h3 class="h4">TypeScript</h3>
             <p class="body-small text-neutral-500" data-i18n="stack.ts">Phát triển fullstack an toàn kiểu dữ liệu</p>
@@ -391,12 +404,7 @@
           <div class="card card-skills reveal">
             <span class="skill-mark" style="--mark:#075fe4" aria-hidden="true">Py</span>
             <h3 class="h4">Python</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.python">Tự động hóa, xử lý dữ liệu &amp; AI</p>
-          </div>
-          <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#d5691b" aria-hidden="true">Ng</span>
-            <h3 class="h4">Angular</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.angular">Frontend doanh nghiệp cấu trúc rõ ràng</p>
+            <p class="body-small text-neutral-500" data-i18n="stack.python">Tự động hóa, xử lý dữ liệu &amp; kịch bản AI</p>
           </div>
           <div class="card card-skills reveal">
             <span class="skill-mark" style="--mark:#2e81ff" aria-hidden="true">SQL</span>
@@ -417,11 +425,6 @@
             <span class="skill-mark" style="--mark:#075fe4" aria-hidden="true">Dk</span>
             <h3 class="h4">Docker &amp; PM2</h3>
             <p class="body-small text-neutral-500" data-i18n="stack.docker">Đóng gói dịch vụ &amp; duy trì vận hành 24/7</p>
-          </div>
-          <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#11845b" aria-hidden="true">PW</span>
-            <h3 class="h4">Playwright / Bots</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.bots">Headless browser, crawler &amp; cron job</p>
           </div>
         </div>
       </div>
@@ -468,18 +471,18 @@
           <div class="card card-experience reveal">
             <div class="experience-role">
               <span class="period" data-i18n="exp.period.ongoing">Dự án cá nhân · Duy trì 24/7</span>
-              <h3 class="h3" data-i18n="exp.role2">Fullstack &amp; Self-Host Builder</h3>
-              <p class="body-small text-neutral-500" data-i18n="exp.role2.tag">sungthe.online &amp; Ubuntu Home Server</p>
+              <h3 class="h3" data-i18n="exp.role2">Fullstack &amp; AI Automation Builder</h3>
+              <p class="body-small text-neutral-500" data-i18n="exp.role2.tag">LLM Pipelines, AI Agents &amp; Ubuntu Home Server</p>
             </div>
             <div>
               <p data-i18n="exp.role2.desc">
-                Trực tiếp thiết kế, phát triển và vận hành các sản phẩm cá nhân từ giao diện web, backend,
-                hệ thống tự động hóa đến hạ tầng máy chủ Linux.
+                Trực tiếp thiết kế, phát triển và vận hành các ứng dụng web tích hợp AI, pipeline xử lý ngôn
+                ngữ tự nhiên bằng LLM và hạ tầng máy chủ Linux hoạt động 24/7.
               </p>
               <ul>
-                <li data-i18n="exp.role2.li1">Vận hành nền tảng sungthe.online (Next.js + Express + SQLite) với hơn 860 bài kiểm thử tự động trên Ubuntu Server.</li>
-                <li data-i18n="exp.role2.li2">Phát triển hệ thống crawler, pipeline dịch truyện bằng AI và tiện ích mã nguồn mở vbook-ext.</li>
-                <li data-i18n="exp.role2.li3">Triển khai nội bộ trợ lý AI OpenClaw và quản trị toàn bộ dịch vụ qua Nginx, PM2 và Docker.</li>
+                <li data-i18n="exp.role2.li1">Xây dựng pipeline dịch thuật tự động qua OpenAI / DeepSeek API với kỹ thuật giữ ngữ cảnh, kết hợp crawler Playwright và phát triển tiện ích mã nguồn mở vbook-ext.</li>
+                <li data-i18n="exp.role2.li2">Vận hành nền tảng đọc truyện trực tuyến sungthe.online (Next.js + Express + SQLite) tích hợp quản trị dịch AI với hơn 860 bài kiểm thử tự động.</li>
+                <li data-i18n="exp.role2.li3">Triển khai nội bộ AI Agent (OpenClaw) hỗ trợ quy trình kỹ thuật và quản trị toàn bộ dịch vụ qua Nginx, PM2 và Docker.</li>
               </ul>
             </div>
           </div>
@@ -497,7 +500,7 @@
               </p>
               <ul>
                 <li data-i18n="exp.role3.li1">Tốt nghiệp chuyên ngành Kỹ thuật phần mềm và Hệ thống thông tin tại ĐH Khoa học Huế.</li>
-                <li data-i18n="exp.role3.li2">Thực hiện trọn vẹn đồ án tốt nghiệp Phong Delivery (React + Node.js) ở cả frontend và backend.</li>
+                <li data-i18n="exp.role3.li2">Thực hiện trọn vẹn đồ án tốt nghiệp GoShip Delivery — Hệ thống Điều phối &amp; Giao nhận (React + Node.js) ở cả frontend và backend.</li>
               </ul>
             </div>
           </div>
@@ -519,10 +522,10 @@
           </div>
           <div class="stat reveal">
             <span class="stat-value">860+</span>
-            <span class="stat-label" data-i18n="stats.tests">Kiểm thử tự động cho Sủng Thê</span>
+            <span class="stat-label" data-i18n="stats.tests">Bài kiểm thử tự động (Vitest &amp; API)</span>
           </div>
           <div class="stat reveal">
-            <span class="stat-value">6</span>
+            <span class="stat-value">5</span>
             <span class="stat-label" data-i18n="stats.projects">Dự án tiêu biểu đã triển khai</span>
           </div>
         </div>
@@ -540,8 +543,9 @@
             web hoặc thảo luận kỹ thuật về kiến trúc backend, tự động hóa và vận hành máy chủ.
           </p>
           <div class="buttons-row">
-            <a class="btn btn-primary" href="mailto:ngoti.phong.dev@gmail.com" data-i18n="cta.email">Gửi email cho tôi</a>
+            <a class="btn btn-primary" href="mailto:ngotienphong053@gmail.com" data-i18n="cta.email">Gửi email cho tôi</a>
             <a class="btn btn-secondary" href="https://github.com/phongngo053" target="_blank" rel="noopener" data-i18n="cta.github">Xem GitHub của tôi</a>
+        <a class="btn btn-secondary" href="assets/Ngo-Tien-Phong-CV-VI.pdf" download data-i18n="cv.download" data-i18n-attr="href:cv.file">Tải CV (PDF) ↓</a>
           </div>
         </div>
       </div>
@@ -573,13 +577,13 @@
                 <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.42-4.04-1.42-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z"/>
               </svg>
             </a>
-            <a href="mailto:ngoti.phong.dev@gmail.com" aria-label="Email">
+            <a href="mailto:ngotienphong053@gmail.com" aria-label="Email">
               <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/>
                 <path d="m3 7 9 6 9-6"/>
               </svg>
             </a>
-            <a href="https://sungthe.online" target="_blank" rel="noopener" aria-label="Sủng Thê Online">
+            <a href="https://sungthe.online" target="_blank" rel="noopener" aria-label="Web Truyện sungthe.online">
               <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="12" cy="12" r="9"/>
                 <path d="M3.6 9h16.8M3.6 15h16.8"/>
@@ -603,7 +607,7 @@
         <div>
           <h2 class="h5" data-i18n="footer.contact">Liên hệ</h2>
           <ul>
-            <li><a href="mailto:ngoti.phong.dev@gmail.com">ngoti.phong.dev@gmail.com</a></li>
+            <li><a href="mailto:ngotienphong053@gmail.com">ngotienphong053@gmail.com</a></li>
             <li><a href="https://sungthe.online" target="_blank" rel="noopener">sungthe.online</a></li>
             <li><a href="https://github.com/phongngo053" target="_blank" rel="noopener">github.com/phongngo053</a></li>
             <li><a href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener" data-i18n="footer.allRepos">Tất cả repository</a></li>

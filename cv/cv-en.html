@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ngô Tiến Phong - CV</title>
+<style>
+  @page { size: A4; margin: 12mm 15mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Arial, sans-serif; font-size: 9.6pt; line-height: 1.38; color: #222; margin: 0; }
+  a { color: inherit; text-decoration: none; }
+  header { text-align: center; margin-bottom: 4px; }
+  h1 { font-size: 24pt; margin: 0; letter-spacing: .5px; }
+  .role { color: #1f4e9e; font-size: 11pt; font-weight: 600; margin: 2px 0 4px; }
+  .contact { font-size: 9pt; }
+  h2 { font-size: 10.5pt; color: #1f4e9e; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1.2px solid #1f4e9e; padding-bottom: 2px; margin: 11px 0 5px; }
+  .row { display: flex; justify-content: space-between; gap: 10px; }
+  .row b { font-weight: 700; } .row i { color: #555; }
+  ul { margin: 2px 0 6px; padding-left: 16px; } li { margin-bottom: 1.5px; }
+  .proj { margin-bottom: 5px; }
+  table { border-collapse: collapse; } td { vertical-align: top; padding: 1px 0; } td:first-child { width: 112px; font-weight: 700; }
+  p { margin: 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Ngô Tiến Phong</h1>
+  <div class="role">Fullstack Software Engineer | Java · Node.js/NestJS · React/Next.js · LLM Integration</div>
+  <div class="contact">Huế, Việt Nam · ngotienphong053@gmail.com · github.com/phongngo053 · phongngo053.github.io/portfolio</div>
+</header>
+
+<h2>Summary</h2>
+<p>Software Engineer with ~2 years of experience building and maintaining enterprise backend systems (Java, Node.js/NestJS) and shipping end-to-end products (React/Next.js, REST APIs, databases, deployment). Experienced in integrating LLM APIs into production pipelines and self-hosting services on Ubuntu (Nginx, SSL, PM2, Docker). Prefers clear architecture, stable technology and maintainable code.</p>
+
+<h2>Experience</h2>
+<div class="row"><b>Software Engineer — FPT Software</b><b>11/2024 – Present</b></div>
+<ul>
+  <li>Develop and maintain backend systems for enterprise clients using Java and the Node.js/NestJS ecosystem.</li>
+  <li>Focus on system stability, clear API specifications and maintainable, well-structured code.</li>
+  <li>Work across the stack: data modeling, API design and integration with user interfaces.</li>
+</ul>
+<div class="row"><b>Fullstack &amp; AI Automation Builder — Personal Projects</b><b>2024 – Present</b></div>
+<ul>
+  <li>Designed and operate <b>sungthe.online</b>, a production web-novel platform (Next.js 16, React 19, Express, SQLite) with an admin tool, author studio and mobile-first reader; 860+ automated tests (Vitest, node:test).</li>
+  <li>Built an automated crawler and LLM translation pipeline (Playwright, Puppeteer, Cheerio, OpenAI/DeepSeek) with context-preserving prompts, glossary consistency, async batching, retries and output normalization.</li>
+  <li>Administer an Ubuntu home server 24/7: Nginx reverse proxy with HTTPS, subdomain routing, PM2/Docker, monitoring and incident handling.</li>
+  <li>Self-host an internal AI agent (OpenClaw) to automate daily engineering workflows.</li>
+</ul>
+
+<h2>Projects</h2>
+<div class="proj"><div class="row"><b>sungthe.online — Web-novel &amp; AI translation platform</b><i>Next.js, React, Express, SQLite, LLM</i></div>Live production service on a self-managed server; automated ingestion and translation of content at scale.</div>
+<div class="proj"><div class="row"><b>VBook AI Translate Extension (open source)</b><i>JavaScript, OpenAI-compatible API</i></div>AI translation plugin for the VBook reader app (Android/iOS) supporting DeepSeek, OpenAI and custom endpoints with configurable prompt, model and base URL.</div>
+<div class="proj"><div class="row"><b>Food Ordering — Monolith &amp; Microservices</b><i>NestJS, MySQL, React, Vite</i></div>Three-role ordering system (customer, store, driver) built twice to compare architectures: a JWT-secured NestJS monolith and a 6-service microservices version.</div>
+<div class="proj"><div class="row"><b>GoShip Delivery — Graduation project</b><i>React, Vite, Node.js REST API</i></div>Fullstack dispatch platform: shipment creation, driver assignment, real-time status tracking, history reconciliation and admin dashboard.</div>
+
+<h2>Technical Skills</h2>
+<table>
+<tr><td>Languages</td><td>Java, TypeScript, JavaScript, SQL</td></tr>
+<tr><td>Backend</td><td>NestJS, Node.js, Express, REST API, JWT, Microservices</td></tr>
+<tr><td>Frontend</td><td>React, Next.js, Vite, HTML/CSS</td></tr>
+<tr><td>Databases</td><td>MySQL, SQLite</td></tr>
+<tr><td>AI / Automation</td><td>LLM APIs (OpenAI, DeepSeek), prompt engineering, AI agents, Playwright, Puppeteer</td></tr>
+<tr><td>DevOps</td><td>Linux (Ubuntu), Nginx, SSL/TLS, Docker, PM2, Git</td></tr>
+<tr><td>Testing</td><td>Vitest, node:test</td></tr>
+</table>
+
+<h2>Education</h2>
+<div class="row"><b>Bachelor of Information Technology (Software Engineering) — University of Sciences, Hue University</b><b>08/2020 – 06/2024</b></div>
+
+<h2>Languages</h2>
+<p>Vietnamese (native) · English (professional working proficiency)</p>
+</body>
+</html>

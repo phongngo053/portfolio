@@ -124,17 +124,17 @@
             </p>
 
             <p class="body-large" data-i18n="aboutPage.p2">
-              Tôi sinh sống tại Huế và tốt nghiệp Trường Đại học Khoa học Huế (08/2020 – 06/2024). Ngoài
-              giờ làm việc, tôi thường đọc tiểu thuyết trực tuyến. Chính nhu cầu cá nhân này là động lực
-              để tôi tự xây dựng nền tảng đọc truyện sungthe.online cùng hệ thống crawler và dịch thuật
-              bằng AI.
+              Tôi sinh sống tại Huế và tốt nghiệp Trường Đại học Khoa học Huế (08/2020 – 06/2024). Điểm mạnh
+              của tôi là chủ động ứng dụng AI vào thực tiễn kỹ thuật: từ tích hợp LLM API (OpenAI, DeepSeek),
+              xây dựng pipeline dịch thuật tự động giữ ngữ cảnh cho nền tảng web truyện sungthe.online, đến
+              triển khai AI Agent (OpenClaw) phục vụ tự động hóa công việc hằng ngày.
             </p>
 
             <p class="body-large" data-i18n="aboutPage.p3">
-              Tôi tự duy trì một máy chủ Ubuntu Home Server hoạt động 24/7 để vận hành sungthe.online, các
-              tác vụ thu thập và dịch dữ liệu định kỳ, cùng trợ lý AI nội bộ OpenClaw. Việc trực tiếp cấu
-              hình Nginx, chứng chỉ SSL, PM2/Docker và xử lý sự cố thực tế giúp tôi chủ động hoàn toàn ở
-              khâu triển khai và vận hành.
+              Tôi tự duy trì một máy chủ Ubuntu Home Server hoạt động 24/7 để vận hành web truyện production,
+              các worker thu thập và xử lý ngôn ngữ bằng AI theo lịch, cùng trợ lý AI Agent nội bộ. Việc trực
+              tiếp cấu hình Nginx, chứng chỉ SSL, PM2/Docker và xử lý sự cố thực tế giúp tôi chủ động hoàn
+              toàn ở khâu triển khai và vận hành.
             </p>
 
             <p class="body-large" data-i18n="aboutPage.p4">
@@ -178,10 +178,11 @@
 
           <div class="timeline-item">
             <span class="period" data-i18n="exp.period.ongoing">Dự án cá nhân · Duy trì 24/7</span>
-            <h3 class="h3" data-i18n="aboutPage.t2">Fullstack &amp; Self-Host Builder</h3>
+            <h3 class="h3" data-i18n="aboutPage.t2">Fullstack &amp; AI Automation Builder</h3>
             <p class="body-default" data-i18n="aboutPage.t2desc">
-              Trực tiếp thiết kế, lập trình và vận hành nền tảng sungthe.online, hệ thống crawler và dịch
-              truyện AI cùng trợ lý OpenClaw trên Ubuntu Home Server, duy trì hoạt động ổn định 24/7.
+              Thiết kế và vận hành nền tảng web truyện sungthe.online, xây dựng pipeline dịch thuật LLM
+              (OpenAI / DeepSeek) kết hợp crawler tự động và self-host AI Agent (OpenClaw) trên Ubuntu Home
+              Server hoạt động 24/7.
             </p>
           </div>
 
@@ -189,8 +190,7 @@
             <span class="period" data-i18n="exp.period.alumni">ĐH Khoa học Huế · 08/2020 – 06/2024</span>
             <h3 class="h3" data-i18n="aboutPage.t3">Cử nhân Công nghệ Thông tin</h3>
             <p class="body-default" data-i18n="aboutPage.t3desc">
-              Tốt nghiệp chuyên ngành Kỹ thuật phần mềm. Đồ án tốt nghiệp Phong Delivery (React + Node.js) là
-              sản phẩm fullstack đầu tiên tôi trực tiếp xây dựng hoàn chỉnh cả frontend và backend.
+              Tốt nghiệp chuyên ngành Kỹ thuật phần mềm. Đồ án tốt nghiệp GoShip Delivery — Hệ thống Điều phối &amp; Giao nhận (React + Node.js) là sản phẩm fullstack đầu tiên tôi trực tiếp xây dựng hoàn chỉnh cả frontend và backend.
             </p>
           </div>
         </div>
@@ -258,7 +258,7 @@
         <div class="contact-grid">
 
           <div class="contact-list reveal">
-            <a class="contact-item" href="mailto:ngoti.phong.dev@gmail.com">
+            <a class="contact-item" href="mailto:ngotienphong053@gmail.com">
               <span class="icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/>
@@ -267,7 +267,7 @@
               </span>
               <span>
                 <span class="label" data-i18n="contact.email">Email</span>
-                <span class="value">ngoti.phong.dev@gmail.com</span>
+                <span class="value">ngotienphong053@gmail.com</span>
               </span>
             </a>
 
@@ -306,7 +306,7 @@
               </span>
               <span>
                 <span class="label" data-i18n="contact.into">Đang tập trung</span>
-                <span class="value" data-i18n="contact.intoValue">Fullstack, Ubuntu Home Server &amp; AI Automation</span>
+                <span class="value" data-i18n="contact.intoValue">Fullstack, LLM / AI Agents &amp; Ubuntu Home Server</span>
               </span>
             </div>
           </div>
@@ -361,13 +361,13 @@
                 <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.42-4.04-1.42-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z"/>
               </svg>
             </a>
-            <a href="mailto:ngoti.phong.dev@gmail.com" aria-label="Email">
+            <a href="mailto:ngotienphong053@gmail.com" aria-label="Email">
               <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/>
                 <path d="m3 7 9 6 9-6"/>
               </svg>
             </a>
-            <a href="https://sungthe.online" target="_blank" rel="noopener" aria-label="Sủng Thê Online">
+            <a href="https://sungthe.online" target="_blank" rel="noopener" aria-label="Web Truyện sungthe.online">
               <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="12" cy="12" r="9"/>
                 <path d="M3.6 9h16.8M3.6 15h16.8"/>
@@ -391,7 +391,7 @@
         <div>
           <h2 class="h5" data-i18n="footer.contact">Liên hệ</h2>
           <ul>
-            <li><a href="mailto:ngoti.phong.dev@gmail.com">ngoti.phong.dev@gmail.com</a></li>
+            <li><a href="mailto:ngotienphong053@gmail.com">ngotienphong053@gmail.com</a></li>
             <li><a href="https://sungthe.online" target="_blank" rel="noopener">sungthe.online</a></li>
             <li><a href="https://github.com/phongngo053" target="_blank" rel="noopener">github.com/phongngo053</a></li>
             <li><a href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener" data-i18n="footer.allRepos">Tất cả repository</a></li>

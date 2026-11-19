@@ -105,13 +105,13 @@
 
         <div class="projects-grid">
 
-          <article class="card card-project reveal" data-tags="live,fullstack">
+          <article class="card card-project card-project-featured reveal" data-tags="live,fullstack,bot">
             <div class="card-project-visual has-screenshot">
               <span class="status-pill"><span class="dot" aria-hidden="true"></span><span data-i18n="projects.liveBadge">Live · sungthe.online</span></span>
               <a class="card-project-preview-link" href="https://sungthe.online" target="_blank" rel="noopener" aria-label="Mở trang web sungthe.online trong tab mới" data-i18n-attr="aria-label:projects.sungthePreviewLabel">
                 <picture>
                   <source srcset="assets/projects/sungthe.webp" type="image/webp">
-                  <img src="assets/projects/sungthe.jpg" width="1280" height="850" fetchpriority="high" alt="Ảnh chụp màn hình trang chủ nền tảng đọc truyện Sủng Thê (sungthe.online)" data-i18n-attr="alt:projects.sungtheAlt">
+                  <img src="assets/projects/sungthe.jpg" width="1280" height="850" fetchpriority="high" alt="Ảnh chụp màn hình trang chủ nền tảng đọc truyện trực tuyến (sungthe.online)" data-i18n-attr="alt:projects.sungtheAlt">
                 </picture>
               </a>
             </div>
@@ -120,14 +120,15 @@
                 <span class="badge badge-primary small">Next.js 16</span>
                 <span class="badge badge-primary small">React 19</span>
                 <span class="badge badge-primary small">Express</span>
+                <span class="badge badge-primary small">AI / LLM Pipeline</span>
                 <span class="badge badge-primary small">SQLite</span>
               </div>
-              <h2 class="card-project-title">Sủng Thê (sungthe.online)</h2>
+              <h2 class="card-project-title" data-i18n="projects.sungtheTitle">Nền tảng Web Truyện &amp; Dịch thuật AI (sungthe.online)</h2>
               <p class="body-default" data-i18n="projectsPage.sungtheDesc">
                 Nền tảng đọc truyện trực tuyến đang vận hành trên Ubuntu Home Server với Next.js 16 App
-                Router (React 19), Express và SQLite. Gồm giao diện đọc tối ưu cho di động có lưu tiến độ,
-                Author Studio cho tác giả tự đăng truyện và Bookhub Admin tích hợp thu thập dữ liệu, dịch
-                thuật AI (835 Vitest và 28 backend tests).
+                Router (React 19), Express và SQLite. Tích hợp Bookhub Admin điều phối luồng thu thập dữ liệu
+                và dịch thuật tự động qua LLM API, Author Studio cho tác giả và giao diện đọc tối ưu di động
+                (835 Vitest và 28 backend tests).
               </p>
               <div class="card-project-links">
                 <a class="link-underline small" href="https://sungthe.online" target="_blank" rel="noopener" data-i18n="projects.openSungthe">Mở sungthe.online ↗</a>
@@ -138,24 +139,25 @@
 
           <article class="card card-project reveal" data-tags="live,bot">
             <div class="card-project-visual">
-              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span data-i18n="projects.selfHostedBadge">Vận hành trên Home Server</span></span>
+              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span data-i18n="projects.selfHostedBadge">AI Pipeline · Home Server</span></span>
               <img src="assets/projects/novel-bots.svg" width="84" height="84" alt="">
             </div>
             <div class="card-project-body">
               <div class="card-project-tags">
-                <span class="badge badge-primary small">Node.js</span>
+                <span class="badge badge-primary small">OpenAI / DeepSeek</span>
+                <span class="badge badge-primary small">Prompt Engineering</span>
                 <span class="badge badge-primary small">TypeScript</span>
                 <span class="badge badge-primary small">Playwright</span>
-                <span class="badge badge-primary small">OpenAI / DeepSeek</span>
               </div>
-              <h2 class="card-project-title" data-i18n="projectsPage.botsTitle">Hệ thống Crawler &amp; Pipeline Dịch Truyện AI</h2>
+              <h2 class="card-project-title" data-i18n="projectsPage.botsTitle">Hệ thống Crawler &amp; Pipeline Dịch thuật LLM</h2>
               <p class="body-default" data-i18n="projectsPage.botsDesc">
-                Hệ thống worker chạy nền trên Ubuntu Server sử dụng Playwright, Puppeteer, Cheerio và
-                node-schedule để thu thập dữ liệu định kỳ, kết hợp pipeline TypeScript và OpenAI/DeepSeek
-                API để dịch tiểu thuyết Trung–Việt tự nhiên và sát ngữ cảnh.
+                Hệ thống worker tự động hóa trên Ubuntu Server kết hợp Playwright, Puppeteer, Cheerio với
+                pipeline dịch thuật LLM (OpenAI / DeepSeek API): thiết kế prompt giữ ngữ cảnh và bảng thuật
+                ngữ nhân vật xuyên suốt các chương, xử lý batch bất đồng bộ kèm cơ chế tự động retry và chuẩn
+                hóa văn bản đầu ra.
               </p>
               <div class="card-project-links">
-                <span class="card-project-meta" data-i18n="projects.botsNote">Automation bots · Private</span>
+                <span class="card-project-meta" data-i18n="projects.botsNote">LLM Automation · Private</span>
               </div>
             </div>
           </article>
@@ -166,15 +168,15 @@
             </div>
             <div class="card-project-body">
               <div class="card-project-tags">
+                <span class="badge badge-primary small">OpenAI-Compatible API</span>
+                <span class="badge badge-primary small">DeepSeek LLM</span>
                 <span class="badge badge-primary small">JavaScript</span>
-                <span class="badge badge-primary small">VBook Plugin</span>
-                <span class="badge badge-primary small">DeepSeek / OpenAI</span>
               </div>
-              <h2 class="card-project-title" data-i18n="projectsPage.vbookTitle">VBook Translate Extension</h2>
+              <h2 class="card-project-title" data-i18n="projectsPage.vbookTitle">VBook AI Translate Extension</h2>
               <p class="body-default" data-i18n="projectsPage.vbookDesc">
-                Tiện ích mã nguồn mở (sungthe-translate) dành cho ứng dụng đọc truyện VBook trên Android và
-                iOS, hỗ trợ dịch trực tiếp qua các API tương thích OpenAI (mặc định DeepSeek) và cho phép
-                tùy chỉnh model, base URL linh hoạt.
+                Tiện ích dịch thuật AI mã nguồn mở dành cho ứng dụng đọc truyện VBook trên Android và iOS,
+                tích hợp trực tiếp các LLM chuẩn OpenAI-compatible API (DeepSeek, OpenAI, custom endpoint)
+                với khả năng tùy biến system prompt, model và base URL linh hoạt.
               </p>
               <div class="card-project-links">
                 <a class="link-underline small" href="https://github.com/phongngo053/vbook-ext" target="_blank" rel="noopener" data-i18n="projects.openVbook">GitHub: vbook-ext ↗</a>
@@ -195,10 +197,11 @@
               </div>
               <h2 class="card-project-title" data-i18n="projectsPage.foodTitle">Food Ordering — Monolith &amp; Microservices</h2>
               <p class="body-default" data-i18n="projectsPage.foodDesc">
-                Hệ thống đặt đồ ăn gồm 3 vai trò (khách hàng, cửa hàng, tài xế), được triển khai theo hai
-                kiến trúc song song để đánh giá: phiên bản Monolith dùng NestJS + MySQL đầy đủ JWT, quản lý
-                đơn hàng, đánh giá, thông báo đẩy; phiên bản Microservices tách thành 6 dịch vụ độc lập; đi
-                kèm giao diện web React + Vite.
+                Hệ thống đặt đồ ăn 3 vai trò (Khách hàng, Cửa hàng, Tài xế) được xây dựng song song trên hai
+                kiến trúc để đối chiếu thực tiễn: bản Monolith (NestJS + MySQL) xử lý trọn vẹn xác thực JWT,
+                vòng đời đơn hàng, đánh giá và thông báo đẩy; bản Microservices phân tách thành 6 dịch vụ
+                độc lập theo domain để so sánh bài toán giao tiếp liên dịch vụ và phân tán dữ liệu; kết hợp
+                giao diện web React + Vite.
               </p>
               <div class="card-project-links">
                 <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-nestjs" target="_blank" rel="noopener" data-i18n="projects.linkMonolith">Monolith (NestJS) ↗</a>
@@ -219,36 +222,15 @@
                 <span class="badge badge-primary small">Node.js</span>
                 <span class="badge badge-primary small">REST API</span>
               </div>
-              <h2 class="card-project-title" data-i18n="projectsPage.deliveryTitle">Phong Delivery (Đồ án tốt nghiệp)</h2>
+              <h2 class="card-project-title" data-i18n="projectsPage.deliveryTitle">GoShip Delivery — Hệ thống Điều phối &amp; Giao nhận (Đồ án tốt nghiệp)</h2>
               <p class="body-default" data-i18n="projectsPage.deliveryDesc">
-                Ứng dụng giao hàng fullstack tách biệt giữa Frontend (React + Vite) và Backend (Node.js
-                REST API), hỗ trợ đặt đơn, điều phối tài xế, theo dõi trạng thái trực tiếp, lưu trữ lịch sử
-                và trang quản trị.
+                Nền tảng quản lý và điều phối giao nhận fullstack tách biệt giữa Frontend (React + Vite) và
+                Backend (Node.js REST API), bao quát trọn vẹn luồng tạo vận đơn, phân công tài xế, theo dõi
+                trạng thái giao hàng theo thời gian thực, đối soát lịch sử và bảng điều khiển quản trị.
               </p>
               <div class="card-project-links">
                 <a class="link-underline small" href="https://github.com/phongngo053/phong-delivery-FE" target="_blank" rel="noopener" data-i18n="projectsPage.linkFe">Front-end (React) ↗</a>
                 <a class="link-underline small" href="https://github.com/phongngo053/phong-delivery-BE" target="_blank" rel="noopener" data-i18n="projectsPage.linkBe">Back-end (Node.js) ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card card-project reveal" data-tags="fullstack">
-            <div class="card-project-visual">
-              <img src="assets/projects/dating-app.svg" width="84" height="84" alt="">
-            </div>
-            <div class="card-project-body">
-              <div class="card-project-tags">
-                <span class="badge badge-primary small">C# / .NET</span>
-                <span class="badge badge-primary small">Angular</span>
-                <span class="badge badge-primary small">TypeScript</span>
-              </div>
-              <h2 class="card-project-title" data-i18n="projectsPage.datingTitle">Dating App</h2>
-              <p class="body-default" data-i18n="projectsPage.datingDesc">
-                Ứng dụng hẹn hò fullstack kết hợp backend .NET / C# và frontend Angular, hoàn thiện các
-                luồng quản lý hồ sơ người dùng, ghép đôi và nhắn tin thời gian thực.
-              </p>
-              <div class="card-project-links">
-                <a class="link-underline small" href="https://github.com/phongngo053/DatingApp" target="_blank" rel="noopener" data-i18n="projectsPage.openDating">GitHub: DatingApp ↗</a>
               </div>
             </div>
           </article>
@@ -306,13 +288,13 @@
                 <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.42-4.04-1.42-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z"/>
               </svg>
             </a>
-            <a href="mailto:ngoti.phong.dev@gmail.com" aria-label="Email">
+            <a href="mailto:ngotienphong053@gmail.com" aria-label="Email">
               <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/>
                 <path d="m3 7 9 6 9-6"/>
               </svg>
             </a>
-            <a href="https://sungthe.online" target="_blank" rel="noopener" aria-label="Sủng Thê Online">
+            <a href="https://sungthe.online" target="_blank" rel="noopener" aria-label="Web Truyện sungthe.online">
               <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="12" cy="12" r="9"/>
                 <path d="M3.6 9h16.8M3.6 15h16.8"/>
@@ -336,7 +318,7 @@
         <div>
           <h2 class="h5" data-i18n="footer.contact">Liên hệ</h2>
           <ul>
-            <li><a href="mailto:ngoti.phong.dev@gmail.com">ngoti.phong.dev@gmail.com</a></li>
+            <li><a href="mailto:ngotienphong053@gmail.com">ngotienphong053@gmail.com</a></li>
             <li><a href="https://sungthe.online" target="_blank" rel="noopener">sungthe.online</a></li>
             <li><a href="https://github.com/phongngo053" target="_blank" rel="noopener">github.com/phongngo053</a></li>
             <li><a href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener" data-i18n="footer.allRepos">Tất cả repository</a></li>

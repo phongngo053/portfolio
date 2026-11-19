@@ -157,7 +157,7 @@
         email: email
       });
       var href =
-        "mailto:ngoti.phong.dev@gmail.com" +
+        "mailto:ngotienphong053@gmail.com" +
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
 
