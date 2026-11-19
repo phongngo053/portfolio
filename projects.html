@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="meta.projects.title">Dự án — Ngô Tiến Phong</title>
-  <meta name="description" data-i18n-content="meta.projects.description" content="Các dự án đã triển khai: web đọc truyện live sungthe.online, dàn bot crawl &amp; dịch truyện AI, kiến trúc microservices và ứng dụng fullstack.">
+  <meta name="description" data-i18n-content="meta.projects.description" content="Các dự án tiêu biểu đã triển khai: nền tảng đọc truyện sungthe.online, hệ thống crawler và dịch truyện bằng AI, kiến trúc microservices và các ứng dụng fullstack.">
   <meta name="author" content="Ngô Tiến Phong">
   <meta name="theme-color" content="#1b1f24">
 
@@ -55,7 +55,7 @@
           <li><a href="projects.html" class="is-active" data-i18n="nav.projects">Dự án</a></li>
           <li><a href="index.html#stack" data-i18n="nav.stack">Công nghệ</a></li>
           <li><a href="index.html#experience" data-i18n="nav.experience">Kinh nghiệm</a></li>
-          <li><a href="about.html" data-i18n="nav.aboutPage">Về mình</a></li>
+          <li><a href="about.html" data-i18n="nav.aboutPage">Về tôi</a></li>
           <li class="nav-lang">
             <div class="lang-switch" role="group" aria-label="Đổi ngôn ngữ" data-i18n-attr="aria-label:nav.langSwitch">
               <button class="lang-option is-active" type="button" data-lang="vi" aria-pressed="true">VN</button>
@@ -86,8 +86,8 @@
         <div class="heading-top-line large" aria-hidden="true"></div>
         <h1 class="display-2" data-i18n="projectsPage.heading">Các dự án tiêu biểu.</h1>
         <p data-i18n="projectsPage.intro">
-          Chỉ giữ lại những dự án có chiều sâu và thực sự chạy được — từ web production trên Home Server,
-          dàn bot truyện AI cho tới các hệ thống fullstack và microservices.
+          Tổng hợp các dự án tiêu biểu đã triển khai hoàn chỉnh, từ ứng dụng web đang vận hành trên Home
+          Server, hệ thống tự động hóa tích hợp AI đến các kiến trúc fullstack và microservices.
         </p>
       </div>
     </section>
@@ -106,9 +106,14 @@
         <div class="projects-grid">
 
           <article class="card card-project reveal" data-tags="live,fullstack">
-            <div class="card-project-visual">
+            <div class="card-project-visual has-screenshot">
               <span class="status-pill"><span class="dot" aria-hidden="true"></span><span data-i18n="projects.liveBadge">Live · sungthe.online</span></span>
-              <img src="assets/projects/sungthe.svg" width="84" height="84" alt="">
+              <a class="card-project-preview-link" href="https://sungthe.online" target="_blank" rel="noopener" aria-label="Mở trang web sungthe.online trong tab mới" data-i18n-attr="aria-label:projects.sungthePreviewLabel">
+                <picture>
+                  <source srcset="assets/projects/sungthe.webp" type="image/webp">
+                  <img src="assets/projects/sungthe.jpg" width="1280" height="850" fetchpriority="high" alt="Ảnh chụp màn hình trang chủ nền tảng đọc truyện Sủng Thê (sungthe.online)" data-i18n-attr="alt:projects.sungtheAlt">
+                </picture>
+              </a>
             </div>
             <div class="card-project-body">
               <div class="card-project-tags">
@@ -119,9 +124,10 @@
               </div>
               <h2 class="card-project-title">Sủng Thê (sungthe.online)</h2>
               <p class="body-default" data-i18n="projectsPage.sungtheDesc">
-                Web đọc truyện chữ hoàn chỉnh đang chạy thật trên Ubuntu Home Server: Next.js 16 App
-                Router (React 19) + Express + SQLite. Có giao diện đọc lưu tiến độ cho mobile, Author
-                Studio cho tác giả tự đăng và Bookhub Admin tích hợp crawl &amp; dịch AI (835 Vitest + 28 backend tests).
+                Nền tảng đọc truyện trực tuyến đang vận hành trên Ubuntu Home Server với Next.js 16 App
+                Router (React 19), Express và SQLite. Gồm giao diện đọc tối ưu cho di động có lưu tiến độ,
+                Author Studio cho tác giả tự đăng truyện và Bookhub Admin tích hợp thu thập dữ liệu, dịch
+                thuật AI (835 Vitest và 28 backend tests).
               </p>
               <div class="card-project-links">
                 <a class="link-underline small" href="https://sungthe.online" target="_blank" rel="noopener" data-i18n="projects.openSungthe">Mở sungthe.online ↗</a>
@@ -132,7 +138,7 @@
 
           <article class="card card-project reveal" data-tags="live,bot">
             <div class="card-project-visual">
-              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span data-i18n="projects.selfHostedBadge">Chạy trên Home Server</span></span>
+              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span data-i18n="projects.selfHostedBadge">Vận hành trên Home Server</span></span>
               <img src="assets/projects/novel-bots.svg" width="84" height="84" alt="">
             </div>
             <div class="card-project-body">
@@ -142,11 +148,11 @@
                 <span class="badge badge-primary small">Playwright</span>
                 <span class="badge badge-primary small">OpenAI / DeepSeek</span>
               </div>
-              <h2 class="card-project-title" data-i18n="projectsPage.botsTitle">Bot Crawl &amp; Pipeline Dịch Truyện AI</h2>
+              <h2 class="card-project-title" data-i18n="projectsPage.botsTitle">Hệ thống Crawler &amp; Pipeline Dịch Truyện AI</h2>
               <p class="body-default" data-i18n="projectsPage.botsDesc">
-                Bộ worker tự động chạy nền trên Ubuntu Server: dùng Playwright, Puppeteer, Cheerio và
-                node-schedule để thu thập dữ liệu định kỳ, kết hợp pipeline TypeScript + OpenAI/DeepSeek
-                API để dịch tiểu thuyết Trung–Việt mượt và giữ đúng ngữ cảnh.
+                Hệ thống worker chạy nền trên Ubuntu Server sử dụng Playwright, Puppeteer, Cheerio và
+                node-schedule để thu thập dữ liệu định kỳ, kết hợp pipeline TypeScript và OpenAI/DeepSeek
+                API để dịch tiểu thuyết Trung–Việt tự nhiên và sát ngữ cảnh.
               </p>
               <div class="card-project-links">
                 <span class="card-project-meta" data-i18n="projects.botsNote">Automation bots · Private</span>
@@ -166,9 +172,9 @@
               </div>
               <h2 class="card-project-title" data-i18n="projectsPage.vbookTitle">VBook Translate Extension</h2>
               <p class="body-default" data-i18n="projectsPage.vbookDesc">
-                Extension mã nguồn mở (sungthe-translate) cho ứng dụng đọc truyện VBook trên Android và
-                iOS — hỗ trợ dịch truyện trực tiếp qua API tương thích OpenAI (mặc định DeepSeek), cho
-                phép đổi model và base URL linh hoạt.
+                Tiện ích mã nguồn mở (sungthe-translate) dành cho ứng dụng đọc truyện VBook trên Android và
+                iOS, hỗ trợ dịch trực tiếp qua các API tương thích OpenAI (mặc định DeepSeek) và cho phép
+                tùy chỉnh model, base URL linh hoạt.
               </p>
               <div class="card-project-links">
                 <a class="link-underline small" href="https://github.com/phongngo053/vbook-ext" target="_blank" rel="noopener" data-i18n="projects.openVbook">GitHub: vbook-ext ↗</a>
@@ -189,9 +195,10 @@
               </div>
               <h2 class="card-project-title" data-i18n="projectsPage.foodTitle">Food Ordering — Monolith &amp; Microservices</h2>
               <p class="body-default" data-i18n="projectsPage.foodDesc">
-                Hệ thống đặt đồ ăn 3 vai trò (khách hàng, cửa hàng, tài xế) được xây dựng thành hai kiến
-                trúc song song để so sánh: bản Monolith NestJS + MySQL đầy đủ JWT, đơn hàng, đánh giá,
-                thông báo đẩy; bản Microservices tách 6 service độc lập; kèm giao diện web React + Vite.
+                Hệ thống đặt đồ ăn gồm 3 vai trò (khách hàng, cửa hàng, tài xế), được triển khai theo hai
+                kiến trúc song song để đánh giá: phiên bản Monolith dùng NestJS + MySQL đầy đủ JWT, quản lý
+                đơn hàng, đánh giá, thông báo đẩy; phiên bản Microservices tách thành 6 dịch vụ độc lập; đi
+                kèm giao diện web React + Vite.
               </p>
               <div class="card-project-links">
                 <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-nestjs" target="_blank" rel="noopener" data-i18n="projects.linkMonolith">Monolith (NestJS) ↗</a>
@@ -214,9 +221,9 @@
               </div>
               <h2 class="card-project-title" data-i18n="projectsPage.deliveryTitle">Phong Delivery (Đồ án tốt nghiệp)</h2>
               <p class="body-default" data-i18n="projectsPage.deliveryDesc">
-                Ứng dụng giao hàng fullstack tách rõ Front-end React + Vite và Back-end Node.js REST API —
-                hỗ trợ đặt đơn, điều phối tài xế, theo dõi trạng thái trực tiếp, lịch sử giao hàng và màn
-                hình quản trị.
+                Ứng dụng giao hàng fullstack tách biệt giữa Frontend (React + Vite) và Backend (Node.js
+                REST API), hỗ trợ đặt đơn, điều phối tài xế, theo dõi trạng thái trực tiếp, lưu trữ lịch sử
+                và trang quản trị.
               </p>
               <div class="card-project-links">
                 <a class="link-underline small" href="https://github.com/phongngo053/phong-delivery-FE" target="_blank" rel="noopener" data-i18n="projectsPage.linkFe">Front-end (React) ↗</a>
@@ -237,8 +244,8 @@
               </div>
               <h2 class="card-project-title" data-i18n="projectsPage.datingTitle">Dating App</h2>
               <p class="body-default" data-i18n="projectsPage.datingDesc">
-                Ứng dụng hẹn hò fullstack kết hợp back-end .NET / C# và front-end Angular — hoàn chỉnh
-                luồng hồ sơ người dùng, ghép đôi và nhắn tin thời gian thực.
+                Ứng dụng hẹn hò fullstack kết hợp backend .NET / C# và frontend Angular, hoàn thiện các
+                luồng quản lý hồ sơ người dùng, ghép đôi và nhắn tin thời gian thực.
               </p>
               <div class="card-project-links">
                 <a class="link-underline small" href="https://github.com/phongngo053/DatingApp" target="_blank" rel="noopener" data-i18n="projectsPage.openDating">GitHub: DatingApp ↗</a>
@@ -249,7 +256,7 @@
         </div>
 
         <p class="body-small text-neutral-500 mt-64 reveal">
-          <span data-i18n="projectsPage.more">Các thử nghiệm khác được lưu trên</span>
+          <span data-i18n="projectsPage.more">Các dự án và mã nguồn khác được lưu trữ tại</span>
           <a class="link-underline small" href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener">github.com/phongngo053</a>.
         </p>
       </div>
@@ -260,14 +267,14 @@
       <div class="container">
         <div class="cta reveal">
           <div class="heading-top-line large" style="margin-left:auto;margin-right:auto" aria-hidden="true"></div>
-          <h2 class="display-3" data-i18n="projectsPage.ctaHeading">Bạn có ý tưởng cần biến thành sản phẩm thật?</h2>
+          <h2 class="display-3" data-i18n="projectsPage.ctaHeading">Bạn có dự án cần triển khai thành sản phẩm thực tế?</h2>
           <p class="body-large" data-i18n="projectsPage.ctaBody">
-            Từ web fullstack, API backend cho tới bot tự động hay tự triển khai lên server riêng — cứ nhắn
-            mình cùng trao đổi nhé.
+            Từ ứng dụng web fullstack, hệ thống backend API đến công cụ tự động hóa hoặc triển khai trên
+            máy chủ riêng, hãy liên hệ để tôi có thể trao đổi chi tiết cùng bạn.
           </p>
           <div class="buttons-row">
-            <a class="btn btn-primary" href="about.html#contact" data-i18n="hero.getInTouch">Liên hệ với mình</a>
-            <a class="btn btn-secondary" href="https://github.com/phongngo053" target="_blank" rel="noopener" data-i18n="cta.github">Xem GitHub của mình</a>
+            <a class="btn btn-primary" href="about.html#contact" data-i18n="hero.getInTouch">Liên hệ với tôi</a>
+            <a class="btn btn-secondary" href="https://github.com/phongngo053" target="_blank" rel="noopener" data-i18n="cta.github">Xem GitHub của tôi</a>
           </div>
         </div>
       </div>
@@ -290,8 +297,8 @@
             <span>Ngô Tiến Phong</span>
           </a>
           <p class="body-small text-neutral-500 mt-24" style="max-width:340px" data-i18n="footer.tagline">
-            Fullstack Developer &amp; Self-Host Builder. Tự viết giao diện, API, bot tự động và vận hành
-            sản phẩm thật trên Ubuntu Home Server.
+            Fullstack Developer &amp; Self-Host Builder. Phát triển giao diện, API, hệ thống tự động hóa và
+            vận hành dịch vụ thực tế trên Ubuntu Home Server.
           </p>
           <div class="social-row mt-32">
             <a href="https://github.com/phongngo053" target="_blank" rel="noopener" aria-label="GitHub">
@@ -338,8 +345,8 @@
       </div>
 
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Ngô Tiến Phong. <span data-i18n="footer.built">Viết thuần HTML, CSS, JS — không framework.</span></span>
-        <span data-i18n="footer.design">Thiết kế lấy cảm hứng từ Developer X (BRIX Templates) — mã nguồn và nội dung tự viết hoàn toàn.</span>
+        <span>© <span data-year>2026</span> Ngô Tiến Phong. <span data-i18n="footer.built">Xây dựng bằng HTML, CSS và JavaScript thuần.</span></span>
+        <span data-i18n="footer.design">Giao diện lấy cảm hứng từ Developer X (BRIX Templates), mã nguồn và nội dung được tự phát triển.</span>
       </div>
     </div>
   </footer>

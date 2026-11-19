@@ -36,9 +36,9 @@ python3 -m http.server 8080
 │   ├── i18n.js         # lightweight VN (default) / EN runtime + localized dictionaries
 │   └── main.js         # nav drawer, scroll spy, reveal, category filters, mailto form
 └── assets/
-    ├── avatar.png
+    ├── avatar.webp / avatar.jpg
     ├── favicon.svg
-    └── projects/*.svg  # hand-drawn project glyphs
+    └── projects/       # live product screenshots & project glyphs
 ```
 
 ## Internationalisation (i18n)

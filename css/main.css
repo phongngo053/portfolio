@@ -539,9 +539,50 @@ blockquote {
   flex: 1;
 }
 
+.card-project-visual.has-screenshot {
+  display: block;
+  background-color: var(--neutral--800);
+}
+
+.card-project-visual.has-screenshot::after {
+  background: linear-gradient(
+    to top,
+    rgba(27, 31, 36, 0.62) 0%,
+    rgba(27, 31, 36, 0.14) 32%,
+    transparent 58%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-project-preview-link,
+.card-project-visual.has-screenshot picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.card-project-visual.has-screenshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  z-index: 0;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-project:hover .card-project-visual.has-screenshot img {
+  transform: scale(1.03);
+}
+
 .card-project-featured {
   grid-column: 1 / -1;
-  container-type: inline-size;
+}
+
+.card-project-featured > .card-project-visual.has-screenshot {
+  height: auto;
+  aspect-ratio: 1280 / 850;
 }
 
 .card-project-featured:hover {
@@ -555,14 +596,55 @@ blockquote {
     align-items: stretch;
   }
 
+  .card-project-featured:has(> .card-project-visual.has-screenshot) {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  }
+
   .card-project-featured > .card-project-visual {
     height: auto;
     min-height: 300px;
   }
 
+  .card-project-featured > .card-project-visual.has-screenshot {
+    aspect-ratio: auto;
+    min-height: 360px;
+    padding: 62px 24px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #27303d 0%, #1c222b 100%);
+  }
+
+  .card-project-featured > .card-project-visual.has-screenshot::after {
+    background: radial-gradient(circle at 20% 10%, rgba(7, 95, 228, 0.24), transparent 60%);
+  }
+
+  .card-project-featured > .card-project-visual.has-screenshot .status-pill {
+    top: 18px;
+    bottom: auto;
+    left: 24px;
+  }
+
+  .card-project-featured > .card-project-visual.has-screenshot .card-project-preview-link {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.42);
+    position: relative;
+    z-index: 2;
+  }
+
   .card-project-featured > .card-project-visual img {
     width: 112px;
     height: 112px;
+  }
+
+  .card-project-featured > .card-project-visual.has-screenshot img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1280 / 850;
   }
 
   .card-project-featured > .card-project-body {
@@ -606,6 +688,13 @@ blockquote {
   top: 18px;
   left: 18px;
   z-index: 2;
+}
+
+.card-project-visual.has-screenshot .status-pill {
+  top: auto;
+  bottom: 16px;
+  left: 16px;
+  pointer-events: none;
 }
 
 .card-project-links {
@@ -1184,6 +1273,7 @@ html[data-lang-pending] body { visibility: hidden; }
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 52px 32px;
+  container-type: inline-size;
 }
 
 .projects-grid.gap-28 {
@@ -1255,18 +1345,29 @@ html[data-lang-pending] body { visibility: hidden; }
   background: var(--accent--primary-1);
 }
 
+.exp-yoe-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-top: 20px;
+}
+
 .experience-role {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
+}
+
+.experience-role h3 {
+  color: var(--neutral--100);
 }
 
 .experience-role .period {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--neutral--500);
+  letter-spacing: 0.01em;
+  color: var(--accent--primary-3);
 }
 
 /* Numbers strip ------------------------------------------------------------ */
@@ -1449,11 +1550,11 @@ html[data-lang-pending] body { visibility: hidden; }
 }
 
 .timeline-item .period {
-  font-size: 14px;
+  display: inline-block;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--neutral--500);
+  letter-spacing: 0.01em;
+  color: var(--accent--primary-3);
   margin-bottom: 8px;
 }
 
@@ -1597,6 +1698,7 @@ html[data-lang-pending] body { visibility: hidden; }
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .card-project:hover,
+  .card-project:hover .card-project-visual.has-screenshot img,
   .card-project-featured:hover,
   .card-homelab:hover,
   .card-skills:hover,
@@ -1637,6 +1739,7 @@ html[data-lang-pending] body { visibility: hidden; }
   .homelab-grid { grid-template-columns: minmax(0, 1fr); }
   .card-experience { grid-template-columns: minmax(0, 1fr); }
   .projects-grid { grid-template-columns: minmax(0, 1fr); }
+  .card-project-visual.has-screenshot { height: auto; aspect-ratio: 1280 / 850; }
   .stack-grid,
   .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; }

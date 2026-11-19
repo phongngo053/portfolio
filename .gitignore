@@ -2,3 +2,6 @@
 .DS_Store
 Thumbs.db
 *.log
+
+# Personal source photos - never push to GitHub
+anh/
