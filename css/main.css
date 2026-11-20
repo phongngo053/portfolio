@@ -1810,3 +1810,24 @@ html[data-lang-pending] body { visibility: hidden; }
   .scroll-down { margin-top: 48px; }
   .heading-top-line.large { max-width: 100px; min-height: 6px; margin-bottom: 32px; }
 }
+
+/* Hide decorative status dots */
+.status-pill .dot,
+.hero-eyebrow .dot,
+.hero-status .dot {
+  display: none;
+}
+
+/* Official tech icons (SVG mask, brand-colored via --mark) */
+.skill-mark {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+.skill-mark::before {
+  content: "";
+  width: 34px;
+  height: 34px;
+  background-color: var(--mark);
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+}

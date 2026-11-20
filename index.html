@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="meta.home.title">Ngô Tiến Phong — Fullstack Developer &amp; Self-Host Builder</title>
-  <meta name="description" data-i18n-content="meta.home.description" content="Portfolio của Ngô Tiến Phong — Fullstack Developer (~2 năm kinh nghiệm) tại FPT Software. Phát triển ứng dụng web fullstack (Next.js, React, Node.js, NestJS, Java), hệ thống tự động hóa tích hợp AI và vận hành Ubuntu Home Server.">
+  <meta name="description" data-i18n-content="meta.home.description"
+    content="Portfolio của Ngô Tiến Phong — Fullstack Developer (~2 năm kinh nghiệm) tại FPT Software. Phát triển ứng dụng web fullstack (Next.js, React, Node.js, NestJS, Java), hệ thống tự động hóa tích hợp AI và vận hành Ubuntu Home Server.">
   <meta name="author" content="Ngô Tiến Phong">
   <meta name="theme-color" content="#1b1f24">
 
   <meta property="og:type" content="website">
   <meta property="og:title" data-i18n-content="meta.home.ogTitle" content="Ngô Tiến Phong — Fullstack Developer">
-  <meta property="og:description" data-i18n-content="meta.home.ogDescription" content="Fullstack Developer phát triển ứng dụng web trọn vẹn và trực tiếp vận hành hệ thống trên Ubuntu Home Server.">
+  <meta property="og:description" data-i18n-content="meta.home.ogDescription"
+    content="Fullstack Developer phát triển ứng dụng web trọn vẹn và trực tiếp vận hành hệ thống trên Ubuntu Home Server.">
   <meta property="og:image" content="https://phongngo053.github.io/portfolio/assets/avatar.jpg">
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/main.css?v=20261120">
 
   <!-- Pick the saved locale before the first paint so the page never flashes the wrong language. -->
   <script>
     (function () {
       var lang = "vi";
-      try { lang = localStorage.getItem("phong-lang") || "vi"; } catch (e) {}
+      try { lang = localStorage.getItem("phong-lang") || "vi"; } catch (e) { }
       if (lang !== "vi" && lang !== "en") lang = "vi";
       document.documentElement.setAttribute("lang", lang);
       if (lang !== "vi") {
@@ -38,16 +42,19 @@
   <script src="js/i18n.js?v=20261120" defer></script>
   <script src="js/main.js?v=20261120" defer></script>
 </head>
+
 <body>
 
   <!-- ============================== NAV ============================== -->
   <header class="nav">
     <div class="container nav-inner">
-      <a class="nav-logo" href="index.html" aria-label="Ngô Tiến Phong — trang chủ" data-i18n-attr="aria-label:nav.home">
+      <a class="nav-logo" href="index.html" aria-label="Ngô Tiến Phong — trang chủ"
+        data-i18n-attr="aria-label:nav.home">
         <span class="logo-mark" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M25 21 L13 32 L25 43"/>
-            <path d="M36 43 H52"/>
+          <svg width="22" height="22" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="7"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M25 21 L13 32 L25 43" />
+            <path d="M36 43 H52" />
           </svg>
         </span>
         <span>Ngô Tiến Phong</span>
@@ -71,12 +78,14 @@
       </nav>
 
       <div class="nav-actions">
-        <div class="lang-switch lang-switch-desktop" role="group" aria-label="Đổi ngôn ngữ" data-i18n-attr="aria-label:nav.langSwitch">
+        <div class="lang-switch lang-switch-desktop" role="group" aria-label="Đổi ngôn ngữ"
+          data-i18n-attr="aria-label:nav.langSwitch">
           <button class="lang-option is-active" type="button" data-lang="vi" aria-pressed="true">VN</button>
           <button class="lang-option" type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
         <a class="btn btn-primary btn-small" href="#contact" data-i18n="nav.talk">Liên hệ</a>
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Mở hoặc đóng menu" data-i18n-attr="aria-label:nav.toggle">
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links"
+          aria-label="Mở hoặc đóng menu" data-i18n-attr="aria-label:nav.toggle">
           <span></span>
         </button>
       </div>
@@ -90,7 +99,6 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-copy">
-            <p class="hero-eyebrow"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.eyebrow">Sẵn sàng hợp tác &amp; dự án mới</span></p>
 
             <h1 class="display-1" data-i18n-html="hero.title">
               Fullstack Developer,<br />
@@ -107,7 +115,8 @@
             <div class="buttons-row">
               <a class="btn btn-primary" href="#projects" data-i18n="hero.viewWork">Xem dự án tiêu biểu</a>
               <a class="btn btn-secondary" href="#contact" data-i18n="hero.getInTouch">Liên hệ với tôi</a>
-        <a class="btn btn-secondary" href="assets/Ngo-Tien-Phong-CV-VI.pdf" download data-i18n="cv.download" data-i18n-attr="href:cv.file">Tải CV (PDF) ↓</a>
+              <a class="btn btn-secondary" href="assets/Ngo-Tien-Phong-CV-VI.pdf" download data-i18n="cv.download"
+                data-i18n-attr="href:cv.file">Tải CV (PDF) ↓</a>
             </div>
 
             <div class="hero-badges">
@@ -124,15 +133,18 @@
             <div class="hero-visual-card">
               <picture>
                 <source srcset="assets/avatar.webp" type="image/webp">
-                <img class="avatar-circle _04" src="assets/avatar.jpg" width="320" height="320" fetchpriority="high" alt="Ngô Tiến Phong">
+                <img class="avatar-circle _04" src="assets/avatar.jpg" width="320" height="320" fetchpriority="high"
+                  alt="Ngô Tiến Phong">
               </picture>
-              <p class="hero-status"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.status">Software Engineer @ FPT Software</span></p>
+              <p class="hero-status"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.status">Software
+                  Engineer @ FPT Software</span></p>
               <p class="body-small text-neutral-500" data-i18n="hero.basedIn">~2 năm kinh nghiệm · Huế, Việt Nam</p>
             </div>
           </div>
         </div>
 
-        <a class="scroll-down" href="#about" aria-label="Cuộn xuống phần giới thiệu" data-i18n-attr="aria-label:hero.scroll">↓</a>
+        <a class="scroll-down" href="#about" aria-label="Cuộn xuống phần giới thiệu"
+          data-i18n-attr="aria-label:hero.scroll">↓</a>
       </div>
     </section>
 
@@ -187,8 +199,9 @@
         <div class="homelab-grid">
           <article class="card card-homelab reveal">
             <div class="homelab-head">
-              <span class="skill-mark" style="--mark:#d5691b" aria-hidden="true">UB</span>
-              <span class="status-pill"><span class="dot" aria-hidden="true"></span><span data-i18n="homelab.badgeLive">Hoạt động 24/7</span></span>
+              <span class="skill-mark" style="--mark:#e95420;--icon:url(../assets/tech-icons/ubuntu.svg)" aria-hidden="true"></span>
+              <span class="status-pill"><span class="dot" aria-hidden="true"></span><span
+                  data-i18n="homelab.badgeLive">Hoạt động 24/7</span></span>
             </div>
             <h3 class="h3" data-i18n="homelab.c1Title">Hạ tầng Linux &amp; Reverse Proxy</h3>
             <p class="body-default" data-i18n="homelab.c1Desc">
@@ -205,7 +218,7 @@
 
           <article class="card card-homelab reveal">
             <div class="homelab-head">
-              <span class="skill-mark" style="--mark:#05c168" aria-hidden="true">WEB</span>
+              <span class="skill-mark" style="--mark:#ffffff;--icon:url(../assets/tech-icons/nextjs.svg)" aria-hidden="true"></span>
               <span class="status-pill"><span class="dot" aria-hidden="true"></span><span>sungthe.online</span></span>
             </div>
             <h3 class="h3" data-i18n="homelab.c2Title">Web Truyện Production (sungthe.online)</h3>
@@ -215,14 +228,16 @@
               dữ liệu và băng thông.
             </p>
             <div>
-              <a class="link-underline small" href="https://sungthe.online" target="_blank" rel="noopener" data-i18n="homelab.c2Link">Mở sungthe.online ↗</a>
+              <a class="link-underline small" href="https://sungthe.online" target="_blank" rel="noopener"
+                data-i18n="homelab.c2Link">Mở sungthe.online ↗</a>
             </div>
           </article>
 
           <article class="card card-homelab reveal">
             <div class="homelab-head">
-              <span class="skill-mark" style="--mark:#2e81ff" aria-hidden="true">AI</span>
-              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span data-i18n="homelab.badgeSelf">Self-hosted AI</span></span>
+              <span class="skill-mark" style="--mark:#74aa9c;--icon:url(../assets/tech-icons/openai.svg)" aria-hidden="true"></span>
+              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span
+                  data-i18n="homelab.badgeSelf">Self-hosted AI</span></span>
             </div>
             <h3 class="h3" data-i18n="homelab.c3Title">OpenClaw AI Agent &amp; LLM Pipelines</h3>
             <p class="body-default" data-i18n="homelab.c3Desc">
@@ -266,11 +281,16 @@
 
           <article class="card card-project card-project-featured reveal">
             <div class="card-project-visual has-screenshot">
-              <span class="status-pill"><span class="dot" aria-hidden="true"></span><span data-i18n="projects.liveBadge">Live · sungthe.online</span></span>
-              <a class="card-project-preview-link" href="https://sungthe.online" target="_blank" rel="noopener" aria-label="Mở trang web sungthe.online trong tab mới" data-i18n-attr="aria-label:projects.sungthePreviewLabel">
+              <span class="status-pill"><span class="dot" aria-hidden="true"></span><span
+                  data-i18n="projects.liveBadge">Live · sungthe.online</span></span>
+              <a class="card-project-preview-link" href="https://sungthe.online" target="_blank" rel="noopener"
+                aria-label="Mở trang web sungthe.online trong tab mới"
+                data-i18n-attr="aria-label:projects.sungthePreviewLabel">
                 <picture>
                   <source srcset="assets/projects/sungthe.webp" type="image/webp">
-                  <img src="assets/projects/sungthe.jpg" width="1280" height="850" loading="lazy" decoding="async" alt="Ảnh chụp màn hình trang chủ nền tảng đọc truyện trực tuyến (sungthe.online)" data-i18n-attr="alt:projects.sungtheAlt">
+                  <img src="assets/projects/sungthe.jpg" width="1280" height="850" loading="lazy" decoding="async"
+                    alt="Ảnh chụp màn hình trang chủ nền tảng đọc truyện trực tuyến (sungthe.online)"
+                    data-i18n-attr="alt:projects.sungtheAlt">
                 </picture>
               </a>
             </div>
@@ -282,7 +302,8 @@
                 <span class="badge badge-primary small">AI / LLM Pipeline</span>
                 <span class="badge badge-primary small">SQLite</span>
               </div>
-              <h3 class="card-project-title" data-i18n="projects.sungtheTitle">Nền tảng Web Truyện &amp; Dịch thuật AI (sungthe.online)</h3>
+              <h3 class="card-project-title" data-i18n="projects.sungtheTitle">Nền tảng Web Truyện &amp; Dịch thuật AI
+                (sungthe.online)</h3>
               <p class="body-default" data-i18n="projects.sungtheDesc">
                 Nền tảng đọc truyện trực tuyến vận hành thực tế trên Ubuntu Home Server. Tích hợp Bookhub
                 Admin tự động hóa luồng thu thập dữ liệu và dịch thuật hàng loạt bằng LLM (OpenAI / DeepSeek),
@@ -290,7 +311,8 @@
                 (Vitest và node:test).
               </p>
               <div class="card-project-links">
-                <a class="link-underline small" href="https://sungthe.online" target="_blank" rel="noopener" data-i18n="projects.openSungthe">Mở sungthe.online ↗</a>
+                <a class="link-underline small" href="https://sungthe.online" target="_blank" rel="noopener"
+                  data-i18n="projects.openSungthe">Mở sungthe.online ↗</a>
                 <span class="card-project-meta" data-i18n="projects.privateRepoNote">Self-hosted · Private repo</span>
               </div>
             </div>
@@ -298,7 +320,8 @@
 
           <article class="card card-project reveal">
             <div class="card-project-visual">
-              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span data-i18n="projects.selfHostedBadge">AI Pipeline · Home Server</span></span>
+              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span
+                  data-i18n="projects.selfHostedBadge">AI Pipeline · Home Server</span></span>
               <img src="assets/projects/novel-bots.svg" width="84" height="84" alt="">
             </div>
             <div class="card-project-body">
@@ -308,14 +331,16 @@
                 <span class="badge badge-primary small">TypeScript</span>
                 <span class="badge badge-primary small">Playwright</span>
               </div>
-              <h3 class="card-project-title" data-i18n="projects.botsTitle">Hệ thống Crawler &amp; Pipeline Dịch thuật LLM</h3>
+              <h3 class="card-project-title" data-i18n="projects.botsTitle">Hệ thống Crawler &amp; Pipeline Dịch thuật
+                LLM</h3>
               <p class="body-default" data-i18n="projects.botsDesc">
                 Pipeline tự động hóa kết hợp Playwright, Puppeteer, Cheerio với LLM API (OpenAI / DeepSeek):
                 tự động thu thập chương mới theo lịch, thiết kế prompt giữ ngữ cảnh và nhất quán thuật ngữ
                 xuyên suốt bộ truyện, xử lý bất đồng bộ kèm retry/chuẩn hóa đầu ra và plugin dịch mở cho VBook.
               </p>
               <div class="card-project-links">
-                <a class="link-underline small" href="https://github.com/phongngo053/vbook-ext" target="_blank" rel="noopener" data-i18n="projects.openVbook">GitHub: vbook-ext ↗</a>
+                <a class="link-underline small" href="https://github.com/phongngo053/vbook-ext" target="_blank"
+                  rel="noopener" data-i18n="projects.openVbook">GitHub: vbook-ext ↗</a>
                 <span class="card-project-meta" data-i18n="projects.botsNote">LLM Automation · Private</span>
               </div>
             </div>
@@ -332,7 +357,8 @@
                 <span class="badge badge-primary small">React</span>
                 <span class="badge badge-primary small">MySQL</span>
               </div>
-              <h3 class="card-project-title" data-i18n="projects.foodTitle">Food Ordering — Monolith &amp; Microservices</h3>
+              <h3 class="card-project-title" data-i18n="projects.foodTitle">Food Ordering — Monolith &amp; Microservices
+              </h3>
               <p class="body-default" data-i18n="projects.foodDesc">
                 Hệ thống đặt đồ ăn 3 vai trò (Khách hàng, Cửa hàng, Tài xế) được xây dựng song song trên hai
                 kiến trúc để đối chiếu thực tiễn: bản Monolith (NestJS + MySQL, JWT, theo dõi đơn, đánh giá,
@@ -340,9 +366,12 @@
                 diện React + Vite.
               </p>
               <div class="card-project-links">
-                <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-nestjs" target="_blank" rel="noopener" data-i18n="projects.linkMonolith">Monolith (NestJS) ↗</a>
-                <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-micro" target="_blank" rel="noopener" data-i18n="projects.linkMicro">Microservices ↗</a>
-                <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-react" target="_blank" rel="noopener" data-i18n="projects.linkWeb">Web (React) ↗</a>
+                <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-nestjs"
+                  target="_blank" rel="noopener" data-i18n="projects.linkMonolith">Monolith (NestJS) ↗</a>
+                <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-micro"
+                  target="_blank" rel="noopener" data-i18n="projects.linkMicro">Microservices ↗</a>
+                <a class="link-underline small" href="https://github.com/phongngo053/food-ordering-react"
+                  target="_blank" rel="noopener" data-i18n="projects.linkWeb">Web (React) ↗</a>
               </div>
             </div>
           </article>
@@ -367,64 +396,71 @@
 
         <div class="stack-grid">
           <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#d5691b" aria-hidden="true">AI</span>
+            <span class="skill-mark" style="--mark:#74aa9c;--icon:url(../assets/tech-icons/openai.svg)" aria-hidden="true"></span>
             <h3 class="h4">LLM &amp; AI APIs</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.llm">OpenAI, DeepSeek, Prompt Engineering &amp; AI Pipeline</p>
+            <p class="body-small text-neutral-500" data-i18n="stack.llm">OpenAI, DeepSeek, Prompt Engineering &amp; AI
+              Pipeline</p>
           </div>
           <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#11845b" aria-hidden="true">AG</span>
+            <span class="skill-mark" style="--mark:#2ead33;--icon:url(../assets/tech-icons/playwright.svg)" aria-hidden="true"></span>
             <h3 class="h4">AI Agents &amp; Bots</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.bots">OpenClaw Agent, Playwright &amp; tự động hóa</p>
+            <p class="body-small text-neutral-500" data-i18n="stack.bots">OpenClaw Agent, Playwright &amp; tự động hóa
+            </p>
           </div>
           <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#075fe4" aria-hidden="true">TS</span>
+            <span class="skill-mark" style="--mark:#3178c6;--icon:url(../assets/tech-icons/typescript.svg)" aria-hidden="true"></span>
             <h3 class="h4">TypeScript</h3>
             <p class="body-small text-neutral-500" data-i18n="stack.ts">Phát triển fullstack an toàn kiểu dữ liệu</p>
           </div>
           <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#2e81ff" aria-hidden="true">Nx</span>
+            <span class="skill-mark" style="--mark:#ffffff;--icon:url(../assets/tech-icons/nextjs.svg)" aria-hidden="true"></span>
             <h3 class="h4">Next.js &amp; React</h3>
             <p class="body-small text-neutral-500" data-i18n="stack.next">App Router, SSR &amp; giao diện ứng dụng</p>
           </div>
           <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#11845b" aria-hidden="true">Nd</span>
+            <span class="skill-mark" style="--mark:#5fa04e;--icon:url(../assets/tech-icons/nodejs.svg)" aria-hidden="true"></span>
             <h3 class="h4">Node.js</h3>
             <p class="body-small text-neutral-500" data-i18n="stack.node">REST API, worker nền &amp; công cụ CLI</p>
           </div>
           <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#05c168" aria-hidden="true">Ne</span>
+            <span class="skill-mark" style="--mark:#ea2845;--icon:url(../assets/tech-icons/nestjs.svg)" aria-hidden="true"></span>
             <h3 class="h4">NestJS</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.nest">Backend theo module &amp; kiến trúc microservices</p>
+            <p class="body-small text-neutral-500" data-i18n="stack.nest">Backend theo module &amp; kiến trúc
+              microservices</p>
           </div>
           <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#d5691b" aria-hidden="true">Jv</span>
+            <span class="skill-mark" style="--mark:#f89820;--icon:url(../assets/tech-icons/java.svg)" aria-hidden="true"></span>
             <h3 class="h4">Java</h3>
             <p class="body-small text-neutral-500" data-i18n="stack.java">Hệ thống doanh nghiệp tại FPT Software</p>
           </div>
           <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#075fe4" aria-hidden="true">Py</span>
+            <span class="skill-mark" style="--mark:#ffd43b;--icon:url(../assets/tech-icons/python.svg)" aria-hidden="true"></span>
             <h3 class="h4">Python</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.python">Tự động hóa, xử lý dữ liệu &amp; kịch bản AI</p>
+            <p class="body-small text-neutral-500" data-i18n="stack.python">Tự động hóa, xử lý dữ liệu &amp; kịch bản AI
+            </p>
           </div>
           <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#2e81ff" aria-hidden="true">SQL</span>
+            <span class="skill-mark" style="--mark:#4479a1;--icon:url(../assets/tech-icons/mysql.svg)" aria-hidden="true"></span>
             <h3 class="h4">MySQL</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.mysql">Thiết kế cơ sở dữ liệu &amp; tối ưu truy vấn</p>
+            <p class="body-small text-neutral-500" data-i18n="stack.mysql">Thiết kế cơ sở dữ liệu &amp; tối ưu truy vấn
+            </p>
           </div>
           <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#05c168" aria-hidden="true">DB</span>
+            <span class="skill-mark" style="--mark:#4aa8e0;--icon:url(../assets/tech-icons/sqlite.svg)" aria-hidden="true"></span>
             <h3 class="h4">SQLite</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.sqlite">Nhẹ, nhanh, phù hợp cho dịch vụ self-host</p>
+            <p class="body-small text-neutral-500" data-i18n="stack.sqlite">Nhẹ, nhanh, phù hợp cho dịch vụ self-host
+            </p>
           </div>
           <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#d5691b" aria-hidden="true">UB</span>
+            <span class="skill-mark" style="--mark:#e95420;--icon:url(../assets/tech-icons/ubuntu.svg)" aria-hidden="true"></span>
             <h3 class="h4">Ubuntu &amp; Nginx</h3>
             <p class="body-small text-neutral-500" data-i18n="stack.ubuntu">Quản trị Linux, reverse proxy &amp; SSL</p>
           </div>
           <div class="card card-skills reveal">
-            <span class="skill-mark" style="--mark:#075fe4" aria-hidden="true">Dk</span>
+            <span class="skill-mark" style="--mark:#2496ed;--icon:url(../assets/tech-icons/docker.svg)" aria-hidden="true"></span>
             <h3 class="h4">Docker &amp; PM2</h3>
-            <p class="body-small text-neutral-500" data-i18n="stack.docker">Đóng gói dịch vụ &amp; duy trì vận hành 24/7</p>
+            <p class="body-small text-neutral-500" data-i18n="stack.docker">Đóng gói dịch vụ &amp; duy trì vận hành 24/7
+            </p>
           </div>
         </div>
       </div>
@@ -438,7 +474,8 @@
             <div class="heading-top-line" aria-hidden="true"></div>
             <h2 class="display-4" data-i18n="exp.heading">Kinh nghiệm &amp; Học vấn</h2>
             <p class="exp-yoe-line">
-              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span data-i18n="exp.yoeBadge">~2 năm kinh nghiệm</span></span>
+              <span class="status-pill is-subtle"><span class="dot" aria-hidden="true"></span><span
+                  data-i18n="exp.yoeBadge">~2 năm kinh nghiệm</span></span>
               <span class="body-small text-neutral-500" data-i18n="exp.yoeDetail">FPT Software · 11/2024 – nay</span>
             </p>
           </div>
@@ -461,9 +498,11 @@
                 REST API, tập trung vào tính ổn định, khả năng theo dõi log và vận hành an toàn.
               </p>
               <ul>
-                <li data-i18n="exp.role1.li1">Thiết kế và triển khai các API, service phục vụ tích hợp cho các nhóm phát triển sản phẩm.</li>
+                <li data-i18n="exp.role1.li1">Thiết kế và triển khai các API, service phục vụ tích hợp cho các nhóm phát
+                  triển sản phẩm.</li>
                 <li data-i18n="exp.role1.li2">Làm việc thường xuyên với Java, Node.js / NestJS, TypeScript và SQL.</li>
-                <li data-i18n="exp.role1.li3">Duy trì quy trình triển khai rõ ràng, nhất quán, dễ hoàn tác (rollback) và đầy đủ tài liệu kỹ thuật.</li>
+                <li data-i18n="exp.role1.li3">Duy trì quy trình triển khai rõ ràng, nhất quán, dễ hoàn tác (rollback) và
+                  đầy đủ tài liệu kỹ thuật.</li>
               </ul>
             </div>
           </div>
@@ -472,7 +511,8 @@
             <div class="experience-role">
               <span class="period" data-i18n="exp.period.ongoing">Dự án cá nhân · Duy trì 24/7</span>
               <h3 class="h3" data-i18n="exp.role2">Fullstack &amp; AI Automation Builder</h3>
-              <p class="body-small text-neutral-500" data-i18n="exp.role2.tag">LLM Pipelines, AI Agents &amp; Ubuntu Home Server</p>
+              <p class="body-small text-neutral-500" data-i18n="exp.role2.tag">LLM Pipelines, AI Agents &amp; Ubuntu
+                Home Server</p>
             </div>
             <div>
               <p data-i18n="exp.role2.desc">
@@ -480,9 +520,12 @@
                 ngữ tự nhiên bằng LLM và hạ tầng máy chủ Linux hoạt động 24/7.
               </p>
               <ul>
-                <li data-i18n="exp.role2.li1">Xây dựng pipeline dịch thuật tự động qua OpenAI / DeepSeek API với kỹ thuật giữ ngữ cảnh, kết hợp crawler Playwright và phát triển tiện ích mã nguồn mở vbook-ext.</li>
-                <li data-i18n="exp.role2.li2">Vận hành nền tảng đọc truyện trực tuyến sungthe.online (Next.js + Express + SQLite) tích hợp quản trị dịch AI với hơn 860 bài kiểm thử tự động.</li>
-                <li data-i18n="exp.role2.li3">Triển khai nội bộ AI Agent (OpenClaw) hỗ trợ quy trình kỹ thuật và quản trị toàn bộ dịch vụ qua Nginx, PM2 và Docker.</li>
+                <li data-i18n="exp.role2.li1">Xây dựng pipeline dịch thuật tự động qua OpenAI / DeepSeek API với kỹ
+                  thuật giữ ngữ cảnh, kết hợp crawler Playwright và phát triển tiện ích mã nguồn mở vbook-ext.</li>
+                <li data-i18n="exp.role2.li2">Vận hành nền tảng đọc truyện trực tuyến sungthe.online (Next.js + Express
+                  + SQLite) tích hợp quản trị dịch AI với hơn 860 bài kiểm thử tự động.</li>
+                <li data-i18n="exp.role2.li3">Triển khai nội bộ AI Agent (OpenClaw) hỗ trợ quy trình kỹ thuật và quản
+                  trị toàn bộ dịch vụ qua Nginx, PM2 và Docker.</li>
               </ul>
             </div>
           </div>
@@ -491,7 +534,8 @@
             <div class="experience-role">
               <span class="period" data-i18n="exp.period.alumni">ĐH Khoa học Huế · 08/2020 – 06/2024</span>
               <h3 class="h3" data-i18n="exp.role3">Cử nhân Công nghệ Thông tin</h3>
-              <p class="body-small text-neutral-500" data-i18n="exp.role3.tag">Kỹ thuật phần mềm &amp; Hệ thống thông tin</p>
+              <p class="body-small text-neutral-500" data-i18n="exp.role3.tag">Kỹ thuật phần mềm &amp; Hệ thống thông
+                tin</p>
             </div>
             <div>
               <p data-i18n="exp.role3.desc">
@@ -499,8 +543,10 @@
                 nghiên cứu tài liệu kỹ thuật để giải quyết vấn đề.
               </p>
               <ul>
-                <li data-i18n="exp.role3.li1">Tốt nghiệp chuyên ngành Kỹ thuật phần mềm và Hệ thống thông tin tại ĐH Khoa học Huế.</li>
-                <li data-i18n="exp.role3.li2">Thực hiện trọn vẹn đồ án tốt nghiệp GoShip Delivery — Hệ thống Điều phối &amp; Giao nhận (React + Node.js) ở cả frontend và backend.</li>
+                <li data-i18n="exp.role3.li1">Tốt nghiệp chuyên ngành Kỹ thuật phần mềm và Hệ thống thông tin tại ĐH
+                  Khoa học Huế.</li>
+                <li data-i18n="exp.role3.li2">Thực hiện trọn vẹn đồ án tốt nghiệp GoShip Delivery — Hệ thống Điều phối
+                  &amp; Giao nhận (React + Node.js) ở cả frontend và backend.</li>
               </ul>
             </div>
           </div>
@@ -543,9 +589,12 @@
             web hoặc thảo luận kỹ thuật về kiến trúc backend, tự động hóa và vận hành máy chủ.
           </p>
           <div class="buttons-row">
-            <a class="btn btn-primary" href="mailto:ngotienphong053@gmail.com" data-i18n="cta.email">Gửi email cho tôi</a>
-            <a class="btn btn-secondary" href="https://github.com/phongngo053" target="_blank" rel="noopener" data-i18n="cta.github">Xem GitHub của tôi</a>
-        <a class="btn btn-secondary" href="assets/Ngo-Tien-Phong-CV-VI.pdf" download data-i18n="cv.download" data-i18n-attr="href:cv.file">Tải CV (PDF) ↓</a>
+            <a class="btn btn-primary" href="mailto:ngotienphong053@gmail.com" data-i18n="cta.email">Gửi email cho
+              tôi</a>
+            <a class="btn btn-secondary" href="https://github.com/phongngo053" target="_blank" rel="noopener"
+              data-i18n="cta.github">Xem GitHub của tôi</a>
+            <a class="btn btn-secondary" href="assets/Ngo-Tien-Phong-CV-VI.pdf" download data-i18n="cv.download"
+              data-i18n-attr="href:cv.file">Tải CV (PDF) ↓</a>
           </div>
         </div>
       </div>
@@ -560,9 +609,10 @@
         <div>
           <a class="nav-logo" href="index.html">
             <span class="logo-mark" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M25 21 L13 32 L25 43"/>
-                <path d="M36 43 H52"/>
+              <svg width="22" height="22" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="7"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M25 21 L13 32 L25 43" />
+                <path d="M36 43 H52" />
               </svg>
             </span>
             <span>Ngô Tiến Phong</span>
@@ -574,20 +624,23 @@
           <div class="social-row mt-32">
             <a href="https://github.com/phongngo053" target="_blank" rel="noopener" aria-label="GitHub">
               <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.42-4.04-1.42-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z"/>
+                <path
+                  d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.42-4.04-1.42-.55-1.4-1.34-1.77-1.34-1.77-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.39 1.24-3.23-.13-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.88.12 3.18.77.84 1.23 1.91 1.23 3.23 0 4.63-2.8 5.65-5.48 5.95.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.83.58A12 12 0 0 0 12 .5Z" />
               </svg>
             </a>
             <a href="mailto:ngotienphong053@gmail.com" aria-label="Email">
-              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/>
-                <path d="m3 7 9 6 9-6"/>
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+                <path d="m3 7 9 6 9-6" />
               </svg>
             </a>
             <a href="https://sungthe.online" target="_blank" rel="noopener" aria-label="Web Truyện sungthe.online">
-              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M3.6 9h16.8M3.6 15h16.8"/>
-                <path d="M12 3a14.5 14.5 0 0 0 0 18 14.5 14.5 0 0 0 0-18Z"/>
+              <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3.6 9h16.8M3.6 15h16.8" />
+                <path d="M12 3a14.5 14.5 0 0 0 0 18 14.5 14.5 0 0 0 0-18Z" />
               </svg>
             </a>
           </div>
@@ -610,17 +663,21 @@
             <li><a href="mailto:ngotienphong053@gmail.com">ngotienphong053@gmail.com</a></li>
             <li><a href="https://sungthe.online" target="_blank" rel="noopener">sungthe.online</a></li>
             <li><a href="https://github.com/phongngo053" target="_blank" rel="noopener">github.com/phongngo053</a></li>
-            <li><a href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener" data-i18n="footer.allRepos">Tất cả repository</a></li>
+            <li><a href="https://github.com/phongngo053?tab=repositories" target="_blank" rel="noopener"
+                data-i18n="footer.allRepos">Tất cả repository</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Ngô Tiến Phong. <span data-i18n="footer.built">Xây dựng bằng HTML, CSS và JavaScript thuần.</span></span>
-        <span data-i18n="footer.design">Giao diện lấy cảm hứng từ Developer X (BRIX Templates), mã nguồn và nội dung được tự phát triển.</span>
+        <span>© <span data-year>2026</span> Ngô Tiến Phong. <span data-i18n="footer.built">Xây dựng bằng HTML, CSS và
+            JavaScript thuần.</span></span>
+        <span data-i18n="footer.design">Giao diện lấy cảm hứng từ Developer X (BRIX Templates), mã nguồn và nội dung
+          được tự phát triển.</span>
       </div>
     </div>
   </footer>
 
 </body>
+
 </html>
